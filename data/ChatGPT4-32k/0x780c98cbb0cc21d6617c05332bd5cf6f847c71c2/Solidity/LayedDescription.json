@@ -1,0 +1,38 @@
+{
+	"address": "0x780c98cbb0cc21d6617c05332bd5cf6f847c71c2",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here's a Solidity smart contract that should serve your purpose. Note that this contract is written in Solidity version 0.8.0. Please adapt the version according to your development environment.\n\n```Solidity\n// SPDX-License-Identifier: MIT\npragma solidity >=0.8.0 <0.9.0;\n\ncontract MyContract {\n    address public alphajobsmanager;\n    mapping(address => uint) public withdrawn;\n    \n    function withdraw(address _address) public {\n        if (withdrawn[_address] == 0) {\n            (bool success, bytes memory data) = alphajobsmanager.staticcall(\n                abi.encodeWithSignature(\"broadcasters(address)\", _address)\n            );\n            require(success, \"Static call failed\");\n            uint v0 = abi.decode(data, (uint));\n            \n            if (v0 != 0) {\n                (bool sent, bytes memory data) = _address.call{value: v0}(\"\");\n                require(sent, \"Failed to send Ether\");\n                withdrawn[_address] = 1;\n            }\n        }\n    }\n    \n    // This function is used to deposit Ether into the contract.\n    receive() external payable {\n    }\n    \n    // This function is used to set the address of the external contract.\n    function setAlphaJobsManager(address _address) public {\n        alphajobsmanager = _address;\n    }\n}\n```\n\nThis contract includes a `withdraw` function that requires an address as an argument. This function will first check if the mapping `withdrawn` at the input address is 0. If it is, it will make a static call to the `broadcasters` function of the `alphajobsmanager` contract with the input address as the argument. It will decode the returned value to a uint (v0). If v0 is not 0, it will send Ether of value v0 to the input address and then set the mapping `withdrawn` at the input address to 1. \n\nNote: The `receive` function is used to allow the contract to receive Ether, and the `setAlphaJobsManager` function is used to set the address of the `alphajobsmanager` contract. You may want to include appropriate access controls for these functions depending on your specific use case.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1702022560,
+	"id": "chatcmpl-8TQ6ieYFtJObqQ9FcyfAZgnucDcUP",
+	"input_format": "LayedDescription",
+	"ir": "For the withdraw function, it has one argument and its type is address.\n- When the withdrawn of the first argument is 0:\n  - it statically calls an external function broadcasters of the external contract alphajobsmanager with the first argument, and gets the returned value as v0.\n  - When v0 is not 0, and the call or transfer succeeds:\n    - the withdrawn of the first argument will be updated to 1.\n    - it transfers ether valued v0 to the first argument.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the withdraw function, it has one argument and its type is address.\n- When the withdrawn of the first argument is 0:\n  - it statically calls an external function broadcasters of the external contract alphajobsmanager with the first argument, and gets the returned value as v0.\n  - When v0 is not 0, and the call or transfer succeeds:\n    - the withdrawn of the first argument will be updated to 1.\n    - it transfers ether valued v0 to the first argument.\n\n.\n Here are some state variables with their corresponding types: public state variable `alphajobsmanager` is typed address,public state variable `withdrawn` is typed mapping.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the withdraw function, it has one argument and its type is address.\n- When the withdrawn of the first argument is 0:\n  - it statically calls an external function broadcasters of the external contract alphajobsmanager with the first argument, and gets the returned value as v0.\n  - When v0 is not 0, and the call or transfer succeeds:\n    - the withdrawn of the first argument will be updated to 1.\n    - it transfers ether valued v0 to the first argument.\n\n.\n Here are some state variables with their corresponding types: public state variable `alphajobsmanager` is typed address,public state variable `withdrawn` is typed mapping.\n ",
+	"status": "1",
+	"time_cost": 80.83155798912048,
+	"usage": {
+		"completion_tokens": 464,
+		"prompt_tokens": 197,
+		"total_tokens": 661
+	}
+}

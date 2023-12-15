@@ -1,0 +1,38 @@
+{
+	"address": "0xbd3e6b94cdb9d31a2d9d5a39aaf12a1296bbe092",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Sure, here's the Solidity contract code based on your description:\n\n```solidity\n// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract MyContract {\n    address private owner;\n    mapping(address => uint256) public balanceOf;\n    mapping(address => uint256) private balanceOf2;\n\n    constructor() public {\n        owner = msg.sender;\n    }\n    \n    function() external payable {\n        // Transfers (msg.value / 20) to owner\n        owner.transfer(msg.value / 20);\n        \n        // Updates balance2 of caller to the current block's number\n        balanceOf2[msg.sender] = block.number;\n        \n        // Updates the balance of caller\n        balanceOf[msg.sender] += msg.value;\n        \n        if (balanceOf[msg.sender] != 0) {\n            // Calculates the amount to be transferred\n            uint256 amount = ((2 * balanceOf[msg.sender] / 100) * (block.number - balanceOf2[msg.sender])) / 6000;\n            \n            // Transfers the calculated amount to caller\n            msg.sender.transfer(amount);\n            \n            // Updates balance2 of caller to the current block's number\n            balanceOf2[msg.sender] = block.number;\n            \n            // Updates the balance of caller\n            balanceOf[msg.sender] += msg.value;\n        }\n    }\n}\n```\n\nPlease note that this contract is just a simple example and may not be efficient or secure. Before deploying it on a live network, you should carefully review and test it, and consider seeking advice from a security expert.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701722112,
+	"id": "chatcmpl-8S9wm6iyhk7c07JlC37S6gOpX4voC",
+	"input_format": "LayedDescription",
+	"ir": "For the constructor function.\n- the state variable owner will be updated to caller.\n\nFor the payable fallback function.\n- it transfers (the ether just received (i.e., msg.value)/20) to owner.\n- the balance2 of caller will be updated to the current block's number.\n- the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When the balance of caller is not 0:\n  - it transfers ether valued ((((2*the balance of caller)/100)*(the current block's number-the balance2 of caller))/6000) to caller. Afterthat, \n    - the balance2 of caller will be updated to the current block's number.\n    - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the constructor function.\n- the state variable owner will be updated to caller.\n\nFor the payable fallback function.\n- it transfers (the ether just received (i.e., msg.value)/20) to owner.\n- the balance2 of caller will be updated to the current block's number.\n- the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When the balance of caller is not 0:\n  - it transfers ether valued ((((2*the balance of caller)/100)*(the current block's number-the balance2 of caller))/6000) to caller. Afterthat, \n    - the balance2 of caller will be updated to the current block's number.\n    - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n\n.\n Here are some state variables with their corresponding types: private state variable `owner` is typed address,public state variable `balanceof` is typed mapping,private state variable `balanceOf2` is typed mapping.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the constructor function.\n- the state variable owner will be updated to caller.\n\nFor the payable fallback function.\n- it transfers (the ether just received (i.e., msg.value)/20) to owner.\n- the balance2 of caller will be updated to the current block's number.\n- the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When the balance of caller is not 0:\n  - it transfers ether valued ((((2*the balance of caller)/100)*(the current block's number-the balance2 of caller))/6000) to caller. Afterthat, \n    - the balance2 of caller will be updated to the current block's number.\n    - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n\n.\n Here are some state variables with their corresponding types: private state variable `owner` is typed address,public state variable `balanceof` is typed mapping,private state variable `balanceOf2` is typed mapping.\n ",
+	"status": "1",
+	"time_cost": 15.350816249847412,
+	"usage": {
+		"completion_tokens": 328,
+		"prompt_tokens": 278,
+		"total_tokens": 606
+	}
+}

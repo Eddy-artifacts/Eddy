@@ -1,0 +1,38 @@
+{
+	"address": "0xecb168408adebd5383944c082853128bc7925773",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here's the equivalent solidity contract code based on the decompiled EVM bytecode:\n\n```solidity\npragma solidity ^0.7.0;\n\ncontract Proxy {\n    address private _target;\n\n    constructor(address target) {\n        _target = target;\n    }\n\n    fallback() external payable {\n        (bool success, bytes memory result) = _target.delegatecall(msg.data);\n        require(success, \"Forwarded call failed.\");\n        assembly {\n            return(add(0x20, result), mload(result))\n        }\n    }\n}\n```\n\nNote:\n\nThis contract uses a `fallback` function which is triggered when the call data does not match any of the existing functions in the contract and no `receive` function exists. This function then uses the `delegatecall` low-level function to forward the call data to a target contract, capturing the success status and the returned data.\n\nIf the `delegatecall` fails (i.e., if the target contract reverts), then the `require` statement will cause the proxy contract to also revert. If the `delegatecall` is successful, then the returned data is forwarded back to the caller.\n\nThe `assembly` block is used to return the data as it is received from the `delegatecall`.\n\nAlso, please note that this is a fairly typical proxy pattern, but the specific details may vary depending on the context.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701486692,
+	"id": "chatcmpl-8RAhgWFt12b6ith3CI0rSX3zh8Szf",
+	"input_format": "DecompiledCode",
+	"ir": "// Decompiled by library.dedaub.com\n// 2022.11.16 10:49 UTC\n\n\n\n// Note: The function selector is not present in the original solidity code.\n// However, we display it for the sake of completeness.\n\nfunction __function_selector__() public payable { \n    CALLDATACOPY(RETURNDATASIZE(), RETURNDATASIZE(), msg.data.length);\n    v0 = 0x2a2b85eb1054d6f0c6c2e37da05ed3e5fea684ef.delegatecall(MEM[(RETURNDATASIZE()) len msg.data.length], MEM[(RETURNDATASIZE()) len (RETURNDATASIZE())]).gas(msg.gas);\n    RETURNDATACOPY(RETURNDATASIZE(), RETURNDATASIZE(), RETURNDATASIZE());\n    require(v0RETURNDATASIZE(), RETURNDATASIZE());\n    return MEM[(RETURNDATASIZE()) len (RETURNDATASIZE())];\n}\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following decompiled code lifted from EVM Bytecode.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the decompiled code: // Decompiled by library.dedaub.com\n// 2022.11.16 10:49 UTC\n\n\n\n// Note: The function selector is not present in the original solidity code.\n// However, we display it for the sake of completeness.\n\nfunction __function_selector__() public payable { \n    CALLDATACOPY(RETURNDATASIZE(), RETURNDATASIZE(), msg.data.length);\n    v0 = 0x2a2b85eb1054d6f0c6c2e37da05ed3e5fea684ef.delegatecall(MEM[(RETURNDATASIZE()) len msg.data.length], MEM[(RETURNDATASIZE()) len (RETURNDATASIZE())]).gas(msg.gas);\n    RETURNDATACOPY(RETURNDATASIZE(), RETURNDATASIZE(), RETURNDATASIZE());\n    require(v0RETURNDATASIZE(), RETURNDATASIZE());\n    return MEM[(RETURNDATASIZE()) len (RETURNDATASIZE())];\n}\n.",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following decompiled code lifted from EVM Bytecode.The following is the decompiled code: // Decompiled by library.dedaub.com\n// 2022.11.16 10:49 UTC\n\n\n\n// Note: The function selector is not present in the original solidity code.\n// However, we display it for the sake of completeness.\n\nfunction __function_selector__() public payable { \n    CALLDATACOPY(RETURNDATASIZE(), RETURNDATASIZE(), msg.data.length);\n    v0 = 0x2a2b85eb1054d6f0c6c2e37da05ed3e5fea684ef.delegatecall(MEM[(RETURNDATASIZE()) len msg.data.length], MEM[(RETURNDATASIZE()) len (RETURNDATASIZE())]).gas(msg.gas);\n    RETURNDATACOPY(RETURNDATASIZE(), RETURNDATASIZE(), RETURNDATASIZE());\n    require(v0RETURNDATASIZE(), RETURNDATASIZE());\n    return MEM[(RETURNDATASIZE()) len (RETURNDATASIZE())];\n}\n.",
+	"status": "1",
+	"time_cost": 8.511147737503052,
+	"usage": {
+		"completion_tokens": 274,
+		"prompt_tokens": 281,
+		"total_tokens": 555
+	}
+}

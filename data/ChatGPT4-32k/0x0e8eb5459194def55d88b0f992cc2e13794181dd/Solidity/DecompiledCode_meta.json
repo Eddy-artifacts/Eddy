@@ -1,0 +1,20 @@
+{
+	"address": "0x0e8eb5459194def55d88b0f992cc2e13794181dd",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 635.0,
+	"prompt_tokens": 275.0,
+	"completion_tokens": 360.0,
+	"time_cost": 12.78282356262207,
+	"gen_code": true,
+	"compilable": " this looks like an address but is not exactly 40 hex digits. it is 39 hex digits. if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 1
+}

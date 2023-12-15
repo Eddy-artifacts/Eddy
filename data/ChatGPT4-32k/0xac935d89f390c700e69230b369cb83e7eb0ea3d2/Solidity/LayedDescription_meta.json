@@ -1,0 +1,20 @@
+{
+	"address": "0xac935d89f390c700e69230b369cb83e7eb0ea3d2",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1368.0,
+	"prompt_tokens": 807.0,
+	"completion_tokens": 561.0,
+	"time_cost": 21.397767066955566,
+	"gen_code": true,
+	"compilable": " cannot perform packed encoding for a literal. please convert it to an explicit type first.\t \"send\" and \"transfer\" are only available for objects of type \"address payable\", not \"address\".\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 15
+}

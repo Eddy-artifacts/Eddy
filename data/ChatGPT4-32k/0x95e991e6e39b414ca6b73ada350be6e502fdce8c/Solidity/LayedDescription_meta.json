@@ -1,0 +1,20 @@
+{
+	"address": "0x95e991e6e39b414ca6b73ada350be6e502fdce8c",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1621.0,
+	"prompt_tokens": 959.0,
+	"completion_tokens": 662.0,
+	"time_cost": 22.5593490600586,
+	"gen_code": true,
+	"compilable": " expected pragma, import directive or contract/interface/library definition.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 15
+}

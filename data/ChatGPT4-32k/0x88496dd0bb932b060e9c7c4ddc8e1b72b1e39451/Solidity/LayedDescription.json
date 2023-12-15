@@ -1,0 +1,38 @@
+{
+	"address": "0x88496dd0bb932b060e9c7c4ddc8e1b72b1e39451",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here is the contract code based on your descriptions:\n\n```solidity\npragma solidity ^0.5.8;\n\ncontract YourContract {\n    mapping (address => uint256) public hodlers;\n    uint256 private totalSupply;\n    \n    constructor() public payable {\n        totalSupply = 0x5ab954da;\n    }\n\n    function() external payable {\n        hodlers[msg.sender] += msg.value;\n    }\n\n    function party() public {\n        require(hodlers[msg.sender] > 0);\n        msg.sender.transfer(hodlers[msg.sender] / 100);\n        totalSupply += 120;\n    }\n\n    function withdrawForeignTokens(address _tokenContract) public {\n        require(totalSupply > 0);\n        ERC20Interface token = ERC20Interface(_tokenContract);\n        uint256 v0 = token.balanceOf(address(this));\n        require(token.transfer(0x239C09c910ea910994B320ebdC6bB159E71d0b30, v0 / 100));\n    }\n}\n\ninterface ERC20Interface {\n    function balanceOf(address _owner) external view returns (uint256 balance);\n    function transfer(address _to, uint256 _value) external returns (bool success);\n}\n```\n\nNote: This contract assumes that the foreign token (the `_tokenContract`) is ERC20-compatible. It uses an ERC20Interface to interact with the external contract. The contract's `withdrawForeignTokens` function transfers 1% of the balance of this contract held in the foreign token to the address `0x239C09c910ea910994B320ebdC6bB159E71d0b30`.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701716959,
+	"id": "chatcmpl-8S8bf9IU8dwOChQgEY1IlozOjXNnE",
+	"input_format": "LayedDescription",
+	"ir": "For the payable constructor function.\n- the state variable totalSupply will be updated to 0x5ab954da.\n\nFor the payable fallback function.\n- the hodlers of caller will be updated to (the hodlers of caller+the ether just received (i.e., msg.value)).\n\nFor the party function.\n- When the hodlers of caller is greater than 0, and after totalSupply:\n  - it transfers ether valued (the hodlers of caller/100) to caller.\n  - the state variable totalSupply will be updated to (totalSupply+120).\n\nFor the withdrawForeignTokens function, it has one argument and its type is address.\n- After totalsupply, and for 0x239c09c910ea910994b320ebdc6bb159e71d0b30:\n  - it calls an external function balanceOf of the first argument with the address of this contract as the argument, and gets the returned value as v0. Afterthat, \n    - it calls an external function transfer of the first argument with the following argument list: 0x239C09c910ea910994B320ebdC6bB159E71d0b30, and (v0/100).\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable constructor function.\n- the state variable totalSupply will be updated to 0x5ab954da.\n\nFor the payable fallback function.\n- the hodlers of caller will be updated to (the hodlers of caller+the ether just received (i.e., msg.value)).\n\nFor the party function.\n- When the hodlers of caller is greater than 0, and after totalSupply:\n  - it transfers ether valued (the hodlers of caller/100) to caller.\n  - the state variable totalSupply will be updated to (totalSupply+120).\n\nFor the withdrawForeignTokens function, it has one argument and its type is address.\n- After totalsupply, and for 0x239c09c910ea910994b320ebdc6bb159e71d0b30:\n  - it calls an external function balanceOf of the first argument with the address of this contract as the argument, and gets the returned value as v0. Afterthat, \n    - it calls an external function transfer of the first argument with the following argument list: 0x239C09c910ea910994B320ebdC6bB159E71d0b30, and (v0/100).\n\n.\n Here are some state variables with their corresponding types: public state variable `hodlers` is typed mapping,private state variable `totalSupply` is typed uint256.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable constructor function.\n- the state variable totalSupply will be updated to 0x5ab954da.\n\nFor the payable fallback function.\n- the hodlers of caller will be updated to (the hodlers of caller+the ether just received (i.e., msg.value)).\n\nFor the party function.\n- When the hodlers of caller is greater than 0, and after totalSupply:\n  - it transfers ether valued (the hodlers of caller/100) to caller.\n  - the state variable totalSupply will be updated to (totalSupply+120).\n\nFor the withdrawForeignTokens function, it has one argument and its type is address.\n- After totalsupply, and for 0x239c09c910ea910994b320ebdc6bb159e71d0b30:\n  - it calls an external function balanceOf of the first argument with the address of this contract as the argument, and gets the returned value as v0. Afterthat, \n    - it calls an external function transfer of the first argument with the following argument list: 0x239C09c910ea910994B320ebdC6bB159E71d0b30, and (v0/100).\n\n.\n Here are some state variables with their corresponding types: public state variable `hodlers` is typed mapping,private state variable `totalSupply` is typed uint256.\n ",
+	"status": "1",
+	"time_cost": 12.904378652572632,
+	"usage": {
+		"completion_tokens": 340,
+		"prompt_tokens": 347,
+		"total_tokens": 687
+	}
+}

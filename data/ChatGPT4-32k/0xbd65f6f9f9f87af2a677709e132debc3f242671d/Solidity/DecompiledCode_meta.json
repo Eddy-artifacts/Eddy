@@ -1,0 +1,20 @@
+{
+	"address": "0xbd65f6f9f9f87af2a677709e132debc3f242671d",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3475.0,
+	"prompt_tokens": 2544.0,
+	"completion_tokens": 931.0,
+	"time_cost": 59.94166088104248,
+	"gen_code": true,
+	"compilable": " type address payable is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address payable is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address payable is not implicitly convertible to expected type uint256.\t type address payable is not implicitly convertible to expected type uint256.\t type address payable is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address payable is not implicitly convertible to expected type uint256.\t type address payable is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t return argument type uint8 is not implicitly convertible to expected type (type of first return variable) bool.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 22
+}

@@ -1,0 +1,19 @@
+{
+	"address": "0xe1f5c6fd86628e299955a84f44e2dfca47aaaaa4",
+	"model": "bytecode_1",
+	"input_format": "Bytecode",
+	"output_format": "Solidity",
+	"status": 1,
+	"token_exceeded": false,
+	"n_tokens": 2024.0,
+	"prompt_tokens": 1715.0,
+	"completion_tokens": 309.0,
+	"time_cost": 16.752821445465088,
+	"gen_code": true,
+	"language": "Solidity",
+	"compilable": " only local variables are supported. to access storage variables, use the _slot and _offset suffixes.\t",
+	"version": null,
+	"n_sai": null,
+	"p_grammar": -1.0,
+	"sai": 4
+}

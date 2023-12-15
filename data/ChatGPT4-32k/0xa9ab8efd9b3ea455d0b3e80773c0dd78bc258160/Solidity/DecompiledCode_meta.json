@@ -1,0 +1,20 @@
+{
+	"address": "0xa9ab8efd9b3ea455d0b3e80773c0dd78bc258160",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2616.0,
+	"prompt_tokens": 1975.0,
+	"completion_tokens": 641.0,
+	"time_cost": 23.17804741859436,
+	"gen_code": true,
+	"compilable": " type int_const 0 is not implicitly convertible to expected type address.\t invalid type for argument in function call. invalid implicit conversion from address to uint256 requested.\t invalid type for argument in function call. invalid implicit conversion from address to uint256 requested.\t operator + not compatible with types address and uint256. arithmetic operations on addresses are not supported. convert to integer first before using them.\t operator += not compatible with types address and uint256\t \"send\" and \"transfer\" are only available for objects of type \"address payable\", not \"address\".\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 12
+}

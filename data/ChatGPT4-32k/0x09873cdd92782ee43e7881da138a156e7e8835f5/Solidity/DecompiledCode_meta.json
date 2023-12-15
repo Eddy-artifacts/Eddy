@@ -1,0 +1,20 @@
+{
+	"address": "0x09873cdd92782ee43e7881da138a156e7e8835f5",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2237.0,
+	"prompt_tokens": 1512.0,
+	"completion_tokens": 725.0,
+	"time_cost": 33.3216347694397,
+	"gen_code": true,
+	"compilable": " function, variable, struct or modifier declaration expected.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 11
+}

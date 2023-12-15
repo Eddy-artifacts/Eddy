@@ -1,0 +1,38 @@
+{
+	"address": "0x5f1a08554f0dc0cf79852c564a10981ffbd7c8af",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here is a Solidity smart contract that adheres to your specifications:\n\n```solidity\npragma solidity ^0.8.1;\n\ncontract MyContract {\n    uint8 public status;\n    address public owner;\n    mapping (address => uint) private balanceOf;\n    uint16 public asset_type;\n    \n    constructor() payable {\n        owner = msg.sender;\n        status = 3;\n    }\n    \n    function approveOracle(address _oracle) public {\n        require(msg.sender == owner, \"Only the owner can approve an oracle\");\n        balanceOf[_oracle] = 1;\n    }\n    \n    function revokeOracle(address _oracle) public {\n        require(msg.sender == owner, \"Only the owner can revoke an oracle\");\n        balanceOf[_oracle] = 0;\n    }\n    \n    function setStatus(uint8 _status) public {\n        require(msg.sender == owner, \"Only the owner can set the status\");\n        require(_status <= 3, \"Status can't be greater than 3\");\n        require(status <= 3, \"Current status can't be greater than 3\");\n        status = _status;\n    }\n}\n```\n\nThis contract has a payable constructor which sets the sender as the contract owner and status to 3. There are two functions: `approveOracle` and `revokeOracle`, which only the contract owner can call to set the balance of a specific address to 1 and 0 respectively. The `setStatus` function also can only be called by the owner and it updates the status to the input argument if it is not greater than 3 and if the current status is not greater than 3.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1702483730,
+	"id": "chatcmpl-8VM4wgxyVEsTXzb29evh0Jv87Pxzp",
+	"input_format": "LayedDescription",
+	"ir": "For the payable constructor function.\n- the state variable status will be updated to 3.\n\nFor the approveOracle function, it has one argument and its type is address.\n- For owner:\n  - the balance of the first argument will be updated to 1.\n\nFor the revokeOracle function, it has one argument and its type is address.\n- For owner:\n  - the balance of the first argument will be updated to 0.\n\nFor the setStatus function, it has one argument and its type is uint8.\n- When the first argument is not greater than 3, and for owner, and status is not greater than 3:\n  - the state variable status will be updated to the first argument.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable constructor function.\n- the state variable status will be updated to 3.\n\nFor the approveOracle function, it has one argument and its type is address.\n- For owner:\n  - the balance of the first argument will be updated to 1.\n\nFor the revokeOracle function, it has one argument and its type is address.\n- For owner:\n  - the balance of the first argument will be updated to 0.\n\nFor the setStatus function, it has one argument and its type is uint8.\n- When the first argument is not greater than 3, and for owner, and status is not greater than 3:\n  - the state variable status will be updated to the first argument.\n\n.\n Here are some state variables with their corresponding types: public state variable `status` is typed uint8,public state variable `owner` is typed address,private state variable `balanceOf` is typed mapping,public state variable `asset_type` is typed uint16.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable constructor function.\n- the state variable status will be updated to 3.\n\nFor the approveOracle function, it has one argument and its type is address.\n- For owner:\n  - the balance of the first argument will be updated to 1.\n\nFor the revokeOracle function, it has one argument and its type is address.\n- For owner:\n  - the balance of the first argument will be updated to 0.\n\nFor the setStatus function, it has one argument and its type is uint8.\n- When the first argument is not greater than 3, and for owner, and status is not greater than 3:\n  - the state variable status will be updated to the first argument.\n\n.\n Here are some state variables with their corresponding types: public state variable `status` is typed uint8,public state variable `owner` is typed address,private state variable `balanceOf` is typed mapping,public state variable `asset_type` is typed uint16.\n ",
+	"status": "1",
+	"time_cost": 14.699252605438232,
+	"usage": {
+		"completion_tokens": 332,
+		"prompt_tokens": 256,
+		"total_tokens": 588
+	}
+}

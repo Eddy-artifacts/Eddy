@@ -1,0 +1,20 @@
+{
+	"address": "0x66ec7145b52cb088e79306beb3d26fad0935f8c3",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "This model's maximum context length is 32768 tokens. However, your messages resulted in 44297 tokens. Please reduce the length of the messages.",
+	"token_exceeded": true,
+	"n_tokens": null,
+	"prompt_tokens": null,
+	"completion_tokens": null,
+	"time_cost": null,
+	"gen_code": null,
+	"compilable": null,
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 122
+}

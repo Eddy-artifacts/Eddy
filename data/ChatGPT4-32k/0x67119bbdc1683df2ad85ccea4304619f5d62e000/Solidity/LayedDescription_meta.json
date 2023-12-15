@@ -1,0 +1,20 @@
+{
+	"address": "0x67119bbdc1683df2ad85ccea4304619f5d62e000",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2586.0,
+	"prompt_tokens": 2003.0,
+	"completion_tokens": 583.0,
+	"time_cost": 38.40821409225464,
+	"gen_code": true,
+	"compilable": " function with same name and arguments defined twice.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 30
+}

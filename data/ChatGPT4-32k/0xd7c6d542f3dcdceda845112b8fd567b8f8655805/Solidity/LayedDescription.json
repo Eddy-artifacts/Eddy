@@ -1,0 +1,38 @@
+{
+	"address": "0xd7c6d542f3dcdceda845112b8fd567b8f8655805",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here is the smart contract according to your description:\n\n```solidity\npragma solidity ^0.8.0;\n\ncontract YourContract {\n\n    bytes32 public s_0;\n    bytes32 public s_1;\n    bytes32 public s_2;\n    bytes32 public s_3;\n\n    constructor() payable {\n        s_0 = 0xed29e99f5c7349716e9ebf9e5e2db3e9d1c59ebbb6e17479da01beab4fff151e;\n        s_1 = 0x9e559605af06d5f08bb2e8bdc2957623b8ba05af02e84380eec39387125ea03b;\n        s_2 = 0xb8aaf33942600fd11ffe2acf242b2b34530ab95751e0e970d8de148e0b90f6b6;\n        s_3 = 0xa8854ce60dc7f77ae8773e4de3a12679a066ff3e710a44c7e24737aad547e19f;\n    }\n}\n```\n\nThis contract updates the `s_0`, `s_1`, `s_2`, and `s_3` state variables with the provided values when it's deployed and receives Ether. The `payable` keyword allows this function to receive Ether.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1702483747,
+	"id": "chatcmpl-8VM5D6OPkcEWSPWIXSXG8eXAyIixG",
+	"input_format": "LayedDescription",
+	"ir": "For the payable constructor function.\n- the state variable s_0 will be updated to 0xed29e99f5c7349716e9ebf9e5e2db3e9d1c59ebbb6e17479da01beab4fff151e.\n- the state variable s_1 will be updated to 0x9e559605af06d5f08bb2e8bdc2957623b8ba05af02e84380eec39387125ea03b.\n- the state variable s_2 will be updated to 0xb8aaf33942600fd11ffe2acf242b2b34530ab95751e0e970d8de148e0b90f6b6.\n- the state variable s_3 will be updated to 0xa8854ce60dc7f77ae8773e4de3a12679a066ff3e710a44c7e24737aad547e19f.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable constructor function.\n- the state variable s_0 will be updated to 0xed29e99f5c7349716e9ebf9e5e2db3e9d1c59ebbb6e17479da01beab4fff151e.\n- the state variable s_1 will be updated to 0x9e559605af06d5f08bb2e8bdc2957623b8ba05af02e84380eec39387125ea03b.\n- the state variable s_2 will be updated to 0xb8aaf33942600fd11ffe2acf242b2b34530ab95751e0e970d8de148e0b90f6b6.\n- the state variable s_3 will be updated to 0xa8854ce60dc7f77ae8773e4de3a12679a066ff3e710a44c7e24737aad547e19f.\n\n.\n Here are some state variables with their corresponding types: .\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable constructor function.\n- the state variable s_0 will be updated to 0xed29e99f5c7349716e9ebf9e5e2db3e9d1c59ebbb6e17479da01beab4fff151e.\n- the state variable s_1 will be updated to 0x9e559605af06d5f08bb2e8bdc2957623b8ba05af02e84380eec39387125ea03b.\n- the state variable s_2 will be updated to 0xb8aaf33942600fd11ffe2acf242b2b34530ab95751e0e970d8de148e0b90f6b6.\n- the state variable s_3 will be updated to 0xa8854ce60dc7f77ae8773e4de3a12679a066ff3e710a44c7e24737aad547e19f.\n\n.\n Here are some state variables with their corresponding types: .\n ",
+	"status": "1",
+	"time_cost": 26.668633460998535,
+	"usage": {
+		"completion_tokens": 304,
+		"prompt_tokens": 284,
+		"total_tokens": 588
+	}
+}

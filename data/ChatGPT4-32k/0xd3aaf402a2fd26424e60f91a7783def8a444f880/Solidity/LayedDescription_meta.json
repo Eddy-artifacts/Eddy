@@ -1,0 +1,20 @@
+{
+	"address": "0xd3aaf402a2fd26424e60f91a7783def8a444f880",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 4673.0,
+	"prompt_tokens": 4056.0,
+	"completion_tokens": 617.0,
+	"time_cost": 49.13208055496216,
+	"gen_code": true,
+	"compilable": " \"sha3\" has been deprecated in favour of \"keccak256\"\t invalid type for argument in function call. invalid implicit conversion from int_const 2 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.\t operator + not compatible with types bytes32 and uint256\t \"sha3\" has been deprecated in favour of \"keccak256\"\t invalid type for argument in function call. invalid implicit conversion from int_const 2 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 12
+}

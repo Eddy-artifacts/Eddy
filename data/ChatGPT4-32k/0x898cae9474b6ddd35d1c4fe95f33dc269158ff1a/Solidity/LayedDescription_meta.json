@@ -1,0 +1,20 @@
+{
+	"address": "0x898cae9474b6ddd35d1c4fe95f33dc269158ff1a",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3384.0,
+	"prompt_tokens": 2531.0,
+	"completion_tokens": 853.0,
+	"time_cost": 37.4066162109375,
+	"gen_code": true,
+	"compilable": " type int_const 1062...(43 digits omitted)...3888 is not implicitly convertible to expected type address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 19
+}

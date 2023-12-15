@@ -1,0 +1,20 @@
+{
+	"address": "0x78d12fc8a093fd1164c6f408351763bb0e0cc812",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1847.0,
+	"prompt_tokens": 926.0,
+	"completion_tokens": 921.0,
+	"time_cost": 65.87461638450623,
+	"gen_code": true,
+	"compilable": " expected token comma got 'identifier'\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 11
+}

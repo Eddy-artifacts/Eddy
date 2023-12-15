@@ -1,0 +1,20 @@
+{
+	"address": "0x575cb87ab3c2329a0248c7d70e0ead8e57f3e3f7",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2252.0,
+	"prompt_tokens": 1452.0,
+	"completion_tokens": 800.0,
+	"time_cost": 29.054362058639526,
+	"gen_code": true,
+	"compilable": " member \"send\" not found or not visible after argument-dependent lookup in address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 20
+}

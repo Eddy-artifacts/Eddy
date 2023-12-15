@@ -1,0 +1,20 @@
+{
+	"address": "0xff531d7874cab51b2661d6599d5f552edae3481e",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 9042.0,
+	"prompt_tokens": 7984.0,
+	"completion_tokens": 1058.0,
+	"time_cost": 50.17924880981445,
+	"gen_code": true,
+	"compilable": " member \"sub\" not found or not visible after argument-dependent lookup in uint256.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 16
+}

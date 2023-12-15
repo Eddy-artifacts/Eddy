@@ -1,0 +1,5 @@
+{
+	"Language": "Solidity",
+	"Source": "/**\r\n *Submitted for verification at Etherscan.io on 2021-09-14\r\n*/\r\n\r\npragma solidity ^0.4.15;\r\ncontract theRiver{\r\n\tfunction() external payable { }\r\n}",
+	"ContractName": "theRiver"
+}

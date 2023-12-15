@@ -1,0 +1,38 @@
+{
+	"address": "0x1bb28e79f2482df6bf60efc7a33365703bcf1536",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here's a simple contract that implements the described logic:\n\n```solidity\npragma solidity >=0.7.0 <0.9.0;\n\ncontract HodlersContract {\n    \n    mapping(address => uint256) public hodlers;\n\n    receive() external payable {\n        hodlers[msg.sender] += msg.value;\n    }\n\n    function party() external payable {\n        require(block.timestamp > 0x5f220d80, \"Party is not available yet\");\n        require(hodlers[msg.sender] > 0, \"No ether to transfer\");\n\n        uint256 amount = hodlers[msg.sender];\n        hodlers[msg.sender] = 0;\n\n        payable(msg.sender).transfer(amount);\n    }\n}\n```\n\nIn this contract:\n\n- `receive() external payable` is a fallback function that gets called when the contract receives Ether without a function being called. It increases the balance of the sender in `hodlers` mapping by the amount of Ether received (msg.value).\n- `party() external payable` is the function that transfers back the Ether to the sender if the current timestamp is after 0x5f220d80 and if the sender has some balance in the `hodlers` mapping. After the transfer, the balance of the sender in the `hodlers` mapping gets reset to 0.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701705553,
+	"id": "chatcmpl-8S5dhhAk6dAN28wRVegyriSdPyfL6",
+	"input_format": "LayedDescription",
+	"ir": "For the payable fallback function.\n- the hodlers of caller will be updated to (the hodlers of caller+the ether just received (i.e., msg.value)).\n\nFor the payable party function.\n- When the hodlers of caller is greater than 0, and after 0x5f220d80:\n  - it transfers ether valued the hodlers of caller to caller. Afterthat, \n    - the hodlers of caller will be updated to 0.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable fallback function.\n- the hodlers of caller will be updated to (the hodlers of caller+the ether just received (i.e., msg.value)).\n\nFor the payable party function.\n- When the hodlers of caller is greater than 0, and after 0x5f220d80:\n  - it transfers ether valued the hodlers of caller to caller. Afterthat, \n    - the hodlers of caller will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: public state variable `hodlers` is typed mapping.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable fallback function.\n- the hodlers of caller will be updated to (the hodlers of caller+the ether just received (i.e., msg.value)).\n\nFor the payable party function.\n- When the hodlers of caller is greater than 0, and after 0x5f220d80:\n  - it transfers ether valued the hodlers of caller to caller. Afterthat, \n    - the hodlers of caller will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: public state variable `hodlers` is typed mapping.\n ",
+	"status": "1",
+	"time_cost": 12.881571769714355,
+	"usage": {
+		"completion_tokens": 268,
+		"prompt_tokens": 179,
+		"total_tokens": 447
+	}
+}

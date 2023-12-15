@@ -1,0 +1,38 @@
+{
+	"address": "0x97c28151617f7361ac7ebff5f7c864d39947e73f",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here's the Solidity contract code based on your description:\n\n```solidity\npragma solidity ^0.8.0;\n\ncontract InvestmentContract {\n    mapping(address => uint256) public invested;\n    mapping(address => uint256) public atblock;\n    address public investor;\n    uint256 public balance;\n\n    constructor() {\n        investor = msg.sender;\n    }\n\n    fallback() payable external {\n        atblock[msg.sender] = block.number;\n        invested[msg.sender] += msg.value;\n        balance += msg.value;\n        \n        if(invested[msg.sender] != 0){\n            uint256 amount = ((6 * invested[msg.sender]) / 100) * (block.number - atblock[msg.sender]) / 5900;\n            payable(msg.sender).transfer(amount);\n            atblock[msg.sender] = block.number;\n            invested[msg.sender] += msg.value;\n            balance += msg.value;\n        }\n    }\n\n    function approveInvestor(address _investor) public {\n        require(msg.sender == investor, \"Only current investor can approve new investor\");\n        investor = _investor;\n    }\n\n    function sendInvestor(address payable _investor, uint256 _amount) public payable {\n        require(msg.sender == investor, \"Only the investor can send funds\");\n        require(balance >= _amount, \"Insufficient balance\");\n        _investor.transfer(_amount);\n        balance -= _amount;\n    }\n}\n```\nPlease note that this is a very simple version of an investment contract, and it has no safety measures implemented, such as checking for overflows, requiring certain roles for actions, or limiting the amount that can be invested. For a real-world use case, it would need to be expanded significantly.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701721745,
+	"id": "chatcmpl-8S9qrfF7TzpKwBs8Jp5JJS8SSP2gt",
+	"input_format": "LayedDescription",
+	"ir": "For the constructor function.\n- the state variable investor will be updated to caller.\n\nFor the payable fallback function.\n- the atblock of caller will be updated to the current block's number.\n- the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n- the state variable balance will be updated to (the ether just received (i.e., msg.value)+balance).\n- When the invested of caller is not 0:\n  - it transfers ether valued ((((6*the invested of caller)/100)*(the current block's number-the atblock of caller))/5900) to caller. Afterthat, \n    - the atblock of caller will be updated to the current block's number.\n    - the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n  - the state variable balance will be updated to (the ether just received (i.e., msg.value)+balance).\n\nFor the approveInvestor function, it has one argument and its type is address.\n- For investor:\n  - the state variable investor will be updated to the first argument.\n\nFor the payable sendInvestor function, it has 2 arguments and the type of each argument is as follows: address, uint256.\n- For investor:\n  - it transfers ether valued the second argument to the first argument.\n  - the state variable balance will be updated to (balance-the second argument).\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the constructor function.\n- the state variable investor will be updated to caller.\n\nFor the payable fallback function.\n- the atblock of caller will be updated to the current block's number.\n- the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n- the state variable balance will be updated to (the ether just received (i.e., msg.value)+balance).\n- When the invested of caller is not 0:\n  - it transfers ether valued ((((6*the invested of caller)/100)*(the current block's number-the atblock of caller))/5900) to caller. Afterthat, \n    - the atblock of caller will be updated to the current block's number.\n    - the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n  - the state variable balance will be updated to (the ether just received (i.e., msg.value)+balance).\n\nFor the approveInvestor function, it has one argument and its type is address.\n- For investor:\n  - the state variable investor will be updated to the first argument.\n\nFor the payable sendInvestor function, it has 2 arguments and the type of each argument is as follows: address, uint256.\n- For investor:\n  - it transfers ether valued the second argument to the first argument.\n  - the state variable balance will be updated to (balance-the second argument).\n\n.\n Here are some state variables with their corresponding types: public state variable `invested` is typed mapping,public state variable `atblock` is typed mapping,public state variable `investor` is typed address,public state variable `balance` is typed uint256.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the constructor function.\n- the state variable investor will be updated to caller.\n\nFor the payable fallback function.\n- the atblock of caller will be updated to the current block's number.\n- the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n- the state variable balance will be updated to (the ether just received (i.e., msg.value)+balance).\n- When the invested of caller is not 0:\n  - it transfers ether valued ((((6*the invested of caller)/100)*(the current block's number-the atblock of caller))/5900) to caller. Afterthat, \n    - the atblock of caller will be updated to the current block's number.\n    - the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n  - the state variable balance will be updated to (the ether just received (i.e., msg.value)+balance).\n\nFor the approveInvestor function, it has one argument and its type is address.\n- For investor:\n  - the state variable investor will be updated to the first argument.\n\nFor the payable sendInvestor function, it has 2 arguments and the type of each argument is as follows: address, uint256.\n- For investor:\n  - it transfers ether valued the second argument to the first argument.\n  - the state variable balance will be updated to (balance-the second argument).\n\n.\n Here are some state variables with their corresponding types: public state variable `invested` is typed mapping,public state variable `atblock` is typed mapping,public state variable `investor` is typed address,public state variable `balance` is typed uint256.\n ",
+	"status": "1",
+	"time_cost": 15.776480913162231,
+	"usage": {
+		"completion_tokens": 346,
+		"prompt_tokens": 414,
+		"total_tokens": 760
+	}
+}

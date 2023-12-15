@@ -1,0 +1,20 @@
+{
+	"address": "0x3612d93f91c8fdb5f158a7c35dd7f87c63ad3f9b",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1675.0,
+	"prompt_tokens": 1036.0,
+	"completion_tokens": 639.0,
+	"time_cost": 34.48330354690552,
+	"gen_code": true,
+	"compilable": " operator / not compatible with types address payable and int_const 16. arithmetic operations on addresses are not supported. convert to integer first before using them.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 11
+}

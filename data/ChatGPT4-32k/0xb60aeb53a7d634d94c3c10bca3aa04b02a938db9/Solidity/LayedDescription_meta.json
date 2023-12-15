@@ -1,0 +1,20 @@
+{
+	"address": "0xb60aeb53a7d634d94c3c10bca3aa04b02a938db9",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2842.0,
+	"prompt_tokens": 1559.0,
+	"completion_tokens": 1283.0,
+	"time_cost": 63.92918062210083,
+	"gen_code": true,
+	"compilable": " cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t wrong argument count for function call: 11 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 11 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 2 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 4 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 10 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 11 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 10
+}

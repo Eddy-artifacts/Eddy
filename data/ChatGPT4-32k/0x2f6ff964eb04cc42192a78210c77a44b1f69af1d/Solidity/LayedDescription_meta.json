@@ -1,0 +1,20 @@
+{
+	"address": "0x2f6ff964eb04cc42192a78210c77a44b1f69af1d",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1.0",
+	"token_exceeded": false,
+	"n_tokens": 3621.0,
+	"prompt_tokens": 3260.0,
+	"completion_tokens": 361.0,
+	"time_cost": 17.32853937149048,
+	"gen_code": true,
+	"compilable": " operator == not compatible with types uint256 and address\t explicit type conversion not allowed from \"bool\" to \"uint256\".\t explicit type conversion not allowed from \"bool\" to \"uint256\".\t explicit type conversion not allowed from \"bool\" to \"uint256\".\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 31
+}

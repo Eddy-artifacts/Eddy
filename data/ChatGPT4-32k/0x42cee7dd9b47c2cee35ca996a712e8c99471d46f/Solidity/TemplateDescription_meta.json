@@ -1,0 +1,20 @@
+{
+	"address": "0x42cee7dd9b47c2cee35ca996a712e8c99471d46f",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 4237.0,
+	"prompt_tokens": 3370.0,
+	"completion_tokens": 867.0,
+	"time_cost": 41.39814114570618,
+	"gen_code": true,
+	"compilable": " type bool is not implicitly convertible to expected type uint8.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 17
+}

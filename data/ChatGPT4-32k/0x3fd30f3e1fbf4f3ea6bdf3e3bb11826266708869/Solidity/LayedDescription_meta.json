@@ -1,0 +1,20 @@
+{
+	"address": "0x3fd30f3e1fbf4f3ea6bdf3e3bb11826266708869",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3152.0,
+	"prompt_tokens": 2407.0,
+	"completion_tokens": 745.0,
+	"time_cost": 44.24550724029541,
+	"gen_code": true,
+	"compilable": " source \"./data/results/0-responses/rerun/description/eval_result_description_v1101_1/description_v1101_1/0x3fd30f3e1fbf4f3ea6bdf3e3bb11826266708869/solidity/layeddescription/erc20.sol\" not found: file not found.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 17
+}

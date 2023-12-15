@@ -1,0 +1,38 @@
+{
+	"address": "0x17e5e0910b9185b0ede564dcbf074ca910ad56a4",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Sure, based on your description, the Solidity contract code could look like this:\n\n```solidity\npragma solidity ^0.8.0;\n\ncontract YourContract {\n    // State variables\n    bytes32 public s_0;\n    bytes32 public s_1;\n\n    // Payable Constructor\n    constructor() payable {\n        s_0 = 0x381c185bf75548b134adc3affd0cc13e66b16feb125486322fa5f47cb80a5bf0;\n        s_1 = 0x5f9d1d2152eae0513a4814bd8e6b0dd3ac8f6310c0494c03e9aa08bcd867c352;\n    }\n}\n```\n\nIn this code, we have a Solidity contract named `YourContract` with two state variables `s_0` and `s_1` of type `bytes32` which are public. In the payable constructor, these state variables are assigned the values as per the description. Note that as of Solidity 0.8.0, the `payable` keyword for constructors has been removed as constructors can no longer receive Ether.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1702483144,
+	"id": "chatcmpl-8VLvU7xFCRDlW05Opa3H9cK1cXHJE",
+	"input_format": "LayedDescription",
+	"ir": "For the payable constructor function.\n- the state variable s_0 will be updated to 0x381c185bf75548b134adc3affd0cc13e66b16feb125486322fa5f47cb80a5bf0.\n- the state variable s_1 will be updated to 0x5f9d1d2152eae0513a4814bd8e6b0dd3ac8f6310c0494c03e9aa08bcd867c352.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable constructor function.\n- the state variable s_0 will be updated to 0x381c185bf75548b134adc3affd0cc13e66b16feb125486322fa5f47cb80a5bf0.\n- the state variable s_1 will be updated to 0x5f9d1d2152eae0513a4814bd8e6b0dd3ac8f6310c0494c03e9aa08bcd867c352.\n\n.\n Here are some state variables with their corresponding types: .\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable constructor function.\n- the state variable s_0 will be updated to 0x381c185bf75548b134adc3affd0cc13e66b16feb125486322fa5f47cb80a5bf0.\n- the state variable s_1 will be updated to 0x5f9d1d2152eae0513a4814bd8e6b0dd3ac8f6310c0494c03e9aa08bcd867c352.\n\n.\n Here are some state variables with their corresponding types: .\n ",
+	"status": "1",
+	"time_cost": 10.981581687927246,
+	"usage": {
+		"completion_tokens": 252,
+		"prompt_tokens": 181,
+		"total_tokens": 433
+	}
+}

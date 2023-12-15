@@ -1,0 +1,20 @@
+{
+	"address": "0xa8e35a8667b88e73e17cd1337b17f04167234e41",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2476.0,
+	"prompt_tokens": 1762.0,
+	"completion_tokens": 714.0,
+	"time_cost": 36.30973434448242,
+	"gen_code": true,
+	"compilable": " undeclared identifier. did you mean \"token\"?\t undeclared identifier. did you mean \"authorize\"?\t undeclared identifier. did you mean \"token\"?\t undeclared identifier. did you mean \"token\"?\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 13
+}

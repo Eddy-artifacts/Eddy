@@ -1,0 +1,38 @@
+{
+	"address": "0xbba2e3845b3407dc3b3a5b2eeb90a9a203068b6d",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here is the Solidity contract code that follows the contract logic you described:\n\n```solidity\npragma solidity ^0.6.12;\n\ncontract MyContract {\n    mapping(address => uint256) public balanceof;\n    mapping(address => uint256) public withdraws;\n    uint256 private totalSupply;\n\n    constructor() public {\n        totalSupply = 0;\n    }\n\n    receive() external payable {\n        totalSupply = msg.value + totalSupply;\n    }\n\n    function withdraw() public {\n        require(balanceof[msg.sender] > 0, \"Balance must be more than 0\");\n        uint256 amount = (balanceof[msg.sender]*totalSupply)/10000;\n        require(amount > withdraws[msg.sender], \"Withdraw amount is not enough\");\n        uint256 withdrawAmount = amount - withdraws[msg.sender];\n        msg.sender.transfer(withdrawAmount);\n        withdraws[msg.sender] = withdrawAmount + withdraws[msg.sender];\n    }\n\n    function changeWallet(address _newWallet) public {\n        require(_newWallet != address(0), \"New wallet address must not be zero\");\n        require(balanceof[msg.sender] > 0, \"Balance must be more than 0\");\n        balanceof[_newWallet] = balanceof[msg.sender];\n        balanceof[msg.sender] = 0;\n        withdraws[_newWallet] = withdraws[msg.sender];\n        withdraws[msg.sender] = 0;\n    }\n}\n```\n\nPlease note that Solidity is case sensitive, and make sure to keep this in mind when you're referencing variables or functions. For example, `balanceof` and `balanceOf` would be two different variables.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701708896,
+	"id": "chatcmpl-8S6VcVDzaTeeZtGBuxgQBVedyilZW",
+	"input_format": "LayedDescription",
+	"ir": "For the payable fallback function.\n- the state variable totalSupply will be updated to (the ether just received (i.e., msg.value)+totalSupply).\n\nFor the withdraw function.\n- When ((the balance of caller*totalSupply)/10000) is not 0, and the balance of caller is not 0, and ((the balance of caller*totalSupply)/10000) is greater than the withdraws of caller:\n  - it transfers ether valued (((the balance of caller*totalSupply)/10000)-the withdraws of caller) to caller. Afterthat, \n    - the withdraws of caller will be updated to ((((the balance of caller*totalSupply)/10000)-the withdraws of caller)+the withdraws of caller).\n\nFor the changeWallet function, it has one argument and its type is address.\n- When the first argument is not 0, and the balance of caller is not 0:\n  - the balance of caller will be updated to the balance of the first argument. Afterthat, \n    - the balance of caller will be updated to the balance of caller.\n  - the withdraws of the first argument will be updated to the withdraws of caller. Afterthat, \n    - the withdraws of caller will be updated to 0.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable fallback function.\n- the state variable totalSupply will be updated to (the ether just received (i.e., msg.value)+totalSupply).\n\nFor the withdraw function.\n- When ((the balance of caller*totalSupply)/10000) is not 0, and the balance of caller is not 0, and ((the balance of caller*totalSupply)/10000) is greater than the withdraws of caller:\n  - it transfers ether valued (((the balance of caller*totalSupply)/10000)-the withdraws of caller) to caller. Afterthat, \n    - the withdraws of caller will be updated to ((((the balance of caller*totalSupply)/10000)-the withdraws of caller)+the withdraws of caller).\n\nFor the changeWallet function, it has one argument and its type is address.\n- When the first argument is not 0, and the balance of caller is not 0:\n  - the balance of caller will be updated to the balance of the first argument. Afterthat, \n    - the balance of caller will be updated to the balance of caller.\n  - the withdraws of the first argument will be updated to the withdraws of caller. Afterthat, \n    - the withdraws of caller will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: public state variable `balanceof` is typed mapping,public state variable `withdraws` is typed mapping,private state variable `totalSupply` is typed uint256.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable fallback function.\n- the state variable totalSupply will be updated to (the ether just received (i.e., msg.value)+totalSupply).\n\nFor the withdraw function.\n- When ((the balance of caller*totalSupply)/10000) is not 0, and the balance of caller is not 0, and ((the balance of caller*totalSupply)/10000) is greater than the withdraws of caller:\n  - it transfers ether valued (((the balance of caller*totalSupply)/10000)-the withdraws of caller) to caller. Afterthat, \n    - the withdraws of caller will be updated to ((((the balance of caller*totalSupply)/10000)-the withdraws of caller)+the withdraws of caller).\n\nFor the changeWallet function, it has one argument and its type is address.\n- When the first argument is not 0, and the balance of caller is not 0:\n  - the balance of caller will be updated to the balance of the first argument. Afterthat, \n    - the balance of caller will be updated to the balance of caller.\n  - the withdraws of the first argument will be updated to the withdraws of caller. Afterthat, \n    - the withdraws of caller will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: public state variable `balanceof` is typed mapping,public state variable `withdraws` is typed mapping,private state variable `totalSupply` is typed uint256.\n ",
+	"status": "1",
+	"time_cost": 21.367680549621582,
+	"usage": {
+		"completion_tokens": 334,
+		"prompt_tokens": 365,
+		"total_tokens": 699
+	}
+}

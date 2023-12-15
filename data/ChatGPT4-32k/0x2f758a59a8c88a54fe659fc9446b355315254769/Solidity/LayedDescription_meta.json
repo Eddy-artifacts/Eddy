@@ -1,0 +1,20 @@
+{
+	"address": "0x2f758a59a8c88a54fe659fc9446b355315254769",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1487.0,
+	"prompt_tokens": 792.0,
+	"completion_tokens": 695.0,
+	"time_cost": 43.14883351325989,
+	"gen_code": true,
+	"compilable": " operator * not compatible with types uint256 and rational_const 1 / 2\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 6
+}

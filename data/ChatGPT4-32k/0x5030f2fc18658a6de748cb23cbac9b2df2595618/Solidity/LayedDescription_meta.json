@@ -1,0 +1,20 @@
+{
+	"address": "0x5030f2fc18658a6de748cb23cbac9b2df2595618",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 921.0,
+	"prompt_tokens": 494.0,
+	"completion_tokens": 427.0,
+	"time_cost": 19.20110583305359,
+	"gen_code": true,
+	"compilable": " wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t \"send\" and \"transfer\" are only available for objects of type \"address payable\", not \"address\".\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 10
+}

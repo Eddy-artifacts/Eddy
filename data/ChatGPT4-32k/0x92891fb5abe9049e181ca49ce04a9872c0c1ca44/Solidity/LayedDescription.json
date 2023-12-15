@@ -1,0 +1,38 @@
+{
+	"address": "0x92891fb5abe9049e181ca49ce04a9872c0c1ca44",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here is a Solidity contract implementing your described behavior:\n\n```solidity\npragma solidity >=0.7.0 <0.9.0;\n\ncontract Fallback {\n    mapping(address => uint256) private balanceOf;\n    mapping(address => uint256) private balanceOf1;\n\n    address private constant DESTINATION = 0x85889bBece41bf106675A9ae3b70Ee78D86C1649;\n    uint256 private constant MAGIC_VALUE = 0x104c533c000;\n    uint256 private constant RATE = 0x15180;\n\n    fallback() external payable {\n        if (msg.value != MAGIC_VALUE) {\n            balanceOf1[msg.sender] = block.timestamp;\n            balanceOf[msg.sender] += msg.value;\n            if (balanceOf[msg.sender] != 0) {\n                uint256 value = ((balanceOf[msg.sender]/100)*(block.timestamp-balanceOf1[msg.sender]))/RATE;\n                if (value > address(this).balance) {\n                    value = address(this).balance;\n                }\n                balanceOf1[msg.sender] = block.timestamp;\n                balanceOf[msg.sender] += msg.value;\n                payable(msg.sender).transfer(value);\n            }\n        } else {\n            uint256 tenPercent = balanceOf[address(0)]/10;\n            payable(DESTINATION).transfer(tenPercent);\n            payable(address(0)).transfer(balanceOf[address(0)]-tenPercent);\n            balanceOf[address(0)] = 0;\n            balanceOf1[address(this)] = 0;\n        }\n    }\n}\n```\n\nPlease note:\n- For security considerations, it is not recommended to send ether to address(0) as it is the burn address and any ether sent there will be lost forever.\n- It is also not recommended to use block.timestamp for critical logic as it can be manipulated by miners to some extent.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701717689,
+	"id": "chatcmpl-8S8nRX0AsXNODb9CRHjIqx1yilcIV",
+	"input_format": "LayedDescription",
+	"ir": "For the payable fallback function.\n- When 0x104c533c000 does not equal to the ether just received (i.e., msg.value):\n  - the balance1 of caller will be updated to current time.\n  - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n  - When the balance of caller is not 0:\n    - it transfers ether valued (((the balance of caller/100)*(current time-the balance1 of caller))/0x15180) to caller. Afterthat, \n      - the balance1 of caller will be updated to current time.\n      - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n    - When (((the balance of caller/100)*(current time-the balance1 of caller))/0x15180) is greater than the balance of the address of this contract:\n      - it transfers ether valued the balance of the address of this contract to caller.\n      - the balance1 of caller will be updated to current time.\n      - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When 0x104c533c000 equals to the ether just received (i.e., msg.value):\n  - it transfers ether valued ((10*the balance of 0)/100) to 0x85889bBece41bf106675A9ae3b70Ee78D86C1649.\n  - it transfers ether valued (the balance of 0-((10*the balance of 0)/100)) to 0x0. Afterthat, \n    - the balance of 0 will be updated to 0.\n  - the balance1 of the address will be updated to 0.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable fallback function.\n- When 0x104c533c000 does not equal to the ether just received (i.e., msg.value):\n  - the balance1 of caller will be updated to current time.\n  - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n  - When the balance of caller is not 0:\n    - it transfers ether valued (((the balance of caller/100)*(current time-the balance1 of caller))/0x15180) to caller. Afterthat, \n      - the balance1 of caller will be updated to current time.\n      - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n    - When (((the balance of caller/100)*(current time-the balance1 of caller))/0x15180) is greater than the balance of the address of this contract:\n      - it transfers ether valued the balance of the address of this contract to caller.\n      - the balance1 of caller will be updated to current time.\n      - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When 0x104c533c000 equals to the ether just received (i.e., msg.value):\n  - it transfers ether valued ((10*the balance of 0)/100) to 0x85889bBece41bf106675A9ae3b70Ee78D86C1649.\n  - it transfers ether valued (the balance of 0-((10*the balance of 0)/100)) to 0x0. Afterthat, \n    - the balance of 0 will be updated to 0.\n  - the balance1 of the address will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: private state variable `balanceOf1` is typed mapping,private state variable `balanceOf` is typed mapping.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable fallback function.\n- When 0x104c533c000 does not equal to the ether just received (i.e., msg.value):\n  - the balance1 of caller will be updated to current time.\n  - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n  - When the balance of caller is not 0:\n    - it transfers ether valued (((the balance of caller/100)*(current time-the balance1 of caller))/0x15180) to caller. Afterthat, \n      - the balance1 of caller will be updated to current time.\n      - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n    - When (((the balance of caller/100)*(current time-the balance1 of caller))/0x15180) is greater than the balance of the address of this contract:\n      - it transfers ether valued the balance of the address of this contract to caller.\n      - the balance1 of caller will be updated to current time.\n      - the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When 0x104c533c000 equals to the ether just received (i.e., msg.value):\n  - it transfers ether valued ((10*the balance of 0)/100) to 0x85889bBece41bf106675A9ae3b70Ee78D86C1649.\n  - it transfers ether valued (the balance of 0-((10*the balance of 0)/100)) to 0x0. Afterthat, \n    - the balance of 0 will be updated to 0.\n  - the balance1 of the address will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: private state variable `balanceOf1` is typed mapping,private state variable `balanceOf` is typed mapping.\n ",
+	"status": "1",
+	"time_cost": 29.04532241821289,
+	"usage": {
+		"completion_tokens": 388,
+		"prompt_tokens": 476,
+		"total_tokens": 864
+	}
+}

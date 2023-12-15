@@ -1,0 +1,20 @@
+{
+	"address": "0x94a0e43dc68948b28421d94596240c605cd638b9",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1473.0,
+	"prompt_tokens": 866.0,
+	"completion_tokens": 607.0,
+	"time_cost": 30.47619223594665,
+	"gen_code": true,
+	"compilable": " operator << not compatible with types int_const 96 and address payable\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t member \"transfer\" not found or not visible after argument-dependent lookup in address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 13
+}

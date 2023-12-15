@@ -1,0 +1,20 @@
+{
+	"address": "0xc699d90671cb8373f21060592d41a7c92280adc4",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 5418.0,
+	"prompt_tokens": 4591.0,
+	"completion_tokens": 827.0,
+	"time_cost": 45.61980032920837,
+	"gen_code": true,
+	"compilable": " fallback function must be defined as \"external\".\t \"send\" and \"transfer\" are only available for objects of type \"address payable\", not \"address\".\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 18
+}

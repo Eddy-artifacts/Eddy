@@ -1,0 +1,20 @@
+{
+	"address": "0x40117c4f66e9a7e3058558e6ffe4232e1a896c6a",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 8514.0,
+	"prompt_tokens": 7720.0,
+	"completion_tokens": 794.0,
+	"time_cost": 47.56854009628296,
+	"gen_code": true,
+	"compilable": " operator + not compatible with types bytes32 and uint256\t operator + not compatible with types bytes32 and uint256\t operator + not compatible with types bytes32 and uint256\t operator <= not compatible with types bytes32 and uint256\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 12
+}

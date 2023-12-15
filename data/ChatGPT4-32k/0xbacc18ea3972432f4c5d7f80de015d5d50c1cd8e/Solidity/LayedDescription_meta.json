@@ -1,0 +1,20 @@
+{
+	"address": "0xbacc18ea3972432f4c5d7f80de015d5d50c1cd8e",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1414.0,
+	"prompt_tokens": 779.0,
+	"completion_tokens": 635.0,
+	"time_cost": 50.47641181945801,
+	"gen_code": true,
+	"compilable": " this looks like an address but has an invalid checksum. correct checksummed address: \"0x2beae7bde74018968d55b463fc6f5cbf0d5cc4a9\". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals\t this looks like an address but has an invalid checksum. correct checksummed address: \"0x2beae7bde74018968d55b463fc6f5cbf0d5cc4a9\". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals\t this looks like an address but has an invalid checksum. correct checksummed address: \"0x2beae7bde74018968d55b463fc6f5cbf0d5cc4a9\". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals\t this looks like an address but has an invalid checksum. correct checksummed address: \"0x2beae7bde74018968d55b463fc6f5cbf0d5cc4a9\". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals\t this looks like an address but has an invalid checksum. correct checksummed address: \"0x2beae7bde74018968d55b463fc6f5cbf0d5cc4a9\". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 7
+}

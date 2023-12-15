@@ -1,0 +1,38 @@
+{
+	"address": "0xa05fef8806f83a732df491235f195355a004a1dc",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Below is a Solidity smart contract code based on the decompiled EVM Bytecode:\n\n```solidity\npragma solidity ^0.8.17;\n\ncontract MyContract {\n    address private _fallback;\n\n    fallback() external payable {\n        (bool success,) = _fallback.delegatecall(msg.data);\n        require(success, \"Delegate call failed\");\n    }\n\n    function implementation() public view returns (address) {\n        return _fallback;\n    }\n\n    function __function_selector__(bytes4 function_selector) public payable {\n        if (msg.data.length < 4) {\n            if (msg.data.length == 0) {\n                revert();\n            }\n        } else if (function_selector >> 224 == 0x5c60da1b) {\n            implementation();\n        }\n        (bool success,) = _fallback.delegatecall(msg.data);\n        require(success, \"Delegate call failed\");\n    }\n}\n```\nPlease note that this is a simplified version of the decompiled code and some features might not be 100% accurately represented. For example, the memory operations in the original decompiled code are not translated because Solidity manages memory automatically.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701486419,
+	"id": "chatcmpl-8RAdHpr8IeYDTk8zyhrwWfOpppX0E",
+	"input_format": "DecompiledCode",
+	"ir": "// Decompiled by library.dedaub.com\n// 2023.11.20 18:41 UTC\n// Compiled using the solidity compiler version 0.8.17\n\n\n// Data structures and variables inferred from the use of storage instructions\nuint256 _fallback; // STORAGE[0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc] bytes 0 to 19\n\n\n\nfunction () public payable { \n    CALLDATACOPY(0, 0, msg.data.length);\n    v0 = _fallback.delegatecall(MEM[0 len msg.data.length], MEM[0 len 0]).gas(msg.gas);\n    require(v0, 0, RETURNDATASIZE()); // checks call status, propagates error data on error\n    return MEM[0 len (RETURNDATASIZE())];\n}\n\nfunction implementation() public nonPayable { \n    return _fallback;\n}\n\n// Note: The function selector is not present in the original solidity code.\n// However, we display it for the sake of completeness.\n\nfunction __function_selector__(bytes4 function_selector) public payable { \n    MEM[64] = 128;\n    if (msg.data.length < 4) {\n        if (!msg.data.length) {\n            ();\n        }\n    } else if (0x5c60da1b == function_selector >> 224) {\n        implementation();\n    }\n    CALLDATACOPY(0, 0, msg.data.length);\n    v0 = _fallback.delegatecall(MEM[0 len msg.data.length], MEM[0 len 0]).gas(msg.gas);\n    require(v0, 0, RETURNDATASIZE()); // checks call status, propagates error data on error\n    return MEM[0 len (RETURNDATASIZE())];\n}\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following decompiled code lifted from EVM Bytecode.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the decompiled code: // Decompiled by library.dedaub.com\n// 2023.11.20 18:41 UTC\n// Compiled using the solidity compiler version 0.8.17\n\n\n// Data structures and variables inferred from the use of storage instructions\nuint256 _fallback; // STORAGE[0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc] bytes 0 to 19\n\n\n\nfunction () public payable { \n    CALLDATACOPY(0, 0, msg.data.length);\n    v0 = _fallback.delegatecall(MEM[0 len msg.data.length], MEM[0 len 0]).gas(msg.gas);\n    require(v0, 0, RETURNDATASIZE()); // checks call status, propagates error data on error\n    return MEM[0 len (RETURNDATASIZE())];\n}\n\nfunction implementation() public nonPayable { \n    return _fallback;\n}\n\n// Note: The function selector is not present in the original solidity code.\n// However, we display it for the sake of completeness.\n\nfunction __function_selector__(bytes4 function_selector) public payable { \n    MEM[64] = 128;\n    if (msg.data.length < 4) {\n        if (!msg.data.length) {\n            ();\n        }\n    } else if (0x5c60da1b == function_selector >> 224) {\n        implementation();\n    }\n    CALLDATACOPY(0, 0, msg.data.length);\n    v0 = _fallback.delegatecall(MEM[0 len msg.data.length], MEM[0 len 0]).gas(msg.gas);\n    require(v0, 0, RETURNDATASIZE()); // checks call status, propagates error data on error\n    return MEM[0 len (RETURNDATASIZE())];\n}\n.",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following decompiled code lifted from EVM Bytecode.The following is the decompiled code: // Decompiled by library.dedaub.com\n// 2023.11.20 18:41 UTC\n// Compiled using the solidity compiler version 0.8.17\n\n\n// Data structures and variables inferred from the use of storage instructions\nuint256 _fallback; // STORAGE[0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc] bytes 0 to 19\n\n\n\nfunction () public payable { \n    CALLDATACOPY(0, 0, msg.data.length);\n    v0 = _fallback.delegatecall(MEM[0 len msg.data.length], MEM[0 len 0]).gas(msg.gas);\n    require(v0, 0, RETURNDATASIZE()); // checks call status, propagates error data on error\n    return MEM[0 len (RETURNDATASIZE())];\n}\n\nfunction implementation() public nonPayable { \n    return _fallback;\n}\n\n// Note: The function selector is not present in the original solidity code.\n// However, we display it for the sake of completeness.\n\nfunction __function_selector__(bytes4 function_selector) public payable { \n    MEM[64] = 128;\n    if (msg.data.length < 4) {\n        if (!msg.data.length) {\n            ();\n        }\n    } else if (0x5c60da1b == function_selector >> 224) {\n        implementation();\n    }\n    CALLDATACOPY(0, 0, msg.data.length);\n    v0 = _fallback.delegatecall(MEM[0 len msg.data.length], MEM[0 len 0]).gas(msg.gas);\n    require(v0, 0, RETURNDATASIZE()); // checks call status, propagates error data on error\n    return MEM[0 len (RETURNDATASIZE())];\n}\n.",
+	"status": "1",
+	"time_cost": 7.658990144729614,
+	"usage": {
+		"completion_tokens": 231,
+		"prompt_tokens": 449,
+		"total_tokens": 680
+	}
+}

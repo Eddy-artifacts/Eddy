@@ -1,0 +1,20 @@
+{
+	"address": "0xf4f8ab8c5db70c8aa8fe22fd8a86505125ef2b3e",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 7198.0,
+	"prompt_tokens": 6302.0,
+	"completion_tokens": 896.0,
+	"time_cost": 82.3661539554596,
+	"gen_code": true,
+	"compilable": " undeclared identifier. did you mean \"tokenpereth\"?\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 21
+}

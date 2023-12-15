@@ -1,0 +1,20 @@
+{
+	"address": "0xf08f56e84c86f37022030d7103fde0365338688f",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 8958.0,
+	"prompt_tokens": 8098.0,
+	"completion_tokens": 860.0,
+	"time_cost": 53.89299535751343,
+	"gen_code": true,
+	"compilable": " cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 12
+}

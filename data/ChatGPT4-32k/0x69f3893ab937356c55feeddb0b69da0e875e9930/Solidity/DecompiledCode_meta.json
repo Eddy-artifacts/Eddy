@@ -1,0 +1,20 @@
+{
+	"address": "0x69f3893ab937356c55feeddb0b69da0e875e9930",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2120.0,
+	"prompt_tokens": 1414.0,
+	"completion_tokens": 706.0,
+	"time_cost": 26.73706960678101,
+	"gen_code": true,
+	"compilable": " member \"getreturn\" not found or not visible after argument-dependent lookup in address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 1
+}

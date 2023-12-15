@@ -1,0 +1,20 @@
+{
+	"address": "0x675f070e80f89ddcc3f2457d9fe571814741e904",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 8850.0,
+	"prompt_tokens": 7698.0,
+	"completion_tokens": 1152.0,
+	"time_cost": 96.34751534461977,
+	"gen_code": true,
+	"compilable": " undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t undeclared identifier.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 17
+}

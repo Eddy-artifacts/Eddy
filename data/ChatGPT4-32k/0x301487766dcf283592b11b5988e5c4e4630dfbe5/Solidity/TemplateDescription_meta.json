@@ -1,0 +1,20 @@
+{
+	"address": "0x301487766dcf283592b11b5988e5c4e4630dfbe5",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3273.0,
+	"prompt_tokens": 2042.0,
+	"completion_tokens": 1231.0,
+	"time_cost": 66.44505381584167,
+	"gen_code": true,
+	"compilable": " type address payable is not implicitly convertible to expected type bytes32.\t indexed expression has to be a type, mapping or array (is uint256)\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 30
+}

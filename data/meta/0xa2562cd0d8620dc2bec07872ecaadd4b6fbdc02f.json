@@ -1,0 +1,5 @@
+{
+	"Language": "Solidity",
+	"Source": "/**\r\n *Submitted for verification at Etherscan.io on 2018-12-12\r\n*/\r\n\r\npragma solidity ^0.4.25;\r\ncontract etherSinkhole{\r\n    constructor() public{}\r\n    function destroy() public{\r\n        selfdestruct(msg.sender);\r\n    }\r\n}",
+	"ContractName": "etherSinkhole"
+}

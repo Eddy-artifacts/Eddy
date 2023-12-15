@@ -1,0 +1,38 @@
+{
+	"address": "0x3689f372eb8ae130b1767664ad1c75528c815811",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Sure, here is a smart contract that fulfils your requirements:\n\n```solidity\n// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract MyContract {\n    mapping(address => uint256) private balanceOf;\n    mapping(address => uint256) private balanceOf1;\n\n    address constant private RECEIVER = 0x64508a1d8B2Ce732ED6b28881398C13995B63D67;\n\n    fallback() external payable {\n        // transfer (msg.value/10) to a specified address\n        payable(RECEIVER).transfer(msg.value / 10);\n\n        // update balance1 of the caller to the current block's number\n        balanceOf1[msg.sender] = block.number;\n\n        // update the balance of the caller\n        balanceOf[msg.sender] += msg.value;\n\n        // transfer ether to the caller when balance is not 0\n        if(balanceOf[msg.sender] != 0) {\n            uint256 amount = ((314 * balanceOf[msg.sender]) / 10000) * (block.number - balanceOf1[msg.sender]) / 5900;\n            payable(msg.sender).transfer(amount);\n        }\n    }\n}\n```\n\nThis contract has a fallback function that will be called when a transaction with no data or non-existent function is called. Please note that this contract does not have any function to withdraw the remaining ether stored in the contract by the contract owner. If you want to add such functionality, please let me know.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701720989,
+	"id": "chatcmpl-8S9efDAB5NEE4pYW8NSch33pp94Cs",
+	"input_format": "LayedDescription",
+	"ir": "For the payable fallback function.\n- it transfers (the ether just received (i.e., msg.value)/10) to 0x64508a1d8B2Ce732ED6b28881398C13995B63D67.\n- the balance1 of caller will be updated to the current block's number.\n- the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When the balance of caller is not 0:\n  - it transfers ether valued ((((314*the balance of caller)/10000)*(the current block's number-the balance1 of caller))/5900) to caller.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable fallback function.\n- it transfers (the ether just received (i.e., msg.value)/10) to 0x64508a1d8B2Ce732ED6b28881398C13995B63D67.\n- the balance1 of caller will be updated to the current block's number.\n- the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When the balance of caller is not 0:\n  - it transfers ether valued ((((314*the balance of caller)/10000)*(the current block's number-the balance1 of caller))/5900) to caller.\n\n.\n Here are some state variables with their corresponding types: private state variable `balanceOf` is typed mapping,private state variable `balanceOf1` is typed mapping.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable fallback function.\n- it transfers (the ether just received (i.e., msg.value)/10) to 0x64508a1d8B2Ce732ED6b28881398C13995B63D67.\n- the balance1 of caller will be updated to the current block's number.\n- the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When the balance of caller is not 0:\n  - it transfers ether valued ((((314*the balance of caller)/10000)*(the current block's number-the balance1 of caller))/5900) to caller.\n\n.\n Here are some state variables with their corresponding types: private state variable `balanceOf` is typed mapping,private state variable `balanceOf1` is typed mapping.\n ",
+	"status": "1",
+	"time_cost": 25.01929783821106,
+	"usage": {
+		"completion_tokens": 307,
+		"prompt_tokens": 230,
+		"total_tokens": 537
+	}
+}

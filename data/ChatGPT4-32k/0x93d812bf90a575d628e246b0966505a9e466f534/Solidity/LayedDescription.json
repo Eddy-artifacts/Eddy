@@ -1,0 +1,38 @@
+{
+	"address": "0x93d812bf90a575d628e246b0966505a9e466f534",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here is a Solidity contract based on your requirements:\n\n```solidity\npragma solidity >=0.7.0 <0.9.0;\n\ncontract MyContract {\n    uint8 public state;\n    address payable public wallet;\n    address public owner;\n    mapping(address => uint256) public deposited;\n\n    constructor(address payable _wallet) {\n        owner = msg.sender;\n        wallet = _wallet;\n        state = 0;\n    }\n\n    modifier onlyOwner() {\n        require(msg.sender == owner);\n        _;\n    }\n\n    function close() public onlyOwner {\n        require(state <= 2 && state == 0);\n        state = 2;\n        wallet.transfer(address(this).balance);\n    }\n\n    function enableRefunds() public onlyOwner {\n        require(state == 0 && state <= 2);\n        state = 1;\n    }\n\n    function transferOwnership(address newOwner) public onlyOwner {\n        require(newOwner != address(0));\n        owner = newOwner;\n    }\n\n    function refund(address payee) public {\n        require(state <= 2 && state == 1);\n        uint256 payment = deposited[payee];\n        deposited[payee] = 0;\n        payable(payee).transfer(payment);\n    }\n\n    function deposit(address depositor) public payable onlyOwner {\n        require(msg.value + deposited[depositor] >= deposited[depositor] && state == 0 && state <= 2);\n        deposited[depositor] += msg.value;\n    }\n}\n```\nThis contract includes the required functions and modifiers. It uses a constructor to set the initial owner and wallet addresses. The `onlyOwner` modifier is used to restrict certain functions to the current owner. The contract also implements the required state checks and value transfers.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701705526,
+	"id": "chatcmpl-8S5dGWeMHBWQBHqBCuothSajQUbEx",
+	"input_format": "LayedDescription",
+	"ir": "For the close function.\n- When state is not greater than 2, and for owner, and state equals to 0:\n  - the state variable state will be updated to 2.\n  - it transfers ether valued the balance of the address of this contract to wallet.\n\nFor the enableRefunds function.\n- When state equals to 0, and for owner, and state is not greater than 2:\n  - the state variable state will be updated to 1.\n\nFor the transferOwnership function, it has one argument and its type is address.\n- When the first argument is not 0, and for owner:\n  - the state variable owner will be updated to the first argument.\n\nFor the refund function, it has one argument and its type is address.\n- When state is not greater than 2, and state equals to 1:\n  - it transfers ether valued the deposited of the first argument to the first argument. Afterthat, \n    - the deposited of the first argument will be updated to 0.\n\nFor the payable deposit function, it has one argument and its type is address.\n- When (the ether just received (i.e., msg.value)+the deposited of the first argument) is not smaller than the deposited of the first argument, and state equals to 0, and for owner, and state is not greater than 2:\n  - the deposited of the first argument will be updated to (the ether just received (i.e., msg.value)+the deposited of the first argument).\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the close function.\n- When state is not greater than 2, and for owner, and state equals to 0:\n  - the state variable state will be updated to 2.\n  - it transfers ether valued the balance of the address of this contract to wallet.\n\nFor the enableRefunds function.\n- When state equals to 0, and for owner, and state is not greater than 2:\n  - the state variable state will be updated to 1.\n\nFor the transferOwnership function, it has one argument and its type is address.\n- When the first argument is not 0, and for owner:\n  - the state variable owner will be updated to the first argument.\n\nFor the refund function, it has one argument and its type is address.\n- When state is not greater than 2, and state equals to 1:\n  - it transfers ether valued the deposited of the first argument to the first argument. Afterthat, \n    - the deposited of the first argument will be updated to 0.\n\nFor the payable deposit function, it has one argument and its type is address.\n- When (the ether just received (i.e., msg.value)+the deposited of the first argument) is not smaller than the deposited of the first argument, and state equals to 0, and for owner, and state is not greater than 2:\n  - the deposited of the first argument will be updated to (the ether just received (i.e., msg.value)+the deposited of the first argument).\n\n.\n Here are some state variables with their corresponding types: public state variable `owner` is typed address,public state variable `deposited` is typed mapping,public state variable `state` is typed uint8,public state variable `wallet` is typed address.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the close function.\n- When state is not greater than 2, and for owner, and state equals to 0:\n  - the state variable state will be updated to 2.\n  - it transfers ether valued the balance of the address of this contract to wallet.\n\nFor the enableRefunds function.\n- When state equals to 0, and for owner, and state is not greater than 2:\n  - the state variable state will be updated to 1.\n\nFor the transferOwnership function, it has one argument and its type is address.\n- When the first argument is not 0, and for owner:\n  - the state variable owner will be updated to the first argument.\n\nFor the refund function, it has one argument and its type is address.\n- When state is not greater than 2, and state equals to 1:\n  - it transfers ether valued the deposited of the first argument to the first argument. Afterthat, \n    - the deposited of the first argument will be updated to 0.\n\nFor the payable deposit function, it has one argument and its type is address.\n- When (the ether just received (i.e., msg.value)+the deposited of the first argument) is not smaller than the deposited of the first argument, and state equals to 0, and for owner, and state is not greater than 2:\n  - the deposited of the first argument will be updated to (the ether just received (i.e., msg.value)+the deposited of the first argument).\n\n.\n Here are some state variables with their corresponding types: public state variable `owner` is typed address,public state variable `deposited` is typed mapping,public state variable `state` is typed uint8,public state variable `wallet` is typed address.\n ",
+	"status": "1",
+	"time_cost": 27.27021813392639,
+	"usage": {
+		"completion_tokens": 359,
+		"prompt_tokens": 421,
+		"total_tokens": 780
+	}
+}

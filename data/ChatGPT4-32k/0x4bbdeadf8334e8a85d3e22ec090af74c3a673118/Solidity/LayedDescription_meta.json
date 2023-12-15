@@ -1,0 +1,20 @@
+{
+	"address": "0x4bbdeadf8334e8a85d3e22ec090af74c3a673118",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1579.0,
+	"prompt_tokens": 844.0,
+	"completion_tokens": 735.0,
+	"time_cost": 33.48109745979309,
+	"gen_code": true,
+	"compilable": " operator == not compatible with types bytes32 and int_const 1\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 13
+}

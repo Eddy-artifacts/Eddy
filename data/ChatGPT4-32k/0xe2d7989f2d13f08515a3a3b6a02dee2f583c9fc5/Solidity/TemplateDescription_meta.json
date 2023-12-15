@@ -1,0 +1,20 @@
+{
+	"address": "0xe2d7989f2d13f08515a3a3b6a02dee2f583c9fc5",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 15696.0,
+	"prompt_tokens": 15145.0,
+	"completion_tokens": 551.0,
+	"time_cost": 33.38596987724304,
+	"gen_code": true,
+	"compilable": " source \"@openzeppelin/contracts/token/erc20/erc20.sol\" not found: file outside of allowed directories.\t source \"@openzeppelin/contracts/math/safemath.sol\" not found: file outside of allowed directories.\t source \"@openzeppelin/contracts/access/ownable.sol\" not found: file outside of allowed directories.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 11
+}

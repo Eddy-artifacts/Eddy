@@ -1,0 +1,20 @@
+{
+	"address": "0x0a5e34ab31a1e589b470e7deeab7bf8b38a1d8d3",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1762.0,
+	"prompt_tokens": 1235.0,
+	"completion_tokens": 527.0,
+	"time_cost": 41.60073637962341,
+	"gen_code": true,
+	"compilable": " member \"balanceof\" not found or not visible after argument-dependent lookup in address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 7
+}

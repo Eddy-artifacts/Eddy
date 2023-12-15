@@ -1,0 +1,38 @@
+{
+	"address": "0x6ba9908db7340f82e75ac42468b8172dbf37c1d6",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Sure, here is the contract code based on the provided description:\n\n```solidity\n// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract HodlersContract {\n    mapping(address => uint256) public hodlers;\n\n    function hodl() public payable {\n        require(msg.value > 0, \"Need to send some ether\");\n        hodlers[msg.sender] += msg.value;\n    }\n\n    function party() public {\n        require(hodlers[msg.sender] > 0, \"You need to hodl first\");\n        require(block.timestamp > 0x5b89d680, \"Party is not yet started\");\n\n        uint256 amount = hodlers[msg.sender];\n        hodlers[msg.sender] = 0;\n\n        (bool success,) = msg.sender.call{value: amount}(\"\");\n        require(success, \"Transfer failed.\");\n    }\n}\n```\n\nIn this contract, users can hold their ether by calling the `hodl` function and sending some ether. The amount of ether sent is added to the user's balance in the `hodlers` mapping.\n\nUsers can then call the `party` function to withdraw their balance, but only if they have a positive balance and if the current block's timestamp is greater than `0x5b89d680`. If these conditions are met, the balance is transferred back to the user and the user's balance in the `hodlers` mapping is reset to zero.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701712917,
+	"id": "chatcmpl-8S7YTjnvofoEyudb5wIvuf1yDjJ6p",
+	"input_format": "LayedDescription",
+	"ir": "For the payable hodl function.\n- the hodlers of caller will be updated to (the hodlers of caller+the ether just received (i.e., msg.value)).\n\nFor the party function.\n- When the hodlers of caller is greater than 0, and after 0x5b89d680:\n  - it transfers ether valued the hodlers of caller to caller. Afterthat, \n    - the hodlers of caller will be updated to 0.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable hodl function.\n- the hodlers of caller will be updated to (the hodlers of caller+the ether just received (i.e., msg.value)).\n\nFor the party function.\n- When the hodlers of caller is greater than 0, and after 0x5b89d680:\n  - it transfers ether valued the hodlers of caller to caller. Afterthat, \n    - the hodlers of caller will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: public state variable `hodlers` is typed mapping.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable hodl function.\n- the hodlers of caller will be updated to (the hodlers of caller+the ether just received (i.e., msg.value)).\n\nFor the party function.\n- When the hodlers of caller is greater than 0, and after 0x5b89d680:\n  - it transfers ether valued the hodlers of caller to caller. Afterthat, \n    - the hodlers of caller will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: public state variable `hodlers` is typed mapping.\n ",
+	"status": "1",
+	"time_cost": 10.24899935722351,
+	"usage": {
+		"completion_tokens": 296,
+		"prompt_tokens": 179,
+		"total_tokens": 475
+	}
+}

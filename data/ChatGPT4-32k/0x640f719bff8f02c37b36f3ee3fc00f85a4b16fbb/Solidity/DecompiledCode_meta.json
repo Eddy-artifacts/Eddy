@@ -1,0 +1,20 @@
+{
+	"address": "0x640f719bff8f02c37b36f3ee3fc00f85a4b16fbb",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1449.0,
+	"prompt_tokens": 852.0,
+	"completion_tokens": 597.0,
+	"time_cost": 25.25402808189392,
+	"gen_code": true,
+	"compilable": " wrong argument count for function call: 0 arguments given but expected 1. this function requires a single bytes argument. use \"\" as argument to provide empty calldata.\t no matching declaration found after argument-dependent lookup.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 10
+}

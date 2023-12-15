@@ -1,0 +1,20 @@
+{
+	"address": "0x73d9e7e5aa720d3867449b111b4136cfab83a5bb",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1932.0,
+	"prompt_tokens": 1151.0,
+	"completion_tokens": 781.0,
+	"time_cost": 56.28917169570923,
+	"gen_code": true,
+	"compilable": " type int_const 1157...(70 digits omitted)...6960 is not implicitly convertible to expected type address.\t unary operator ! cannot be applied to type uint256\t type uint256 is not implicitly convertible to expected type bool.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 24
+}

@@ -1,0 +1,20 @@
+{
+	"address": "0x69d1ef860246fa242041bf1d784e8cb43e2a9b07",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1447.0,
+	"prompt_tokens": 823.0,
+	"completion_tokens": 624.0,
+	"time_cost": 22.47695755958557,
+	"gen_code": true,
+	"compilable": " this looks like an address but has an invalid checksum. correct checksummed address: \"0x27fe767c1da8a69731c64f15d6ee98ee8af62e72\". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals\t unary operator ! cannot be applied to type uint256\t unary operator ! cannot be applied to type uint256\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 8
+}

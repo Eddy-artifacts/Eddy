@@ -1,0 +1,20 @@
+{
+	"address": "0xf479c029ed8af4a6a23248ac826812cf7cbd4d2c",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 22367.0,
+	"prompt_tokens": 21924.0,
+	"completion_tokens": 443.0,
+	"time_cost": 35.277594566345215,
+	"gen_code": true,
+	"compilable": " only local variables are supported. to access storage variables, use the _slot and _offset suffixes.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 8
+}

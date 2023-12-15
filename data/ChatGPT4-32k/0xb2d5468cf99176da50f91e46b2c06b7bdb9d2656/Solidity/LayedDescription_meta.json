@@ -1,0 +1,20 @@
+{
+	"address": "0xb2d5468cf99176da50f91e46b2c06b7bdb9d2656",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1174.0,
+	"prompt_tokens": 670.0,
+	"completion_tokens": 504.0,
+	"time_cost": 22.793458461761475,
+	"gen_code": true,
+	"compilable": " member \"daily\" not found or not visible after argument-dependent lookup in address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 20
+}

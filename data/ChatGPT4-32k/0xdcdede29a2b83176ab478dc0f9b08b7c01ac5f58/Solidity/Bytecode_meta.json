@@ -1,0 +1,19 @@
+{
+	"address": "0xdcdede29a2b83176ab478dc0f9b08b7c01ac5f58",
+	"model": "bytecode_1",
+	"input_format": "Bytecode",
+	"output_format": "Solidity",
+	"status": 1,
+	"token_exceeded": false,
+	"n_tokens": 2064.0,
+	"prompt_tokens": 1824.0,
+	"completion_tokens": 240.0,
+	"time_cost": 9.153971672058104,
+	"gen_code": false,
+	"language": "Solidity",
+	"compilable": null,
+	"version": null,
+	"n_sai": null,
+	"p_grammar": -1.0,
+	"sai": 12
+}

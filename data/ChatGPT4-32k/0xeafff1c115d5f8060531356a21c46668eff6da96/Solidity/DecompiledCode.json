@@ -1,0 +1,38 @@
+{
+	"address": "0xeafff1c115d5f8060531356a21c46668eff6da96",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "As an experienced smart contract developer, I've recompiled the provided decompiled code into Solidity. Please note that Solidity does not support direct memory access, so the `__function_selector__` function has been adapted accordingly. Also note that the original decompiled code seems to have some mistakes, for example the mappings `_invested` and `_atBlock` should map address to uint256, not uint256 to uint256, and also the logic of the fallback function seems to be incorrect. Here is the recompiled code:\n\n```solidity\npragma solidity ^0.8.0;\n\ncontract MyContract {\n    mapping (address => uint256) private _invested;\n    mapping (address => uint256) private _atBlock;\n\n    function invested(address addr) public view returns (uint256) {\n        return _invested[addr];\n    }\n\n    function atBlock(address addr) public view returns (uint256) {\n        return _atBlock[addr];\n    }\n\n    fallback() external payable {\n        if (_invested[msg.sender] > 0) {\n            (bool success, ) = msg.sender.call{value: 35 * _atBlock[msg.sender] / 100 * (block.number - _atBlock[msg.sender]) / 5900, gas: 2300 * !(35 * _atBlock[msg.sender] / 100 * (block.number - _atBlock[msg.sender]) / 5900)}(\"\");\n            require(success, \"Call failed\");\n        }\n        _atBlock[msg.sender] = block.number;\n        _invested[msg.sender] += msg.value;\n        (bool success, ) = address(0x5fafc6d356679afffb4de085793d54d310e3f4b8).call{value: msg.value / 20, gas: 2300 * !(msg.value / 20)}(\"\");\n        require(success, \"Call failed\");\n    }\n}\n```\n\nPlease note that this code is provided as is and may not work as intended without modifications. Be sure to fully test this contract before using it in a production environment.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701471466,
+	"id": "chatcmpl-8R6k6byrIcv8Otd6gKEXgSuHMnhcZ",
+	"input_format": "DecompiledCode",
+	"ir": "// Decompiled at www.contract-library.com\n// 2021.09.13 17:15 UTC\n\n// Data structures and variables inferred from the use of storage instructions\nmapping (uint256 => [uint256]) _invested; // STORAGE[0x0]\nmapping (uint256 => [uint256]) _atBlock; // STORAGE[0x1]\n\n\nfunction invested(address varg0) public nonPayable { \n    return _invested[varg0];\n}\n\nfunction atBlock(address varg0) public nonPayable { \n    return _atBlock[varg0];\n}\n\nfunction fallback() public payable { \n    if (_invested[msg.sender]) {\n        v0 = msg.sender.call().value(35 * _atBlock[msg.sender] / 100 * (block.number - _atBlock[msg.sender]) / 5900).gas(2300 * !(35 * _atBlock[msg.sender] / 100 * (block.number - _atBlock[msg.sender]) / 5900));\n        require(v0); // checks call status, propagates error data on error\n    }\n    _atBlock[msg.sender] = block.number;\n    _atBlock[msg.sender] += msg.value;\n    v1 = 0x5fafc6d356679afffb4de085793d54d310e3f4b8.call().value(msg.value / 20).gas(2300 * !(msg.value / 20));\n    require(v1); // checks call status, propagates error data on error\n}\n\n// Note: The function selector is not present in the original solidity code.\n// However, we display it for the sake of completeness.\n\nfunction __function_selector__(uint32 function_selector) public payable { \n    MEM[64] = 128;\n    if (msg.data.length >= 4) {\n        if (function_selector == 0x66b3f6bf) {\n            invested(address);\n        } else if (0x8aac1362 == function_selector) {\n            atBlock(address);\n        }\n    }\n    fallback();\n}\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following decompiled code lifted from EVM Bytecode.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the decompiled code: // Decompiled at www.contract-library.com\n// 2021.09.13 17:15 UTC\n\n// Data structures and variables inferred from the use of storage instructions\nmapping (uint256 => [uint256]) _invested; // STORAGE[0x0]\nmapping (uint256 => [uint256]) _atBlock; // STORAGE[0x1]\n\n\nfunction invested(address varg0) public nonPayable { \n    return _invested[varg0];\n}\n\nfunction atBlock(address varg0) public nonPayable { \n    return _atBlock[varg0];\n}\n\nfunction fallback() public payable { \n    if (_invested[msg.sender]) {\n        v0 = msg.sender.call().value(35 * _atBlock[msg.sender] / 100 * (block.number - _atBlock[msg.sender]) / 5900).gas(2300 * !(35 * _atBlock[msg.sender] / 100 * (block.number - _atBlock[msg.sender]) / 5900));\n        require(v0); // checks call status, propagates error data on error\n    }\n    _atBlock[msg.sender] = block.number;\n    _atBlock[msg.sender] += msg.value;\n    v1 = 0x5fafc6d356679afffb4de085793d54d310e3f4b8.call().value(msg.value / 20).gas(2300 * !(msg.value / 20));\n    require(v1); // checks call status, propagates error data on error\n}\n\n// Note: The function selector is not present in the original solidity code.\n// However, we display it for the sake of completeness.\n\nfunction __function_selector__(uint32 function_selector) public payable { \n    MEM[64] = 128;\n    if (msg.data.length >= 4) {\n        if (function_selector == 0x66b3f6bf) {\n            invested(address);\n        } else if (0x8aac1362 == function_selector) {\n            atBlock(address);\n        }\n    }\n    fallback();\n}\n.",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following decompiled code lifted from EVM Bytecode.The following is the decompiled code: // Decompiled at www.contract-library.com\n// 2021.09.13 17:15 UTC\n\n// Data structures and variables inferred from the use of storage instructions\nmapping (uint256 => [uint256]) _invested; // STORAGE[0x0]\nmapping (uint256 => [uint256]) _atBlock; // STORAGE[0x1]\n\n\nfunction invested(address varg0) public nonPayable { \n    return _invested[varg0];\n}\n\nfunction atBlock(address varg0) public nonPayable { \n    return _atBlock[varg0];\n}\n\nfunction fallback() public payable { \n    if (_invested[msg.sender]) {\n        v0 = msg.sender.call().value(35 * _atBlock[msg.sender] / 100 * (block.number - _atBlock[msg.sender]) / 5900).gas(2300 * !(35 * _atBlock[msg.sender] / 100 * (block.number - _atBlock[msg.sender]) / 5900));\n        require(v0); // checks call status, propagates error data on error\n    }\n    _atBlock[msg.sender] = block.number;\n    _atBlock[msg.sender] += msg.value;\n    v1 = 0x5fafc6d356679afffb4de085793d54d310e3f4b8.call().value(msg.value / 20).gas(2300 * !(msg.value / 20));\n    require(v1); // checks call status, propagates error data on error\n}\n\n// Note: The function selector is not present in the original solidity code.\n// However, we display it for the sake of completeness.\n\nfunction __function_selector__(uint32 function_selector) public payable { \n    MEM[64] = 128;\n    if (msg.data.length >= 4) {\n        if (function_selector == 0x66b3f6bf) {\n            invested(address);\n        } else if (0x8aac1362 == function_selector) {\n            atBlock(address);\n        }\n    }\n    fallback();\n}\n.",
+	"status": "1",
+	"time_cost": 15.647642612457275,
+	"usage": {
+		"completion_tokens": 431,
+		"prompt_tokens": 483,
+		"total_tokens": 914
+	}
+}

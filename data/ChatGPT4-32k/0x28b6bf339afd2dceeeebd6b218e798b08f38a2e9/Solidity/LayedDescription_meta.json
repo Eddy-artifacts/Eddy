@@ -1,0 +1,20 @@
+{
+	"address": "0x28b6bf339afd2dceeeebd6b218e798b08f38a2e9",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2432.0,
+	"prompt_tokens": 1687.0,
+	"completion_tokens": 745.0,
+	"time_cost": 33.336615800857544,
+	"gen_code": true,
+	"compilable": " identifier already declared.\t identifier already declared.\t function with same name and arguments defined twice.\t operator / not compatible with types bytes32 and int_const 1\t operator - not compatible with types bytes32 and uint256\t operator < not compatible with types bytes32 and uint256\t operator / not compatible with types bytes32 and int_const 1\t operator - not compatible with types bytes32 and uint256\t type bytes32 is not implicitly convertible to expected type uint256.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 17
+}

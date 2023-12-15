@@ -1,0 +1,20 @@
+{
+	"address": "0x5dd4cd8ec1fd73452be387e8abbc70d4d200478a",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3987.0,
+	"prompt_tokens": 2248.0,
+	"completion_tokens": 1739.0,
+	"time_cost": 148.35660338401794,
+	"gen_code": true,
+	"compilable": " different number of components on the left hand side (1) than on the right hand side (2).\t different number of components on the left hand side (1) than on the right hand side (2).\t different number of components on the left hand side (1) than on the right hand side (2).\t different number of components on the left hand side (1) than on the right hand side (2).\t different number of components on the left hand side (1) than on the right hand side (2).\t different number of components on the left hand side (1) than on the right hand side (2).\t different number of components on the left hand side (1) than on the right hand side (2).\t different number of components on the left hand side (1) than on the right hand side (2).\t different number of components on the left hand side (1) than on the right hand side (2).\t different number of components on the left hand side (1) than on the right hand side (2).\t different number of components on the left hand side (1) than on the right hand side (2).\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 27
+}

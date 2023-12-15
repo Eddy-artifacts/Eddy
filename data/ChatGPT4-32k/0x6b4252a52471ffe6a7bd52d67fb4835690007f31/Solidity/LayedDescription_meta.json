@@ -1,0 +1,20 @@
+{
+	"address": "0x6b4252a52471ffe6a7bd52d67fb4835690007f31",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1040.0,
+	"prompt_tokens": 530.0,
+	"completion_tokens": 510.0,
+	"time_cost": 27.292202711105347,
+	"gen_code": true,
+	"compilable": " source \"@openzeppelin/contracts/token/erc20/ierc20.sol\" not found: file outside of allowed directories.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 6
+}

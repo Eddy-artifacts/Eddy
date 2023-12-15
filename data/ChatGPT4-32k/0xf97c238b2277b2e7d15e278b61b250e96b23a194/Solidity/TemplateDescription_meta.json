@@ -1,0 +1,20 @@
+{
+	"address": "0xf97c238b2277b2e7d15e278b61b250e96b23a194",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 6802.0,
+	"prompt_tokens": 5919.0,
+	"completion_tokens": 883.0,
+	"time_cost": 52.4815526008606,
+	"gen_code": true,
+	"compilable": " member \"length\" not found or not visible after argument-dependent lookup in string storage ref.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 12
+}

@@ -1,0 +1,38 @@
+{
+	"address": "0x4b855725bb816b7e2b3e67bcffe0436b407675ae",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here's a Solidity contract which implements the described logic:\n\n```solidity\npragma solidity ^0.5.0;\n\ncontract MyContract {\n    address private owner;\n    address public ens;\n    uint256 public rootnode;\n    uint256 public fee;\n    address public resolver;\n\n    constructor() public {\n        owner = msg.sender;\n    }\n\n    modifier onlyOwner {\n        require(msg.sender == owner, \"Caller is not owner\");\n        _;\n    }\n\n    function setOwner(address newOwner) public onlyOwner {\n        owner = newOwner;\n    }\n\n    function withdraw() public onlyOwner {\n        msg.sender.transfer(address(this).balance);\n    }\n\n    function setResolver(address newResolver) public onlyOwner {\n        resolver = newResolver;\n    }\n\n    function setFee(uint256 newFee) public onlyOwner {\n        fee = newFee;\n    }\n}\n```\n\nThis contract has an `onlyOwner` modifier to restrict certain functions (`setOwner`, `withdraw`, `setResolver`, `setFee`) to be called only by the owner of the contract. This ensures that only the owner can change the owner, withdraw ether from the contract, set the resolver, and set the fee. The `setOwner` function updates the `owner` state variable, `withdraw` transfers all ether from the contract to the owner, `setResolver` updates the `resolver` state variable, and `setFee` updates the `fee` state variable. Please make sure to adapt it to your needs and test it thoroughly before deploying.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1702485107,
+	"id": "chatcmpl-8VMR9dB84LAugH4oydi8k02eBfpGq",
+	"input_format": "LayedDescription",
+	"ir": "For the setOwner function, it has one argument and its type is address.\n- For owner:\n  - the state variable owner will be updated to the first argument.\n\nFor the withdraw function.\n- For owner:\n  - it transfers ether valued the balance of the address of this contract to caller.\n\nFor the setResolver function, it has one argument and its type is address.\n- For owner:\n  - the state variable resolver will be updated to the first argument.\n\nFor the setFee function, it has one argument and its type is uint256.\n- For owner:\n  - the state variable fee will be updated to the first argument.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the setOwner function, it has one argument and its type is address.\n- For owner:\n  - the state variable owner will be updated to the first argument.\n\nFor the withdraw function.\n- For owner:\n  - it transfers ether valued the balance of the address of this contract to caller.\n\nFor the setResolver function, it has one argument and its type is address.\n- For owner:\n  - the state variable resolver will be updated to the first argument.\n\nFor the setFee function, it has one argument and its type is uint256.\n- For owner:\n  - the state variable fee will be updated to the first argument.\n\n.\n Here are some state variables with their corresponding types: private state variable `owner` is typed address,public state variable `ens` is typed address,public state variable `rootnode` is typed uint256,public state variable `fee` is typed uint256,public state variable `resolver` is typed address.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the setOwner function, it has one argument and its type is address.\n- For owner:\n  - the state variable owner will be updated to the first argument.\n\nFor the withdraw function.\n- For owner:\n  - it transfers ether valued the balance of the address of this contract to caller.\n\nFor the setResolver function, it has one argument and its type is address.\n- For owner:\n  - the state variable resolver will be updated to the first argument.\n\nFor the setFee function, it has one argument and its type is uint256.\n- For owner:\n  - the state variable fee will be updated to the first argument.\n\n.\n Here are some state variables with their corresponding types: private state variable `owner` is typed address,public state variable `ens` is typed address,public state variable `rootnode` is typed uint256,public state variable `fee` is typed uint256,public state variable `resolver` is typed address.\n ",
+	"status": "1",
+	"time_cost": 19.04392719268799,
+	"usage": {
+		"completion_tokens": 309,
+		"prompt_tokens": 252,
+		"total_tokens": 561
+	}
+}

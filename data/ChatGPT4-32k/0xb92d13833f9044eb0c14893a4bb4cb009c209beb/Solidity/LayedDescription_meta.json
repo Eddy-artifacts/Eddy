@@ -1,0 +1,20 @@
+{
+	"address": "0xb92d13833f9044eb0c14893a4bb4cb009c209beb",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1096.0,
+	"prompt_tokens": 520.0,
+	"completion_tokens": 576.0,
+	"time_cost": 51.57598924636841,
+	"gen_code": true,
+	"compilable": " explicit type conversion not allowed from \"uint8\" to \"bytes32\".\t operator * not compatible with types bytes32 and int_const 7237...(68 digits omitted)...2496\t operator / not compatible with types bytes32 and uint32\t operator % not compatible with types bytes32 and int_const 32\t operator * not compatible with types bytes32 and int_const 4523...(67 digits omitted)...2656\t operator & not compatible with types bytes32 and int_const 6784...(68 digits omitted)...9840\t explicit type conversion not allowed from \"uint8\" to \"bytes32\".\t operator * not compatible with types bytes32 and int_const 4523...(67 digits omitted)...2656\t operator & not compatible with types bytes32 and int_const 6784...(68 digits omitted)...9840\t operator / not compatible with types bytes32 and uint32\t operator % not compatible with types bytes32 and int_const 32\t operator * not compatible with types bytes32 and int_const 4523...(67 digits omitted)...2656\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 3
+}

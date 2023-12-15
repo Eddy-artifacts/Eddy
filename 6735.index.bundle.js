@@ -1,0 +1,1 @@
+(self.webpackChunkupgradehub_frontend=self.webpackChunkupgradehub_frontend||[]).push([[6735],{68735:n=>{n.exports=function(n){return{aliases:["pycon"],contains:[{className:"meta",starts:{end:/ |$/,starts:{end:"$",subLanguage:"python"}},variants:[{begin:/^>>>(?=[ ]|$)/},{begin:/^\.\.\.(?=[ ]|$)/}]}]}}}}]);

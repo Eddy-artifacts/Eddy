@@ -1,0 +1,20 @@
+{
+	"address": "0x72cc9d8e0a8034fecd2159fb2a951efe8b49f5ae",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 5918.0,
+	"prompt_tokens": 5228.0,
+	"completion_tokens": 690.0,
+	"time_cost": 30.240049362182617,
+	"gen_code": true,
+	"compilable": " undeclared identifier. \"contribute\" is not (or not yet) visible at this point.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 13
+}

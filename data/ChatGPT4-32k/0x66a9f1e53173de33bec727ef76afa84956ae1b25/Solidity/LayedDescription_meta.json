@@ -1,0 +1,20 @@
+{
+	"address": "0x66a9f1e53173de33bec727ef76afa84956ae1b25",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1696.0,
+	"prompt_tokens": 937.0,
+	"completion_tokens": 759.0,
+	"time_cost": 43.24196219444275,
+	"gen_code": true,
+	"compilable": " this looks like an address but has an invalid checksum. correct checksummed address: \"0xdf0960778c6e6597f197ed9a25f12f5d971da86c\". if this is not used as an address, please prepend '00'. for more information please see https://docs.soliditylang.org/en/develop/types.html#address-literals\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 15
+}

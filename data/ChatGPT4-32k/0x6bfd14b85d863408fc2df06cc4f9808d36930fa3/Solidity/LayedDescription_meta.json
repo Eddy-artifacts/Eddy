@@ -1,0 +1,20 @@
+{
+	"address": "0x6bfd14b85d863408fc2df06cc4f9808d36930fa3",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 4535.0,
+	"prompt_tokens": 3896.0,
+	"completion_tokens": 639.0,
+	"time_cost": 29.10139393806457,
+	"gen_code": true,
+	"compilable": " source \"@openzeppelin/contracts/token/erc20/erc20.sol\" not found: file outside of allowed directories.\t source \"@openzeppelin/contracts/access/ownable.sol\" not found: file outside of allowed directories.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 8
+}

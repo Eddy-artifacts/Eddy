@@ -1,0 +1,20 @@
+{
+	"address": "0xd22769058252671fe7a12509c25c324f1bc1a590",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 13064.0,
+	"prompt_tokens": 11939.0,
+	"completion_tokens": 1125.0,
+	"time_cost": 57.54309058189392,
+	"gen_code": true,
+	"compilable": " member \"transfer\" not found or not visible after argument-dependent lookup in address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 41
+}

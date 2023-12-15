@@ -1,0 +1,20 @@
+{
+	"address": "0x06c299dbd4d53ee82812c15bc4c997a2a998dd9e",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1589.0,
+	"prompt_tokens": 1105.0,
+	"completion_tokens": 484.0,
+	"time_cost": 29.231619358062744,
+	"gen_code": true,
+	"compilable": " function with same name and arguments defined twice.\t operator + not compatible with types bytes32 and uint256\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 8
+}

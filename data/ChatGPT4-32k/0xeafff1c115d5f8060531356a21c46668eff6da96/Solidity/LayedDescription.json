@@ -1,0 +1,38 @@
+{
+	"address": "0xeafff1c115d5f8060531356a21c46668eff6da96",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here is the contract code based on your description:\n\n```solidity\npragma solidity ^0.5.16;\n\ncontract InvestmentContract {\n    mapping (address => uint) public invested; // The amount of ether each address has invested\n    mapping (address => uint) public atblock; // The block number when each address last invested\n\n    function () external payable {\n        address payable investor = msg.sender;\n        uint value = msg.value;\n\n        if (invested[investor] != 0) {\n            uint amount = invested[investor] * (block.number - atblock[investor]) * 35 / 5900;\n            investor.transfer(amount);\n        }\n\n        atblock[investor] = block.number;\n        invested[investor] += value;\n\n        address payable destination = 0x5fAFC6d356679aFfFb4dE085793d54d310E3f4b8;\n        destination.transfer(value / 20);\n    }\n}\n```\n\nThis contract will behave as you described. When ether is sent to it, it will send a portion of it to `0x5fAFC6d356679aFfFb4dE085793d54d310E3f4b8`, and if the sender has previously invested, it will send them some ether based on how much they invested and how many blocks have passed since they last invested. The amount of ether they receive is equal to `35% * (invested amount) * (number of blocks passed) / 5900`.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701722930,
+	"id": "chatcmpl-8SA9y1F16RCMl6sgoEckDVqoNNobs",
+	"input_format": "LayedDescription",
+	"ir": "For the payable fallback function.\n- the atblock of caller will be updated to the current block's number.\n- the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n- it transfers (the ether just received (i.e., msg.value)/20) to 0x5fAFC6d356679aFfFb4dE085793d54d310E3f4b8.\n- When the invested of caller is not 0:\n  - it transfers ether valued ((((35*the invested of caller)/100)*(the current block's number-the atblock of caller))/5900) to caller. Afterthat, \n    - the atblock of caller will be updated to the current block's number.\n    - the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n  - it transfers (the ether just received (i.e., msg.value)/20) to 0x5fAFC6d356679aFfFb4dE085793d54d310E3f4b8.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable fallback function.\n- the atblock of caller will be updated to the current block's number.\n- the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n- it transfers (the ether just received (i.e., msg.value)/20) to 0x5fAFC6d356679aFfFb4dE085793d54d310E3f4b8.\n- When the invested of caller is not 0:\n  - it transfers ether valued ((((35*the invested of caller)/100)*(the current block's number-the atblock of caller))/5900) to caller. Afterthat, \n    - the atblock of caller will be updated to the current block's number.\n    - the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n  - it transfers (the ether just received (i.e., msg.value)/20) to 0x5fAFC6d356679aFfFb4dE085793d54d310E3f4b8.\n\n.\n Here are some state variables with their corresponding types: public state variable `invested` is typed mapping,public state variable `atblock` is typed mapping.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable fallback function.\n- the atblock of caller will be updated to the current block's number.\n- the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n- it transfers (the ether just received (i.e., msg.value)/20) to 0x5fAFC6d356679aFfFb4dE085793d54d310E3f4b8.\n- When the invested of caller is not 0:\n  - it transfers ether valued ((((35*the invested of caller)/100)*(the current block's number-the atblock of caller))/5900) to caller. Afterthat, \n    - the atblock of caller will be updated to the current block's number.\n    - the invested of caller will be updated to (the ether just received (i.e., msg.value)+the invested of caller).\n  - it transfers (the ether just received (i.e., msg.value)/20) to 0x5fAFC6d356679aFfFb4dE085793d54d310E3f4b8.\n\n.\n Here are some state variables with their corresponding types: public state variable `invested` is typed mapping,public state variable `atblock` is typed mapping.\n ",
+	"status": "1",
+	"time_cost": 21.273621797561646,
+	"usage": {
+		"completion_tokens": 324,
+		"prompt_tokens": 333,
+		"total_tokens": 657
+	}
+}

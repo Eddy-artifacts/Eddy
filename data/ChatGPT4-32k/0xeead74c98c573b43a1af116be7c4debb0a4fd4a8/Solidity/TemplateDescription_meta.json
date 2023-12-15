@@ -1,0 +1,20 @@
+{
+	"address": "0xeead74c98c573b43a1af116be7c4debb0a4fd4a8",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1912.0,
+	"prompt_tokens": 1355.0,
+	"completion_tokens": 557.0,
+	"time_cost": 29.879271984100345,
+	"gen_code": true,
+	"compilable": " operator * not compatible with types int_const 79228162514264337593543950336 and address payable\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 6
+}

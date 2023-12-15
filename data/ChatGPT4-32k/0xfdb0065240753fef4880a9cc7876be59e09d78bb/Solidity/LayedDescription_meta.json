@@ -1,0 +1,20 @@
+{
+	"address": "0xfdb0065240753fef4880a9cc7876be59e09d78bb",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1793.0,
+	"prompt_tokens": 1023.0,
+	"completion_tokens": 770.0,
+	"time_cost": 30.211398124694824,
+	"gen_code": true,
+	"compilable": " data location must be \"calldata\" for parameter in external function, but \"memory\" was given.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 15
+}

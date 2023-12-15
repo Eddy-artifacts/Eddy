@@ -1,0 +1,20 @@
+{
+	"address": "0x1543d0f83489e82a1344df6827b23d541f235a50",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3459.0,
+	"prompt_tokens": 2822.0,
+	"completion_tokens": 637.0,
+	"time_cost": 29.32441544532776,
+	"gen_code": true,
+	"compilable": " type int_const 48879 is not implicitly convertible to expected type address.\t operator != not compatible with types bool and int_const 0\t operator != not compatible with types bool and int_const 0\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 22
+}

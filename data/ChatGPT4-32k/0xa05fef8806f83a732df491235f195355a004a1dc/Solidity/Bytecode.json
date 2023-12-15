@@ -1,0 +1,38 @@
+{
+	"address": "0xa05fef8806f83a732df491235f195355a004a1dc",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "The provided bytecode can be a result of multiple Solidity codes as it's the compiled version. However, it's impossible to get the exact original Solidity code from bytecode. \n\nWe can only make an educated guess about the structure of the original contract. Based on common Solidity contract structures, it seems like the contract could be something like this:\n\n```solidity\npragma solidity ^0.8.11;\n\ncontract MyContract {\n    event MyEvent(address indexed sender, uint256 value);\n\n    function myFunction(uint256 _a) public returns (uint256) {\n        emit MyEvent(msg.sender, _a);\n        return _a;\n    }\n}\n```\nThis is a very basic contract that includes a function and an event. The function `myFunction` takes an integer `_a` as an input, emits an event with the sender's address and the input integer, and then returns the integer.\n\nPlease note, this is just a guess and may not reflect the exact original Solidity code. It's impossible to get the exact original Solidity code from bytecode.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701467811,
+	"id": "chatcmpl-8R5n9irIpHD7yclGSc5E5rYj3B1c9",
+	"input_format": "Bytecode",
+	"ir": "0x608060405260043610601f5760003560e01c80635c60da1b14603157602b565b36602b576029605f565b005b6029605f565b348015603c57600080fd5b5060436097565b6040516001600160a01b03909116815260200160405180910390f35b609560917f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b031690565b60d1565b565b600060c97f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b031690565b905090565b90565b3660008037600080366000845af43d6000803e80801560ef573d6000f35b3d6000fdfea26469706673582212207790c2b23bdf8df761d4462c174717784a8f4dcffd88cd4d499bbeebf43ce6bf64736f6c63430008110033",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following smart contract bytecode.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the bytecode: 0x608060405260043610601f5760003560e01c80635c60da1b14603157602b565b36602b576029605f565b005b6029605f565b348015603c57600080fd5b5060436097565b6040516001600160a01b03909116815260200160405180910390f35b609560917f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b031690565b60d1565b565b600060c97f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b031690565b905090565b90565b3660008037600080366000845af43d6000803e80801560ef573d6000f35b3d6000fdfea26469706673582212207790c2b23bdf8df761d4462c174717784a8f4dcffd88cd4d499bbeebf43ce6bf64736f6c63430008110033.",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following smart contract bytecode.The following is the bytecode: 0x608060405260043610601f5760003560e01c80635c60da1b14603157602b565b36602b576029605f565b005b6029605f565b348015603c57600080fd5b5060436097565b6040516001600160a01b03909116815260200160405180910390f35b609560917f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b031690565b60d1565b565b600060c97f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b031690565b905090565b90565b3660008037600080366000845af43d6000803e80801560ef573d6000f35b3d6000fdfea26469706673582212207790c2b23bdf8df761d4462c174717784a8f4dcffd88cd4d499bbeebf43ce6bf64736f6c63430008110033.",
+	"status": "1",
+	"time_cost": 8.926872253417969,
+	"usage": {
+		"completion_tokens": 217,
+		"prompt_tokens": 330,
+		"total_tokens": 547
+	}
+}

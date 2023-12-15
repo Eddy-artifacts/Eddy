@@ -1,0 +1,20 @@
+{
+	"address": "0xa97ff44cff7101fac76af172f088f400f28cb4e9",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3266.0,
+	"prompt_tokens": 2773.0,
+	"completion_tokens": 493.0,
+	"time_cost": 41.316565990448,
+	"gen_code": true,
+	"compilable": " expected identifier but got 'fallback'\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 17
+}

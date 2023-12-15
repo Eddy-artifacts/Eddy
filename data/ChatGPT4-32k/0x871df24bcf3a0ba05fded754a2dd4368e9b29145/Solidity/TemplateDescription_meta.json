@@ -1,0 +1,20 @@
+{
+	"address": "0x871df24bcf3a0ba05fded754a2dd4368e9b29145",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "This model's maximum context length is 32768 tokens. However, your messages resulted in 33167 tokens. Please reduce the length of the messages.",
+	"token_exceeded": true,
+	"n_tokens": null,
+	"prompt_tokens": null,
+	"completion_tokens": null,
+	"time_cost": null,
+	"gen_code": null,
+	"compilable": null,
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 34
+}

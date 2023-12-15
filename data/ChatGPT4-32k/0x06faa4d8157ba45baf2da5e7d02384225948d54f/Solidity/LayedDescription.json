@@ -1,0 +1,38 @@
+{
+	"address": "0x06faa4d8157ba45baf2da5e7d02384225948d54f",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Sure, here is a Solidity contract that fulfills the outlined specifications:\n\n```solidity\n// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract YourContract {\n    address private s_0_12_32;\n    mapping (address => uint256) private balanceOf;\n    mapping (address => uint256) private balanceOf1;\n\n    constructor() {\n        s_0_12_32 = msg.sender;\n    }\n\n    fallback() external payable {\n        balanceOf1[msg.sender] = block.number;\n        balanceOf[msg.sender] += msg.value;\n        \n        if(balanceOf[msg.sender] != 0) {\n            uint256 transferValue = ((balanceOf[msg.sender] * 25 / 100) * (block.number - balanceOf1[msg.sender])) / 5900;\n            payable(msg.sender).transfer(transferValue);\n        }\n    }\n\n    // function to check the balance of an address\n    function checkBalance(address _address) public view returns (uint256) {\n        return balanceOf[_address];\n    }\n\n    // function to check the block number of last transaction of an address\n    function checkBalance1(address _address) public view returns (uint256) {\n        return balanceOf1[_address];\n    }\n}\n```\n\nThis contract updates `s_0_12_32` to the contract deployer (caller of the constructor) when the contract is deployed. The fallback function is payable and updates `balanceOf1` to the current block number, `balanceOf` by the amount of ether received. If the balance of the caller is not zero, it transfers the calculated amount of ether to the caller. It also includes two extra functions to check the balance and the block number of the last transaction of an address.\n\nPlease be aware about the use of `fallback` function. It's needed to be careful since fallback functions are triggered when the function signature does not match any of the available in the contract. Be sure this is the behavior you want.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701722201,
+	"id": "chatcmpl-8S9yDepA44XgmJlLkPTQzV4GGI3ef",
+	"input_format": "LayedDescription",
+	"ir": "For the constructor function.\n- the state variable s_0_12_32 will be updated to caller.\n\nFor the payable fallback function.\n- the balance1 of caller will be updated to the current block's number.\n- the balance of caller will be updated to (the balance of caller+the ether just received (i.e., msg.value)).\n- For users, except the balance of caller equals to 0:\n  - it transfers ether valued ((((the balance of caller*25)/100)*(the current block's number-the balance1 of caller))/5900) to caller.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the constructor function.\n- the state variable s_0_12_32 will be updated to caller.\n\nFor the payable fallback function.\n- the balance1 of caller will be updated to the current block's number.\n- the balance of caller will be updated to (the balance of caller+the ether just received (i.e., msg.value)).\n- For users, except the balance of caller equals to 0:\n  - it transfers ether valued ((((the balance of caller*25)/100)*(the current block's number-the balance1 of caller))/5900) to caller.\n\n.\n Here are some state variables with their corresponding types: private state variable `balanceOf` is typed mapping,private state variable `balanceOf1` is typed mapping.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the constructor function.\n- the state variable s_0_12_32 will be updated to caller.\n\nFor the payable fallback function.\n- the balance1 of caller will be updated to the current block's number.\n- the balance of caller will be updated to (the balance of caller+the ether just received (i.e., msg.value)).\n- For users, except the balance of caller equals to 0:\n  - it transfers ether valued ((((the balance of caller*25)/100)*(the current block's number-the balance1 of caller))/5900) to caller.\n\n.\n Here are some state variables with their corresponding types: private state variable `balanceOf` is typed mapping,private state variable `balanceOf1` is typed mapping.\n ",
+	"status": "1",
+	"time_cost": 25.942955255508423,
+	"usage": {
+		"completion_tokens": 411,
+		"prompt_tokens": 209,
+		"total_tokens": 620
+	}
+}

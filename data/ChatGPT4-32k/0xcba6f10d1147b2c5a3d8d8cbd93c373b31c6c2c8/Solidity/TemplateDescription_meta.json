@@ -1,0 +1,20 @@
+{
+	"address": "0xcba6f10d1147b2c5a3d8d8cbd93c373b31c6c2c8",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 5772.0,
+	"prompt_tokens": 4933.0,
+	"completion_tokens": 839.0,
+	"time_cost": 54.82156610488892,
+	"gen_code": true,
+	"compilable": " source \"./data/results/0-responses/rerun/description/eval_result_description_v1111_1/description_v1111_1/0xcba6f10d1147b2c5a3d8d8cbd93c373b31c6c2c8/solidity/templatedescription/safemath.sol\" not found: file not found.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 39
+}

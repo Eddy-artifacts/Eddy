@@ -1,0 +1,20 @@
+{
+	"address": "0xed1b85d8a750fb3058cfc46d4508e791fe7a4d73",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 968.0,
+	"prompt_tokens": 552.0,
+	"completion_tokens": 416.0,
+	"time_cost": 22.489677906036377,
+	"gen_code": true,
+	"compilable": " operator == not compatible with types int_const 157872740 and bytes4\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 2
+}

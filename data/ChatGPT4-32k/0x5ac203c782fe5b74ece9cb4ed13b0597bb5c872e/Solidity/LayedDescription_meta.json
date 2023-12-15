@@ -1,0 +1,20 @@
+{
+	"address": "0x5ac203c782fe5b74ece9cb4ed13b0597bb5c872e",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1749.0,
+	"prompt_tokens": 958.0,
+	"completion_tokens": 791.0,
+	"time_cost": 55.01223826408386,
+	"gen_code": true,
+	"compilable": " type bool is not implicitly convertible to expected type uint256.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 33
+}

@@ -1,0 +1,20 @@
+{
+	"address": "0xaa6da59f02ac6335ff0dbb896323181a8431a675",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2094.0,
+	"prompt_tokens": 1284.0,
+	"completion_tokens": 810.0,
+	"time_cost": 39.826165199279785,
+	"gen_code": true,
+	"compilable": " wrong argument count for function call: 5 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t no matching declaration found after argument-dependent lookup.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 12
+}

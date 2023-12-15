@@ -1,0 +1,38 @@
+{
+	"address": "0x6bf4ac662f183f3ba1960bd6d6691b7613589d23",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Given your requirements, here's a Solidity contract that should meet your needs:\n\n```Solidity\npragma solidity ^0.7.0;\n\ninterface IToken {\n    function sendDividends(address recipient, uint256 amount) external;\n}\n\ncontract DividendContract {\n    IToken public token;\n    address public adminaddress_1;\n    address public adminaddress_2;\n    address public adminaddress_3;\n\n    constructor(address _token, address _adminaddress_1, address _adminaddress_2, address _adminaddress_3) {\n        token = IToken(_token);\n        adminaddress_1 = _adminaddress_1;\n        adminaddress_2 = _adminaddress_2;\n        adminaddress_3 = _adminaddress_3;\n    }\n\n    function transferDividends() public payable {\n        uint256 contractBalance = address(this).balance;\n\n        if (msg.sender == adminaddress_1) {\n            token.sendDividends(adminaddress_1, contractBalance);\n        } else if (msg.sender == adminaddress_2) {\n            token.sendDividends(adminaddress_2, contractBalance);\n        } else if (msg.sender == adminaddress_3) {\n            token.sendDividends(adminaddress_3, contractBalance);\n        } else {\n            revert(\"Permission denied\");\n        }\n    }\n}\n```\n\nIn this contract, `transferDividends` is a function that checks if the sender is one of the admin addresses. If it is, it calls the `sendDividends` function of the `token` contract and sends all the contract's balance as dividends to the corresponding admin address. If the sender is not one of the admin addresses, the function reverts the transaction. The `token` contract is an instance of the `IToken` interface, which has the `sendDividends` function that should be implemented in the actual token contract. The contract's constructor sets the initial values for the `token` and the admin addresses.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701718119,
+	"id": "chatcmpl-8S8uNiRQxpsZ1ojvWH8E6BGc5V4iE",
+	"input_format": "LayedDescription",
+	"ir": "For the transferDividends function.\n- For adminaddress_1:\n  - it calls an external function sendDividends of the external contract token with ether valued valued the balance of the address of this contract\n- For users, except for adminaddress_1:\n  - For adminaddress_2:\n    - it calls an external function sendDividends of the external contract token with ether valued valued the balance of the address of this contract\n  - For users, except for adminaddress_2, and for adminaddress_3:\n    - it calls an external function sendDividends of the external contract token with ether valued valued the balance of the address of this contract\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the transferDividends function.\n- For adminaddress_1:\n  - it calls an external function sendDividends of the external contract token with ether valued valued the balance of the address of this contract\n- For users, except for adminaddress_1:\n  - For adminaddress_2:\n    - it calls an external function sendDividends of the external contract token with ether valued valued the balance of the address of this contract\n  - For users, except for adminaddress_2, and for adminaddress_3:\n    - it calls an external function sendDividends of the external contract token with ether valued valued the balance of the address of this contract\n\n.\n Here are some state variables with their corresponding types: public state variable `adminaddress_1` is typed address,public state variable `adminaddress_2` is typed address,public state variable `adminaddress_3` is typed address,public state variable `token` is typed address.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the transferDividends function.\n- For adminaddress_1:\n  - it calls an external function sendDividends of the external contract token with ether valued valued the balance of the address of this contract\n- For users, except for adminaddress_1:\n  - For adminaddress_2:\n    - it calls an external function sendDividends of the external contract token with ether valued valued the balance of the address of this contract\n  - For users, except for adminaddress_2, and for adminaddress_3:\n    - it calls an external function sendDividends of the external contract token with ether valued valued the balance of the address of this contract\n\n.\n Here are some state variables with their corresponding types: public state variable `adminaddress_1` is typed address,public state variable `adminaddress_2` is typed address,public state variable `adminaddress_3` is typed address,public state variable `token` is typed address.\n ",
+	"status": "1",
+	"time_cost": 18.336165189743042,
+	"usage": {
+		"completion_tokens": 410,
+		"prompt_tokens": 259,
+		"total_tokens": 669
+	}
+}

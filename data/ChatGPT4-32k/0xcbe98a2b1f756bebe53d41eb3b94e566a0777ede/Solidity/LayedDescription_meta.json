@@ -1,0 +1,20 @@
+{
+	"address": "0xcbe98a2b1f756bebe53d41eb3b94e566a0777ede",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1380.0,
+	"prompt_tokens": 796.0,
+	"completion_tokens": 584.0,
+	"time_cost": 43.29741144180298,
+	"gen_code": true,
+	"compilable": " type int_const 1157...(70 digits omitted)...1055 is not implicitly convertible to expected type uint8. literal is too large to fit in uint8.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 13
+}

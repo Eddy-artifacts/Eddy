@@ -1,0 +1,20 @@
+{
+	"address": "0x9be0754df1f8ebf8d6a6fc86e0bf186aa3f7a4f4",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2702.0,
+	"prompt_tokens": 1931.0,
+	"completion_tokens": 771.0,
+	"time_cost": 38.83590984344482,
+	"gen_code": true,
+	"compilable": " functions are not allowed to have the same name as the contract. if you intend this to be a constructor, use \"constructor(...) { ... }\" to define it.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 13
+}

@@ -1,0 +1,20 @@
+{
+	"address": "0xc1ad68c43508dd5addb8d0ac0927dbe752d149d6",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1.0",
+	"token_exceeded": false,
+	"n_tokens": 4215.0,
+	"prompt_tokens": 3575.0,
+	"completion_tokens": 640.0,
+	"time_cost": 35.911426067352295,
+	"gen_code": true,
+	"compilable": " operator == not compatible with types address payable and uint256\t operator < not compatible with types bool and int_const 2\t operator != not compatible with types uint256 and bool\t type bool is not implicitly convertible to expected type uint256.\t operator == not compatible with types address payable and uint256\t operator < not compatible with types bool and int_const 2\t operator != not compatible with types uint256 and bool\t type bool is not implicitly convertible to expected type uint256.\t operator == not compatible with types address payable and uint256\t operator == not compatible with types address payable and uint256\t indexed expression has to be a type, mapping or array (is uint256)\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 31
+}

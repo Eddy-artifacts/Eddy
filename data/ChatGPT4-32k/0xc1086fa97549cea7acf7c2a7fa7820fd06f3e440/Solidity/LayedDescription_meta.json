@@ -1,0 +1,20 @@
+{
+	"address": "0xc1086fa97549cea7acf7c2a7fa7820fd06f3e440",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 6930.0,
+	"prompt_tokens": 6426.0,
+	"completion_tokens": 504.0,
+	"time_cost": 37.592650175094604,
+	"gen_code": true,
+	"compilable": " \"send\" and \"transfer\" are only available for objects of type \"address payable\", not \"address\".\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 13
+}

@@ -1,0 +1,20 @@
+{
+	"address": "0x58fcf11196abaeefdf23198ec4ec9c5237963e17",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2603.0,
+	"prompt_tokens": 2020.0,
+	"completion_tokens": 583.0,
+	"time_cost": 111.0426561832428,
+	"gen_code": true,
+	"compilable": " invalid type for argument in function call. invalid implicit conversion from bytes4 to bytes memory requested. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t invalid type for argument in function call. invalid implicit conversion from bytes4 to bytes memory requested. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t invalid type for argument in function call. invalid implicit conversion from bytes4 to bytes memory requested. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 4 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t member \"transfer\" not found or not visible after argument-dependent lookup in address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 12
+}

@@ -1,0 +1,38 @@
+{
+	"address": "0xe52bd9bcfa0c9513a5f9bbfdfa6debab9606da10",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here's an example of how you might implement this contract in Solidity:\n\n```solidity\n// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\ncontract MyContract {\n    mapping(address => uint256) private balanceOf;\n    mapping(address => uint256) private balanceOf1;\n\n    receive() external payable {\n        balanceOf[msg.sender] = block.number;\n        balanceOf1[msg.sender] = msg.value;\n    }\n\n    function withdraw() public {\n        uint256 withdrawalAmount = (balanceOf1[msg.sender] * (100 + (block.number - balanceOf[msg.sender]))) / 100;\n        \n        require(withdrawalAmount <= address(this).balance, \"Insufficient contract balance\");\n        require(withdrawalAmount > 0, \"No balance to withdraw\");\n        require((block.number - balanceOf[msg.sender]) <= 100, \"Maximum limit reached\");\n\n        payable(msg.sender).transfer(withdrawalAmount);\n        balanceOf1[msg.sender] = 0;\n    }\n}\n```\nThis contract first declares two private mapping state variables `balanceOf` and `balanceOf1` that map an address to a uint256. \n\nThe `receive` function is a special fallback function that is executed when the contract receives Ether without any other data. It updates `balanceOf` and `balanceOf1` for the sender of the transaction (`msg.sender`) with the current block number and the amount of Ether received (`msg.value`), respectively.\n\nThe `withdraw` function first calculates the amount to be withdrawn as specified in the contract description. It then checks that the withdrawal amount is not greater than the contract's balance, that the withdrawal amount is greater than 0, and that the difference between the current block number and the sender's balance is not greater than 100. If these conditions are met, it transfers the withdrawal amount to the sender and updates `balanceOf1` for the sender to 0.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701721544,
+	"id": "chatcmpl-8S9ncqbS0kVqZ8xw7wCVcV5dQlAxc",
+	"input_format": "LayedDescription",
+	"ir": "For the payable fallback function.\n- the balance of caller will be updated to the current block's number.\n- the balance1 of caller will be updated to the ether just received (i.e., msg.value).\n\nFor the withdraw function.\n- When ((the balance1 of caller*(100+(the current block's number-the balance of caller)))/100) is not greater than the balance of the address of this contract, and ((the balance1 of caller*(100+(the current block's number-the balance of caller)))/100) is greater than 0, and (the current block's number-the balance of caller) is not greater than 100, and for ORIGIN:\n  - it transfers ether valued ((the balance1 of caller*(100+(the current block's number-the balance of caller)))/100) to caller. Afterthat, \n    - the balance1 of caller will be updated to 0.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable fallback function.\n- the balance of caller will be updated to the current block's number.\n- the balance1 of caller will be updated to the ether just received (i.e., msg.value).\n\nFor the withdraw function.\n- When ((the balance1 of caller*(100+(the current block's number-the balance of caller)))/100) is not greater than the balance of the address of this contract, and ((the balance1 of caller*(100+(the current block's number-the balance of caller)))/100) is greater than 0, and (the current block's number-the balance of caller) is not greater than 100, and for ORIGIN:\n  - it transfers ether valued ((the balance1 of caller*(100+(the current block's number-the balance of caller)))/100) to caller. Afterthat, \n    - the balance1 of caller will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: private state variable `balanceOf1` is typed mapping,private state variable `balanceOf` is typed mapping.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable fallback function.\n- the balance of caller will be updated to the current block's number.\n- the balance1 of caller will be updated to the ether just received (i.e., msg.value).\n\nFor the withdraw function.\n- When ((the balance1 of caller*(100+(the current block's number-the balance of caller)))/100) is not greater than the balance of the address of this contract, and ((the balance1 of caller*(100+(the current block's number-the balance of caller)))/100) is greater than 0, and (the current block's number-the balance of caller) is not greater than 100, and for ORIGIN:\n  - it transfers ether valued ((the balance1 of caller*(100+(the current block's number-the balance of caller)))/100) to caller. Afterthat, \n    - the balance1 of caller will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: private state variable `balanceOf1` is typed mapping,private state variable `balanceOf` is typed mapping.\n ",
+	"status": "1",
+	"time_cost": 21.340219497680664,
+	"usage": {
+		"completion_tokens": 395,
+		"prompt_tokens": 278,
+		"total_tokens": 673
+	}
+}

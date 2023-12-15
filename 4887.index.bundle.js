@@ -1,0 +1,1 @@
+(self.webpackChunkupgradehub_frontend=self.webpackChunkupgradehub_frontend||[]).push([[4887],{9192:e=>{e.exports=function(e){return{name:"Node REPL",contains:[{className:"meta",starts:{end:/ |$/,starts:{end:"$",subLanguage:"javascript"}},variants:[{begin:/^>(?=[ ]|$)/},{begin:/^\.\.\.(?=[ ]|$)/}]}]}}}}]);

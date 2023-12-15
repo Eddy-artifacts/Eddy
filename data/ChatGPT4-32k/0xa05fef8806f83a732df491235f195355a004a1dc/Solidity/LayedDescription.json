@@ -1,0 +1,38 @@
+{
+	"address": "0xa05fef8806f83a732df491235f195355a004a1dc",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here is the Solidity smart contract code that matches your description:\n\n```solidity\npragma solidity >=0.7.0 <0.9.0;\n\ncontract Delegate {\n    address public implementation;\n\n    constructor(address _implementation) {\n        implementation = _implementation;\n    }\n    \n    fallback() external payable {\n        address _impl = implementation;\n        require(_impl != address(0));\n\n        assembly {\n            let ptr := mload(0x40)\n            calldatacopy(ptr, 0, calldatasize())\n            let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)\n            let size := returndatasize()\n            returndatacopy(ptr, 0, size)\n\n            switch result\n            case 0 { revert(ptr, size) }\n            default { return(ptr, size) }\n        }\n    }\n}\n```\n\nIn this contract, we have a fallback function that is marked as payable. This function will get triggered when the contract receives Ether along with data that doesn't match any other function in the contract, or if no data was supplied at all.\n\nThe fallback function delegates the call to the contract at the `implementation` address. It does this using inline assembly for maximum efficiency. If the delegate call fails, it reverts all changes to the state and forwards the error message. If the call is successful, it returns the data returned by the call.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701740856,
+	"id": "chatcmpl-8SEp6sgzTw8R9hSSz3SpS3zbASjLK",
+	"input_format": "LayedDescription",
+	"ir": "For the payable fallback function.\n- it delegates a call to implementation with all the arguments.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable fallback function.\n- it delegates a call to implementation with all the arguments.\n\n.\n Here are some state variables with their corresponding types: public state variable `implementation` is typed address.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable fallback function.\n- it delegates a call to implementation with all the arguments.\n\n.\n Here are some state variables with their corresponding types: public state variable `implementation` is typed address.\n ",
+	"status": "1",
+	"time_cost": 12.069453954696655,
+	"usage": {
+		"completion_tokens": 293,
+		"prompt_tokens": 98,
+		"total_tokens": 391
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"address": "0xe8647880a6f9e4b609728ee78a73f817eb490634",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1012.0,
+	"prompt_tokens": 645.0,
+	"completion_tokens": 367.0,
+	"time_cost": 21.02224087715149,
+	"gen_code": true,
+	"compilable": " source \"@openzeppelin/contracts/token/erc20/ierc20.sol\" not found: file outside of allowed directories.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 6
+}

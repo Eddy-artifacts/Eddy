@@ -1,0 +1,38 @@
+{
+	"address": "0x009449c99a2822914d68691d87b0177292fb5a6c",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Given your description, here is a sample Solidity contract that should meet your requirements:\n\n```solidity\npragma solidity ^0.8.0;\n\ncontract MyContract {\n    uint256 public starttime;\n    uint256 public endtime;\n    uint256 public rate;\n    uint256 public weiraised;\n    uint256 public cap;\n    uint256 public mincount;\n    address public wallet;\n    address public admin;\n    address public token;\n\n    constructor() {\n        admin = msg.sender; // Set the deployer as admin\n    }\n\n    modifier onlyAdmin() {\n        require(msg.sender == admin, \"Only admin can call this function.\");\n        _;\n    }\n\n    function changeWallet(address _wallet) public onlyAdmin {\n        wallet = _wallet;\n    }\n\n    function removeContract() public onlyAdmin {\n        selfdestruct(payable(wallet));\n    }\n}\n```\nThis contract includes an `onlyAdmin` modifier to restrict access to certain functions to only the admin. The `changeWallet` function changes the wallet address stored in state. The `removeContract` function destroys the contract and sends any remaining balance to the wallet. Please verify and test this thoroughly before using it in any production environment.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1702484735,
+	"id": "chatcmpl-8VML9yCu55evNYhrejCulP14UDUM8",
+	"input_format": "LayedDescription",
+	"ir": "For the changeWallet function, it has one argument and its type is address.\n- For admin:\n  - the state variable wallet will be updated to the first argument.\n\nFor the removeContract function.\n- For admin:\n  - the contract will be destroyed and its balance will be sent to wallet.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the changeWallet function, it has one argument and its type is address.\n- For admin:\n  - the state variable wallet will be updated to the first argument.\n\nFor the removeContract function.\n- For admin:\n  - the contract will be destroyed and its balance will be sent to wallet.\n\n.\n Here are some state variables with their corresponding types: public state variable `starttime` is typed uint256,public state variable `endtime` is typed uint256,public state variable `wallet` is typed address,public state variable `rate` is typed uint256,public state variable `weiraised` is typed uint256,public state variable `cap` is typed uint256,public state variable `admin` is typed address,public state variable `token` is typed address,public state variable `mincount` is typed uint256.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the changeWallet function, it has one argument and its type is address.\n- For admin:\n  - the state variable wallet will be updated to the first argument.\n\nFor the removeContract function.\n- For admin:\n  - the contract will be destroyed and its balance will be sent to wallet.\n\n.\n Here are some state variables with their corresponding types: public state variable `starttime` is typed uint256,public state variable `endtime` is typed uint256,public state variable `wallet` is typed address,public state variable `rate` is typed uint256,public state variable `weiraised` is typed uint256,public state variable `cap` is typed uint256,public state variable `admin` is typed address,public state variable `token` is typed address,public state variable `mincount` is typed uint256.\n ",
+	"status": "1",
+	"time_cost": 22.82541847229004,
+	"usage": {
+		"completion_tokens": 242,
+		"prompt_tokens": 229,
+		"total_tokens": 471
+	}
+}

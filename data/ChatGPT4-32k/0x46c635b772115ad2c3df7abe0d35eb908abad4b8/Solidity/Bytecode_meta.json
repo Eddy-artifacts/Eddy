@@ -1,0 +1,19 @@
+{
+	"address": "0x46c635b772115ad2c3df7abe0d35eb908abad4b8",
+	"model": "bytecode_1",
+	"input_format": "Bytecode",
+	"output_format": "Solidity",
+	"status": 1,
+	"token_exceeded": false,
+	"n_tokens": 2853.0,
+	"prompt_tokens": 2551.0,
+	"completion_tokens": 302.0,
+	"time_cost": 9.49786376953125,
+	"gen_code": true,
+	"language": "Solidity",
+	"compilable": " functions are not allowed to have the same name as the contract. if you intend this to be a constructor, use \"constructor(...) { ... }\" to define it.\t",
+	"version": null,
+	"n_sai": null,
+	"p_grammar": -1.0,
+	"sai": 11
+}

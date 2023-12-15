@@ -1,0 +1,20 @@
+{
+	"address": "0x07f7ecb66d788ab01dc93b9b71a88401de7d0f2e",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1731.0,
+	"prompt_tokens": 1162.0,
+	"completion_tokens": 569.0,
+	"time_cost": 24.697904586791992,
+	"gen_code": true,
+	"compilable": " operator != not compatible with types bool and int_const 0\t operator != not compatible with types bool and int_const 0\t cannot perform packed encoding for a literal. please convert it to an explicit type first.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 13
+}

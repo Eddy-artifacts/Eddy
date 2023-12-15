@@ -1,0 +1,20 @@
+{
+	"address": "0xbeeb655808e3bdb83b6998f09dfe1e0f2c66a9be",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3988.0,
+	"prompt_tokens": 2358.0,
+	"completion_tokens": 1630.0,
+	"time_cost": 109.88106203079224,
+	"gen_code": true,
+	"compilable": " operator * not compatible with types int_const 79228162514264337593543950336 and address\t operator * not compatible with types int_const 79228162514264337593543950336 and address\t operator * not compatible with types int_const 79228162514264337593543950336 and address\t type address is not implicitly convertible to expected type bytes32.\t indexed expression has to be a type, mapping or array (is uint256)\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 27
+}

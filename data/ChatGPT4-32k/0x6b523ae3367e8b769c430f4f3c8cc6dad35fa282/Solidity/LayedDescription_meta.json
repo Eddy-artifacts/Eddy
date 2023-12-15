@@ -1,0 +1,20 @@
+{
+	"address": "0x6b523ae3367e8b769c430f4f3c8cc6dad35fa282",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1202.0,
+	"prompt_tokens": 579.0,
+	"completion_tokens": 623.0,
+	"time_cost": 39.09127855300903,
+	"gen_code": true,
+	"compilable": " source \"@openzeppelin/contracts/token/erc721/erc721.sol\" not found: file outside of allowed directories.\t source \"@openzeppelin/contracts/token/erc20/erc20.sol\" not found: file outside of allowed directories.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 53
+}

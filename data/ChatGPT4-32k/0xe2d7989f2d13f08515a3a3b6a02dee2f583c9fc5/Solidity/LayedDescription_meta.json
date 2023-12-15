@@ -1,0 +1,20 @@
+{
+	"address": "0xe2d7989f2d13f08515a3a3b6a02dee2f583c9fc5",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 15402.0,
+	"prompt_tokens": 14736.0,
+	"completion_tokens": 666.0,
+	"time_cost": 42.70106244087219,
+	"gen_code": true,
+	"compilable": " member \"transferownership\" not found or not visible after argument-dependent lookup in address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 11
+}

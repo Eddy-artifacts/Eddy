@@ -1,0 +1,20 @@
+{
+	"address": "0x02e582682aa7b4dcc3f7574c468ef61b29545404",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3927.0,
+	"prompt_tokens": 3484.0,
+	"completion_tokens": 443.0,
+	"time_cost": 106.97808814048769,
+	"gen_code": true,
+	"compilable": " type uint256[] storage ref is not implicitly convertible to expected type uint256.\t invalid type for argument in function call. invalid implicit conversion from uint256[] storage ref to uint256 requested.\t type uint256 is not implicitly convertible to expected type address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 23
+}

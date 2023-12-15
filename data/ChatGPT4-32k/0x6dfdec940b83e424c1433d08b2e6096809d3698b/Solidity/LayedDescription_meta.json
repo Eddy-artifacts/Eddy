@@ -1,0 +1,20 @@
+{
+	"address": "0x6dfdec940b83e424c1433d08b2e6096809d3698b",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 13897.0,
+	"prompt_tokens": 13207.0,
+	"completion_tokens": 690.0,
+	"time_cost": 36.88293790817261,
+	"gen_code": true,
+	"compilable": " expected identifier but got 'minutes'\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 12
+}

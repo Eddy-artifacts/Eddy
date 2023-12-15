@@ -1,0 +1,38 @@
+{
+	"address": "0x12d5b7c26dd8dc6e2f71f5bf240d5e76452b2fe5",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Sure, here is the contract code in Solidity:\n\n```solidity\npragma solidity ^0.5.0;\n\ncontract MyContract {\n    uint256 public paused;\n    uint256 public totalSupply;\n    uint256 public totalSupply3;\n    uint256 public totalSupply7;\n    uint256 public totalSupply6;\n    uint256 public paused2;\n    uint256 public paused1;\n\n    constructor() public payable {\n        paused = 0;\n        totalSupply = 0;\n        totalSupply3 = 0;\n        totalSupply7 = 0;\n        totalSupply6 = 0;\n        paused2 = 0;\n        paused1 = 0;\n    }\n}\n```\nThis contract is pretty simple and just initializes some state variables to 0 in the constructor.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1702481825,
+	"id": "chatcmpl-8VLaDuf6vHNpW6dJdxdNL6MxGqHj7",
+	"input_format": "LayedDescription",
+	"ir": "For the payable constructor function.\n- the state variable paused will be updated to 0.\n- the state variable totalSupply will be updated to 0.\n- the state variable totalSupply3 will be updated to 0.\n- the state variable totalSupply7 will be updated to 0.\n- the state variable totalSupply6 will be updated to 0.\n- the state variable paused2 will be updated to 0.\n- the state variable paused1 will be updated to 0.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the payable constructor function.\n- the state variable paused will be updated to 0.\n- the state variable totalSupply will be updated to 0.\n- the state variable totalSupply3 will be updated to 0.\n- the state variable totalSupply7 will be updated to 0.\n- the state variable totalSupply6 will be updated to 0.\n- the state variable paused2 will be updated to 0.\n- the state variable paused1 will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: .\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the payable constructor function.\n- the state variable paused will be updated to 0.\n- the state variable totalSupply will be updated to 0.\n- the state variable totalSupply3 will be updated to 0.\n- the state variable totalSupply7 will be updated to 0.\n- the state variable totalSupply6 will be updated to 0.\n- the state variable paused2 will be updated to 0.\n- the state variable paused1 will be updated to 0.\n\n.\n Here are some state variables with their corresponding types: .\n ",
+	"status": "1",
+	"time_cost": 6.265997886657715,
+	"usage": {
+		"completion_tokens": 159,
+		"prompt_tokens": 170,
+		"total_tokens": 329
+	}
+}

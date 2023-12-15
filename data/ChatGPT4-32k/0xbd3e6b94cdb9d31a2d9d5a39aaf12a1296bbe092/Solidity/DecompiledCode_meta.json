@@ -1,0 +1,20 @@
+{
+	"address": "0xbd3e6b94cdb9d31a2d9d5a39aaf12a1296bbe092",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 995.0,
+	"prompt_tokens": 506.0,
+	"completion_tokens": 489.0,
+	"time_cost": 25.04700326919556,
+	"gen_code": true,
+	"compilable": " expected identifier, got 'payable'\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 4
+}

@@ -1,0 +1,20 @@
+{
+	"address": "0x5f875083f7f3c71ee347a37bd3e234f60c062cd0",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2550.0,
+	"prompt_tokens": 1593.0,
+	"completion_tokens": 957.0,
+	"time_cost": 54.62985634803772,
+	"gen_code": true,
+	"compilable": " expected token comma got 'payable'\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 16
+}

@@ -1,0 +1,38 @@
+{
+	"address": "0x94988e076f23ef94d05a1cc285f2055d54334b78",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here's the Solidity smart contract code based on your description:\n\n```sol\npragma solidity ^0.5.16;\n\ncontract YourContract {\n    mapping(address => uint256) private balanceOf;\n    mapping(address => uint256) private balanceOf1;\n    address private owner;\n\n    constructor() public {\n        owner = msg.sender;\n    }\n\n    function() external payable {\n        balanceOf1[msg.sender] = now;\n        balanceOf[msg.sender] += msg.value;\n\n        if(msg.value > 0) {\n            uint256 transferToOwner = (msg.value * 4) / 100;\n            address(uint160(owner)).transfer(transferToOwner);\n        }\n\n        if(balanceOf[msg.sender] != 0) {\n            uint256 transferToSender = ((4 * balanceOf[msg.sender]) / 100 * (now - balanceOf1[msg.sender])) / 0x15180;\n            if(transferToSender >= address(this).balance) {\n                transferToSender = address(this).balance;\n            }\n            msg.sender.transfer(transferToSender);\n        }\n    }\n}\n```\n\nThis contract will do exactly what you described. The constructor sets the owner to the address that deploys the contract. The fallback function is payable, meaning it can receive Ether. It updates the `balanceOf1` mapping with the current timestamp and the `balanceOf` mapping with the amount of Ether sent. \n\nIf the amount of Ether sent is greater than 0, it transfers 4% of that Ether to the owner. If the balance of the sender is not 0, it calculates a value based on the balance of the sender and the time since their last transaction, then transfers that amount of Ether to the sender. \n\nIf the calculated value is greater than the contract's balance, it simply transfers the entire contract balance to the sender.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701720729,
+	"id": "chatcmpl-8S9aTzN77DSETnYmWgrSebHa2Isjs",
+	"input_format": "LayedDescription",
+	"ir": "For the constructor function.\n- the state variable owner will be updated to caller.\n\nFor the payable fallback function.\n- the balance1 of caller will be updated to current time.\n- the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When the ether just received (i.e., msg.value) is greater than 0:\n  - it transfers ((the ether just received (i.e., msg.value)*4)/100) to owner.\n- When the balance of caller is not 0:\n  - it transfers ether valued ((((4*the balance of caller)/100)*(current time-the balance1 of caller))/0x15180) to caller.\n  - When ((((4*the balance of caller)/100)*(current time-the balance1 of caller))/0x15180) is not smaller than the balance of the address of this contract:\n    - it transfers ether valued the balance of the address of this contract to caller.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the constructor function.\n- the state variable owner will be updated to caller.\n\nFor the payable fallback function.\n- the balance1 of caller will be updated to current time.\n- the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When the ether just received (i.e., msg.value) is greater than 0:\n  - it transfers ((the ether just received (i.e., msg.value)*4)/100) to owner.\n- When the balance of caller is not 0:\n  - it transfers ether valued ((((4*the balance of caller)/100)*(current time-the balance1 of caller))/0x15180) to caller.\n  - When ((((4*the balance of caller)/100)*(current time-the balance1 of caller))/0x15180) is not smaller than the balance of the address of this contract:\n    - it transfers ether valued the balance of the address of this contract to caller.\n\n.\n Here are some state variables with their corresponding types: private state variable `balanceOf` is typed mapping,private state variable `balanceOf1` is typed mapping,private state variable `owner` is typed address.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the constructor function.\n- the state variable owner will be updated to caller.\n\nFor the payable fallback function.\n- the balance1 of caller will be updated to current time.\n- the balance of caller will be updated to (the ether just received (i.e., msg.value)+the balance of caller).\n- When the ether just received (i.e., msg.value) is greater than 0:\n  - it transfers ((the ether just received (i.e., msg.value)*4)/100) to owner.\n- When the balance of caller is not 0:\n  - it transfers ether valued ((((4*the balance of caller)/100)*(current time-the balance1 of caller))/0x15180) to caller.\n  - When ((((4*the balance of caller)/100)*(current time-the balance1 of caller))/0x15180) is not smaller than the balance of the address of this contract:\n    - it transfers ether valued the balance of the address of this contract to caller.\n\n.\n Here are some state variables with their corresponding types: private state variable `balanceOf` is typed mapping,private state variable `balanceOf1` is typed mapping,private state variable `owner` is typed address.\n ",
+	"status": "1",
+	"time_cost": 23.0827534198761,
+	"usage": {
+		"completion_tokens": 376,
+		"prompt_tokens": 303,
+		"total_tokens": 679
+	}
+}

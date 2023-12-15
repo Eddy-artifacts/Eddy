@@ -1,0 +1,20 @@
+{
+	"address": "0x65770b5283117639760bea3f867b69b3697a91dd",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1.0",
+	"token_exceeded": false,
+	"n_tokens": 2331.0,
+	"prompt_tokens": 1657.0,
+	"completion_tokens": 674.0,
+	"time_cost": 41.85108065605164,
+	"gen_code": true,
+	"compilable": " type uint256 is not implicitly convertible to expected type address.\t type uint256 is not implicitly convertible to expected type address.\t type uint256 is not implicitly convertible to expected type address.\t type uint256 is not implicitly convertible to expected type address.\t explicit type conversion not allowed from \"bool\" to \"uint256\".\t explicit type conversion not allowed from \"bool\" to \"uint256\".\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 25
+}

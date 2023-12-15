@@ -1,0 +1,20 @@
+{
+	"address": "0x7615882d2c0dba1913623c5a4c50fc345723d013",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 4328.0,
+	"prompt_tokens": 3382.0,
+	"completion_tokens": 946.0,
+	"time_cost": 59.9039158821106,
+	"gen_code": true,
+	"compilable": " cannot perform packed encoding for a literal. please convert it to an explicit type first.\t invalid type for argument in function call. invalid implicit conversion from address to address payable requested.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 34
+}

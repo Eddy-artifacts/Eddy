@@ -1,0 +1,20 @@
+{
+	"address": "0x36bdc3b60dc5491fbc7d74a05709e94d5b554321",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 9176.0,
+	"prompt_tokens": 8295.0,
+	"completion_tokens": 881.0,
+	"time_cost": 40.12002635002136,
+	"gen_code": true,
+	"compilable": " expected ',' but got '{'\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 14
+}

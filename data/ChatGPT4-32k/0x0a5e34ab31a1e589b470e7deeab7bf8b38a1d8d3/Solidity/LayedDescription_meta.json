@@ -1,0 +1,20 @@
+{
+	"address": "0x0a5e34ab31a1e589b470e7deeab7bf8b38a1d8d3",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1212.0,
+	"prompt_tokens": 706.0,
+	"completion_tokens": 506.0,
+	"time_cost": 19.819744110107425,
+	"gen_code": true,
+	"compilable": " expected identifier, got 'lparen'\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 7
+}

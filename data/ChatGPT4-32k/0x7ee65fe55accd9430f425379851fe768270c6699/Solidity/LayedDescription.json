@@ -1,0 +1,38 @@
+{
+	"address": "0x7ee65fe55accd9430f425379851fe768270c6699",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here is the contract code based on your description:\n\n```Solidity\npragma solidity ^0.5.0;\n\ncontract MyContract {\n    address private owner;\n    bool private decimals;\n\n    constructor() public {\n        owner = msg.sender;\n        decimals = false;\n    }\n\n    modifier onlyOwner {\n        require(msg.sender == owner);\n        _;\n    }\n\n    function selfDestruct(address payable _receiver) external onlyOwner {\n        require(decimals != false, \"Decimals must not be 0\");\n        selfdestruct(_receiver);\n    }\n\n    function setEtheraffle(address newOwner) external onlyOwner {\n        owner = newOwner;\n    }\n\n    function upgrade(address payable _contract) external onlyOwner {\n        decimals = true;\n        (bool success, ) = _contract.call.value(address(this).balance)(abi.encodeWithSignature(\"receiveEther()\"));\n        require(success, \"External function call failed\");\n    }\n}\n```\n\nThis contract does the following:\n- It is initialized with the `owner` as the sender of the transaction.\n- The `selfDestruct` function allows the owner to destroy the contract and send its balance to a provided address. It can only be called if `decimals` is not 0.\n- The `setEtheraffle` function allows the owner to change the owner.\n- The `upgrade` function allows the owner to set `decimals` to 1 and call an external function `receiveEther` on a provided contract, with the value of the transaction being the balance of the contract.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701718735,
+	"id": "chatcmpl-8S94Jq8Rxh38AYvx0kbV0WKPjVTS5",
+	"input_format": "LayedDescription",
+	"ir": "For the selfDestruct function, it has one argument and its type is address.\n- When decimals is not 0, and for owner:\n  - the contract will be destroyed and its balance will be sent to the first argument.\n\nFor the setEtheraffle function, it has one argument and its type is address.\n- For owner:\n  - the state variable owner will be updated to the first argument.\n\nFor the upgrade function, it has one argument and its type is address.\n- For owner:\n  - the state variable decimals will be updated to 1.\n  - it calls an external function receiveEther of the first argument with ether valued valued the balance of the address of this contract\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the selfDestruct function, it has one argument and its type is address.\n- When decimals is not 0, and for owner:\n  - the contract will be destroyed and its balance will be sent to the first argument.\n\nFor the setEtheraffle function, it has one argument and its type is address.\n- For owner:\n  - the state variable owner will be updated to the first argument.\n\nFor the upgrade function, it has one argument and its type is address.\n- For owner:\n  - the state variable decimals will be updated to 1.\n  - it calls an external function receiveEther of the first argument with ether valued valued the balance of the address of this contract\n\n.\n Here are some state variables with their corresponding types: private state variable `owner` is typed address,private state variable `decimals` is typed bool.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the selfDestruct function, it has one argument and its type is address.\n- When decimals is not 0, and for owner:\n  - the contract will be destroyed and its balance will be sent to the first argument.\n\nFor the setEtheraffle function, it has one argument and its type is address.\n- For owner:\n  - the state variable owner will be updated to the first argument.\n\nFor the upgrade function, it has one argument and its type is address.\n- For owner:\n  - the state variable decimals will be updated to 1.\n  - it calls an external function receiveEther of the first argument with ether valued valued the balance of the address of this contract\n\n.\n Here are some state variables with their corresponding types: private state variable `owner` is typed address,private state variable `decimals` is typed bool.\n ",
+	"status": "1",
+	"time_cost": 16.890486001968384,
+	"usage": {
+		"completion_tokens": 310,
+		"prompt_tokens": 230,
+		"total_tokens": 540
+	}
+}

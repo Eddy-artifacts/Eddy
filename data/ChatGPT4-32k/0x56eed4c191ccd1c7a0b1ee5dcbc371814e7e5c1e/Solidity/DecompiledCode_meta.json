@@ -1,0 +1,20 @@
+{
+	"address": "0x56eed4c191ccd1c7a0b1ee5dcbc371814e7e5c1e",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3301.0,
+	"prompt_tokens": 2810.0,
+	"completion_tokens": 491.0,
+	"time_cost": 26.36792755126953,
+	"gen_code": true,
+	"compilable": " expected pragma, import directive or contract/interface/library definition.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 14
+}

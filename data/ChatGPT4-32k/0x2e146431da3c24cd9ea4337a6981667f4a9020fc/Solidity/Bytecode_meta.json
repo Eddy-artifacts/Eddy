@@ -1,0 +1,19 @@
+{
+	"address": "0x2e146431da3c24cd9ea4337a6981667f4a9020fc",
+	"model": "bytecode_1",
+	"input_format": "Bytecode",
+	"output_format": "Solidity",
+	"status": 1,
+	"token_exceeded": false,
+	"n_tokens": 4975.0,
+	"prompt_tokens": 4464.0,
+	"completion_tokens": 511.0,
+	"time_cost": 20.25323486328125,
+	"gen_code": true,
+	"language": "Solidity",
+	"compilable": " source \"./data/results/0-responses/bytecode/eval_result_bytecode_1/bytecode_1/0x2e146431da3c24cd9ea4337a6981667f4a9020fc/solidity/bytecode/erc20interface.sol\" not found: file not found.\t source \"./data/results/0-responses/bytecode/eval_result_bytecode_1/bytecode_1/0x2e146431da3c24cd9ea4337a6981667f4a9020fc/solidity/bytecode/safemath.sol\" not found: file not found.\t",
+	"version": null,
+	"n_sai": null,
+	"p_grammar": -1.0,
+	"sai": 17
+}

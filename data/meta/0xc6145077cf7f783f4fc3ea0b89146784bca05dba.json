@@ -1,0 +1,5 @@
+{
+	"Language": "Solidity",
+	"Source": "/**\r\n *Submitted for verification at Etherscan.io on 2018-04-04\r\n*/\r\n\r\npragma solidity ^0.4.21;\r\n\r\ncontract Hellina{\r\n    address owner;\r\n    function Hellina(){\r\n        owner=msg.sender;\r\n    }\r\n    \r\n    function Buy() payable{\r\n        \r\n    }\r\n    \r\n    function Withdraw(){\r\n        owner.transfer(address(this).balance);\r\n    }\r\n}",
+	"ContractName": "Hellina"
+}

@@ -1,0 +1,38 @@
+{
+	"address": "0x7099ea5286aa066b5e6194ffebee691332502d8a",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Here is the contract code based on your descriptions:\n\n```solidity\npragma solidity ^0.5.5;\n\ncontract YourContract {\n    address payable recipient1 = 0xF4c6BB681800Ffb96Bc046F56af9f06Ab5774156;\n    address payable recipient2 = 0xD79D762727A6eeb9c47Cfb6FB451C858dfBF8405;\n    address payable recipient3 = 0x83c0Efc6d8B16D87BFe1335AB6BcAb3Ed3960285;\n\n    function get() public payable {\n        uint256 balance = address(this).balance;\n        uint256 amount = balance / 3;\n\n        (bool success1,) = recipient1.call.value(amount)(\"\");\n        require(success1, \"Transfer failed.\");\n\n        (bool success2,) = recipient2.call.value(amount)(\"\");\n        require(success2, \"Transfer failed.\");\n\n        balance = address(this).balance;\n        (bool success3,) = recipient3.call.value(balance)(\"\");\n        require(success3, \"Transfer failed.\");\n    }\n\n    function() external payable {}\n}\n```\n\nIn this contract, the `get` function divides the contract's balance into three parts. It then sends one part to `recipient1`, another part to `recipient2`, and the remaining balance to `recipient3`. \n\nThe code uses `call.value` to send ether to the specified addresses. The `require` function is used after each transfer to ensure that the transfer was successful. If the transfer fails, the whole transaction will be reverted.\n\nThe fallback function is used to receive ethers sent to the contract.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701711013,
+	"id": "chatcmpl-8S73lQlolimOTfIHG52T2YzdAxUXO",
+	"input_format": "LayedDescription",
+	"ir": "For the get function.\n- it transfers ether valued (the balance of the address of this contract/3) to 0xF4c6BB681800Ffb96Bc046F56af9f06Ab5774156.\n- it transfers ether valued (the balance of the address of this contract/3) to 0xD79D762727A6eeb9c47Cfb6FB451C858dfBF8405.\n- it transfers ether valued the balance of the address of this contract to 0x83c0Efc6d8B16D87BFe1335AB6BcAb3Ed3960285.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the get function.\n- it transfers ether valued (the balance of the address of this contract/3) to 0xF4c6BB681800Ffb96Bc046F56af9f06Ab5774156.\n- it transfers ether valued (the balance of the address of this contract/3) to 0xD79D762727A6eeb9c47Cfb6FB451C858dfBF8405.\n- it transfers ether valued the balance of the address of this contract to 0x83c0Efc6d8B16D87BFe1335AB6BcAb3Ed3960285.\n\n.\n Here are some state variables with their corresponding types: .\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the get function.\n- it transfers ether valued (the balance of the address of this contract/3) to 0xF4c6BB681800Ffb96Bc046F56af9f06Ab5774156.\n- it transfers ether valued (the balance of the address of this contract/3) to 0xD79D762727A6eeb9c47Cfb6FB451C858dfBF8405.\n- it transfers ether valued the balance of the address of this contract to 0x83c0Efc6d8B16D87BFe1335AB6BcAb3Ed3960285.\n\n.\n Here are some state variables with their corresponding types: .\n ",
+	"status": "1",
+	"time_cost": 22.397130250930786,
+	"usage": {
+		"completion_tokens": 345,
+		"prompt_tokens": 208,
+		"total_tokens": 553
+	}
+}

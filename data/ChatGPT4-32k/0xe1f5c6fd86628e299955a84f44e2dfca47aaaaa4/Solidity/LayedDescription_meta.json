@@ -1,0 +1,20 @@
+{
+	"address": "0xe1f5c6fd86628e299955a84f44e2dfca47aaaaa4",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 934.0,
+	"prompt_tokens": 449.0,
+	"completion_tokens": 485.0,
+	"time_cost": 48.9197564125061,
+	"gen_code": true,
+	"compilable": " expected identifier but got '('\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 4
+}

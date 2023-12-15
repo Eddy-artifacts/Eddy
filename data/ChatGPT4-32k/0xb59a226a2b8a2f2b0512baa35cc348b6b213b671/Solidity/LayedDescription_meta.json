@@ -1,0 +1,20 @@
+{
+	"address": "0xb59a226a2b8a2f2b0512baa35cc348b6b213b671",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2752.0,
+	"prompt_tokens": 1972.0,
+	"completion_tokens": 780.0,
+	"time_cost": 39.11327576637268,
+	"gen_code": true,
+	"compilable": " identifier already declared.\t member \"allowed\" not found or not visible after argument-dependent lookup in address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 18
+}

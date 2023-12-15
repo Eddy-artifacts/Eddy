@@ -1,0 +1,20 @@
+{
+	"address": "0x3c020e014069df790d4f4e63fd297ba4e1c8e51f",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2449.0,
+	"prompt_tokens": 1916.0,
+	"completion_tokens": 533.0,
+	"time_cost": 25.752397060394287,
+	"gen_code": true,
+	"compilable": " operator * not compatible with types address and int_const 79228162514264337593543950336. arithmetic operations on addresses are not supported. convert to integer first before using them.\t operator * not compatible with types address and int_const 79228162514264337593543950336. arithmetic operations on addresses are not supported. convert to integer first before using them.\t \"sha3\" has been deprecated in favour of \"keccak256\".\t wrong argument count for function call: 2 arguments given but expected 1. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 30
+}

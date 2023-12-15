@@ -1,0 +1,20 @@
+{
+	"address": "0xe4e28bfd45969218a2af311ee10e80846f7b2fdc",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1220.0,
+	"prompt_tokens": 747.0,
+	"completion_tokens": 473.0,
+	"time_cost": 32.07022452354431,
+	"gen_code": true,
+	"compilable": " expected a state variable declaration. if you intended this as a fallback function or a function to handle plain ether transactions, use the \"fallback\" keyword or the \"receive\" keyword instead.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 8
+}

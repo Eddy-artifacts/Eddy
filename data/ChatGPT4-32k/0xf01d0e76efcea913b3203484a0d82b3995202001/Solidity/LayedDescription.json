@@ -1,0 +1,38 @@
+{
+	"address": "0xf01d0e76efcea913b3203484a0d82b3995202001",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "Sure, here's a Solidity smart contract that implements the described logic.\n\n```solidity\npragma solidity >=0.7.0 <0.9.0;\n\ncontract YourContract {\n    address private owner;\n    mapping(address => uint256) public authorizations;\n\n    constructor() {\n        owner = msg.sender;\n    }\n\n    fallback() external payable {\n        if (authorizations[msg.sender] > 0) {\n            uint256 amount = msg.value + (authorizations[msg.sender]*0x38d7ea4c68000);\n            payable(msg.sender).transfer(amount);\n            authorizations[msg.sender] = 0;\n        }\n    }\n\n    function withdraw(uint256 amount) external {\n        require(msg.sender == owner, \"Only the owner can withdraw\");\n        payable(owner).transfer(amount);\n    }\n\n    function authorize(address user, uint256 amount) external {\n        require(msg.sender == owner, \"Only the owner can authorize\");\n        require(address(this).balance >= amount, \"Not enough balance in contract\");\n        authorizations[user] = amount;\n    }\n}\n```\n\nThis contract has four main functions:\n\n- `constructor`: Sets the sender as the owner of the contract.\n- `fallback`: If the sender is authorized (has a non-zero authorization), it adds the sent value to a calculated amount based on the authorization, then transfers the total amount to the sender, and finally resets the sender's authorization to 0.\n- `withdraw`: The owner can withdraw a specified amount of ether from the contract.\n- `authorize`: The owner can authorize a user by setting their authorization to a provided amount, given that the contract has enough balance.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701711143,
+	"id": "chatcmpl-8S75rml29wpzgwC6mXD58YJ5v9Ax9",
+	"input_format": "LayedDescription",
+	"ir": "For the constructor function.\n- the state variable owner will be updated to caller.\n\nFor the payable fallback function.\n- When the authorizations of caller is greater than 0:\n  - it transfers (the ether just received (i.e., msg.value)+(the authorizations of caller*0x38d7ea4c68000)) to caller. Afterthat, \n    - the authorizations of caller will be updated to 0.\n\nFor the withdraw function, it has one argument and its type is uint256.\n- For owner:\n  - it transfers ether valued the first argument to owner.\n\nFor the authorize function, it has 2 arguments and the type of each argument is as follows: address, uint256.\n- For owner, and the balance of the address of this contract is not smaller than the second argument:\n  - the authorizations of the first argument will be updated to the second argument.\n\n",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the description of the contract logic: For the constructor function.\n- the state variable owner will be updated to caller.\n\nFor the payable fallback function.\n- When the authorizations of caller is greater than 0:\n  - it transfers (the ether just received (i.e., msg.value)+(the authorizations of caller*0x38d7ea4c68000)) to caller. Afterthat, \n    - the authorizations of caller will be updated to 0.\n\nFor the withdraw function, it has one argument and its type is uint256.\n- For owner:\n  - it transfers ether valued the first argument to owner.\n\nFor the authorize function, it has 2 arguments and the type of each argument is as follows: address, uint256.\n- For owner, and the balance of the address of this contract is not smaller than the second argument:\n  - the authorizations of the first argument will be updated to the second argument.\n\n.\n Here are some state variables with their corresponding types: private state variable `owner` is typed address,public state variable `authorizations` is typed mapping.\n ",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following contract descriptions. Some state variables are provided to help you develop.The following is the description of the contract logic: For the constructor function.\n- the state variable owner will be updated to caller.\n\nFor the payable fallback function.\n- When the authorizations of caller is greater than 0:\n  - it transfers (the ether just received (i.e., msg.value)+(the authorizations of caller*0x38d7ea4c68000)) to caller. Afterthat, \n    - the authorizations of caller will be updated to 0.\n\nFor the withdraw function, it has one argument and its type is uint256.\n- For owner:\n  - it transfers ether valued the first argument to owner.\n\nFor the authorize function, it has 2 arguments and the type of each argument is as follows: address, uint256.\n- For owner, and the balance of the address of this contract is not smaller than the second argument:\n  - the authorizations of the first argument will be updated to the second argument.\n\n.\n Here are some state variables with their corresponding types: private state variable `owner` is typed address,public state variable `authorizations` is typed mapping.\n ",
+	"status": "1",
+	"time_cost": 14.226508140563965,
+	"usage": {
+		"completion_tokens": 334,
+		"prompt_tokens": 275,
+		"total_tokens": 609
+	}
+}

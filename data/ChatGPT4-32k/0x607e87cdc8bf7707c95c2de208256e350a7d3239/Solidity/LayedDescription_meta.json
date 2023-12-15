@@ -1,0 +1,20 @@
+{
+	"address": "0x607e87cdc8bf7707c95c2de208256e350a7d3239",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 4220.0,
+	"prompt_tokens": 3721.0,
+	"completion_tokens": 499.0,
+	"time_cost": 22.18063402175904,
+	"gen_code": true,
+	"compilable": " member \"systemonsalecount\" not found or not visible after argument-dependent lookup in address.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 40
+}

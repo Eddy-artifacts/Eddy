@@ -1,0 +1,20 @@
+{
+	"address": "0xafb7ae966a9a7801beace4a7d5bbee91d860f616",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 1518.0,
+	"prompt_tokens": 1046.0,
+	"completion_tokens": 472.0,
+	"time_cost": 26.20608377456665,
+	"gen_code": true,
+	"compilable": " type address is not implicitly convertible to expected type address payable.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 12
+}

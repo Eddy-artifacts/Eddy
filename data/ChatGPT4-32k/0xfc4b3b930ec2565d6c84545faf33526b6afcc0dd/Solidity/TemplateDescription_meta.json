@@ -1,0 +1,20 @@
+{
+	"address": "0xfc4b3b930ec2565d6c84545faf33526b6afcc0dd",
+	"model": "description_v1111_1",
+	"input_format": "TemplateDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 3424.0,
+	"prompt_tokens": 2295.0,
+	"completion_tokens": 1129.0,
+	"time_cost": 52.77259635925293,
+	"gen_code": true,
+	"compilable": " operator * not compatible with types address and int_const 79228162514264337593543950336. arithmetic operations on addresses are not supported. convert to integer first before using them.\t operator * not compatible with types address and int_const 79228162514264337593543950336. arithmetic operations on addresses are not supported. convert to integer first before using them.\t operator * not compatible with types address and int_const 79228162514264337593543950336. arithmetic operations on addresses are not supported. convert to integer first before using them.\t operator -= not compatible with types uint160 and uint256\t type address is not implicitly convertible to expected type address payable.\t",
+	"language": "Solidity",
+	"version": null,
+	"n_sai": null,
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 30
+}

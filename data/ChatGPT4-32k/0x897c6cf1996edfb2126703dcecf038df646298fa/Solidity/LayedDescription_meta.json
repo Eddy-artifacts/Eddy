@@ -1,0 +1,20 @@
+{
+	"address": "0x897c6cf1996edfb2126703dcecf038df646298fa",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2793.0,
+	"prompt_tokens": 2038.0,
+	"completion_tokens": 755.0,
+	"time_cost": 27.981735229492188,
+	"gen_code": true,
+	"compilable": " invalid type for argument in function call. invalid implicit conversion from bytes4 to bytes memory requested. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 2 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t wrong argument count for function call: 2 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.\t \"send\" and \"transfer\" are only available for objects of type \"address payable\", not \"address\".\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 15
+}

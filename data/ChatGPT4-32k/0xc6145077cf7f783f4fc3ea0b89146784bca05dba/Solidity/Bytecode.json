@@ -1,0 +1,38 @@
+{
+	"address": "0xc6145077cf7f783f4fc3ea0b89146784bca05dba",
+	"choices": [
+		{
+			"finish_reason": "stop",
+			"index": 0,
+			"message": {
+				"content": "The bytecode you provided is not human-readable, as it's the low-level code that runs on the Ethereum Virtual Machine (EVM). However, it is possible to provide a general outline of the Solidity code that would generate similar bytecode. Please note that the exact structure, function names and variables can't be determined from the bytecode alone. Here is a broad outline:\n\n```Solidity\npragma solidity >=0.4.22 <0.7.0;\n\ncontract MyContract {\n    function myFunction1(bytes32 param1) public returns (bytes32 result) {\n        // function logic here\n    }\n    function myFunction2(bytes32 param2) public returns (bytes32 result) {\n        // function logic here\n    }\n}\n```\n\nThe above contract has two functions that take a single `bytes32` parameter and return a `bytes32` result. The actual function names and parameters can't be determined from the bytecode. The function logic is also unknown. This is a rough estimation and might not be accurate. For accurate results, the original source code is needed.",
+				"role": "assistant"
+			}
+		}
+	],
+	"created": 1701460220,
+	"id": "chatcmpl-8R3oi9uVOvWGhVn9oIMTkNmnJo0y9",
+	"input_format": "Bytecode",
+	"ir": "0x6060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806357ea89b614604e578063974c86b5146060575b600080fd5b3415605857600080fd5b605e6068565b005b606660e1565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050151560df57600080fd5b565b5600a165627a7a72305820c80aa8f639b5641297d7178f4b27a66ee5141c8529a93808962b320e4e3d44870029",
+	"language": "Solidity",
+	"messages": [
+		{
+			"content": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following smart contract bytecode.",
+			"role": "system"
+		},
+		{
+			"content": "The following is the bytecode: 0x6060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806357ea89b614604e578063974c86b5146060575b600080fd5b3415605857600080fd5b605e6068565b005b606660e1565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050151560df57600080fd5b565b5600a165627a7a72305820c80aa8f639b5641297d7178f4b27a66ee5141c8529a93808962b320e4e3d44870029.",
+			"role": "user"
+		}
+	],
+	"model": "gpt-4-32k",
+	"object": "chat.completion",
+	"prompts": "You are an experienced smart contract developer that excels at Solidity program languages. Please write a contract code by the following smart contract bytecode.The following is the bytecode: 0x6060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806357ea89b614604e578063974c86b5146060575b600080fd5b3415605857600080fd5b605e6068565b005b606660e1565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050151560df57600080fd5b565b5600a165627a7a72305820c80aa8f639b5641297d7178f4b27a66ee5141c8529a93808962b320e4e3d44870029.",
+	"status": "1",
+	"time_cost": 10.52964162826538,
+	"usage": {
+		"completion_tokens": 219,
+		"prompt_tokens": 247,
+		"total_tokens": 466
+	}
+}

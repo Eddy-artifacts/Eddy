@@ -1,0 +1,20 @@
+{
+	"address": "0xe1754d039c839192ee193d5cf8406fb24fcb421f",
+	"model": "description_v1101_1",
+	"input_format": "LayedDescription",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 2182.0,
+	"prompt_tokens": 1289.0,
+	"completion_tokens": 893.0,
+	"time_cost": 40.29861760139465,
+	"gen_code": true,
+	"compilable": " identifier already declared.\t undeclared identifier. did you mean \"migrationagent\"?\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 25
+}

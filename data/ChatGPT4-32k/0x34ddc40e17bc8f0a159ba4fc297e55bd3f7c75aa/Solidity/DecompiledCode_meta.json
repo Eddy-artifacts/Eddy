@@ -1,0 +1,20 @@
+{
+	"address": "0x34ddc40e17bc8f0a159ba4fc297e55bd3f7c75aa",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 5693.0,
+	"prompt_tokens": 4771.0,
+	"completion_tokens": 922.0,
+	"time_cost": 47.77231121063232,
+	"gen_code": true,
+	"compilable": " type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 14
+}

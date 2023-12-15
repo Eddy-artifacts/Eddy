@@ -1,0 +1,20 @@
+{
+	"address": "0x268be5667d4e5bd036bd608d0601ef1441604429",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 13751.0,
+	"prompt_tokens": 13275.0,
+	"completion_tokens": 476.0,
+	"time_cost": 26.10618829727173,
+	"gen_code": true,
+	"compilable": " explicit type conversion not allowed from \"address\" to \"uint256\".\t explicit type conversion not allowed from \"address\" to \"uint256\".\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 16
+}

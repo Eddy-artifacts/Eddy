@@ -1,0 +1,20 @@
+{
+	"address": "0x540834aa7a6f445b9cd960dd52ea41d382898538",
+	"model": "elipmoc_1",
+	"input_format": "DecompiledCode",
+	"output_format": "Solidity",
+	"status": "1",
+	"token_exceeded": false,
+	"n_tokens": 10294.0,
+	"prompt_tokens": 9758.0,
+	"completion_tokens": 536.0,
+	"time_cost": 25.54777669906616,
+	"gen_code": true,
+	"compilable": " this looks like an address but has an invalid checksum. correct checksummed address: \"0xffffffffffffffffffffffffffffffffffffffff\". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals\t unary operator ~ cannot be applied to type address payable\t operator & not compatible with types address payable and uint256\t operator | not compatible with types address and address payable\t type address is not implicitly convertible to expected type uint256.\t type address is not implicitly convertible to expected type uint256.\t invalid type for argument in function call. invalid implicit conversion from address to address payable requested.\t type bool is not implicitly convertible to expected type uint8.\t",
+	"version": null,
+	"n_sai": null,
+	"language": "Solidity",
+	"not_exist": null,
+	"p_grammar": -1.0,
+	"sai": 45
+}
