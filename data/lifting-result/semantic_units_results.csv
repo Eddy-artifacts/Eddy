@@ -1,0 +1,5 @@
+type,#path_coverage,#semantic_unit_coverage
+Ethersolve,92.44,83.88
+Eddy,95.51,89.61
+wo Memory Analysis,94.62,88.78
+wo Transaction,93.94,85.20

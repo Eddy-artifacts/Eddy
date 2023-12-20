@@ -1,0 +1,5 @@
+type,#precision,#recall,#wo_type_precision,#wo_type_recall
+elipmoc,42.00,42.01,97.89,98.28
+Eddy,69.34,70.30,96.70,98.49
+wo Memory Analysis,69.05,70.18,95.85,97.88
+wo Transactions,68.94,70.14,95.73,97.76
