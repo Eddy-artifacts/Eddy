@@ -1,0 +1,5 @@
+,summary_type,address_type,#compilable,#sai_coverage
+0,description_v1101,solidity,77.86,73.61
+1,description_v1101,vyper,55.56,71.31
+2,description_v1101,new,94.29,78.62
+3,description_v1101,total,78.04,73.79

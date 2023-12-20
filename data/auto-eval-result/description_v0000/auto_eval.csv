@@ -1,0 +1,6 @@
+address_type,#contracts,#n_gen_code,#p_gen_code,#compilable,#p_compilable,#n_pure_compilable,#p_pure_compilable,#n_empty_compilable,#p_empty_compilable,#p_grammar
+Sol,908,876,96.48,619,68.17,604,66.52,15,1.65,70.14
+Vy,18,17,94.44,9,50.00,9,50.00,0,0.00,72.86
+NewSol,35,34,97.14,26,74.29,26,74.29,0,0.00,94.16
+Before,926,893,96.44,628,67.82,613,66.20,15,1.62,70.17
+Total,961,927,96.46,654,68.05,639,66.49,15,1.56,71.16

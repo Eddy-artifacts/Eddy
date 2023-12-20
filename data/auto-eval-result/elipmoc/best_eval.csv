@@ -1,0 +1,5 @@
+,summary_type,address_type,#compilable,#sai_coverage
+0,elipmoc,solidity,79.07,46.94
+1,elipmoc,vyper,72.22,40.53
+2,elipmoc,new,71.43,69.43
+3,elipmoc,total,78.67,47.49

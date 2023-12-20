@@ -1,0 +1,5 @@
+address_type,summary_type,#p_compilable,#e_p_compilable,#sai_coverage,#e_sai_coverage
+solidity,bytecode,19.25,2.57,13.06,0.89
+vyper,bytecode,18.89,9.25,5.48,2.37
+new,bytecode,22.29,11.05,21.30,6.48
+total,bytecode,19.35,2.53,13.28,1.02

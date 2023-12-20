@@ -1,0 +1,5 @@
+address_type,summary_type,#p_compilable,#e_p_compilable,#sai_coverage,#e_sai_coverage
+solidity,description_v1111,46.67,1.27,76.32,1.06
+vyper,description_v1111,41.11,6.17,76.07,9.81
+new,description_v1111,70.86,9.18,71.84,9.03
+total,description_v1111,47.45,1.50,76.08,0.85

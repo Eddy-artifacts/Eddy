@@ -1,0 +1,537 @@
+clean_compilable,Counter,Reasons
+undeclared identifier.,1192,identify
+cannot perform packed encoding for a literal. please convert it to an explicit type first.,694,type
+"source ""@openzeppelin/contracts/math/safemath.sol"" not found: file outside of allowed directories.",419,external
+"expected a state variable declaration. if you intended this as a fallback function or a function to handle plain ether transactions, use the ""fallback"" keyword or the ""receive"" keyword instead.",178,identify
+"""msg.gas"" has been deprecated in favor of ""gasleft()""",1,version
+type address is not implicitly convertible to expected type address payable.,158,type
+operator + not compatible with types bytes32 and uint256,120,type
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/master/contracts/math/safemath.sol"" not found: file outside of allowed directories.",107,external
+"""send"" and ""transfer"" are only available for objects of type ""address payable"", not ""address"".",101,type
+operator * not compatible with types address and int_const 79228162514264337593543950336. arithmetic operations on addresses are not supported. convert to integer first before using them.,91,type
+"function declared as view, but this expression (potentially) modifies the state and thus requires non-payable (the default) or payable.",87,bad usage
+operator != not compatible with types bool and int_const 0,80,type
+different number of components on the left hand side (1) than on the right hand side (2).,75,bad usage
+identifier not found or not unique.,74,identify
+type bool is not implicitly convertible to expected type uint256.,62,type
+type uint256 is not implicitly convertible to expected type address.,58,type
+identifier already declared.,55,identify
+type int_const 0 is not implicitly convertible to expected type address.,54,type
+operator == not compatible with types bool and int_const 0,52,type
+operator == not compatible with types address payable and uint256,51,type
+"no visibility specified. did you intend to add ""public""?",48,identify
+operator / not compatible with types string storage ref and int_const 2,45,type
+operator + not compatible with types bytes32 and rational_const 31 / 32,44,type
+"explicit type conversion not allowed from ""bool"" to ""uint256"".",43,type
+type address payable is not implicitly convertible to expected type uint256.,42,type
+operator + not compatible with types int_const 31 and string storage ref,40,type
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/math/safemath.sol"" not found: file outside of allowed directories.",30,external
+"indexed expression has to be a type, mapping or array (is uint256)",30,type
+operator + not compatible with types int_const 1 and bytes32,29,type
+"wrong argument count for function call: 2 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.",26,bad usage
+invalid type for argument in function call. invalid implicit conversion from int_const 3 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,26,bad usage
+operator == not compatible with types address payable and uint160,25,type
+expected primary expression.,24,
+invalid type for argument in function call. invalid implicit conversion from int_const 5 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,22,bad usage
+"expected ',' but got identifier",21,identify
+no matching declaration found after argument-dependent lookup.,21,
+type address is not implicitly convertible to expected type uint256.,20,type
+type int_const 0 is not implicitly convertible to expected type bool.,20,type
+"""msg.value"" and ""callvalue()"" can only be used in payable public functions. make the function ""payable"" or use an internal function to avoid this error.",20,identify
+operator < not compatible with types bool and int_const 2,19,type
+type address payable is not implicitly convertible to expected type bytes32.,19,type
+"source ""@openzeppelin/contracts/access/ownable.sol"" not found: file outside of allowed directories.",19,external
+"source ""@openzeppelin/contracts/token/erc20/erc20.sol"" not found: file outside of allowed directories.",19,external
+"wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.",18,bad usage
+"undeclared identifier. did you mean ""token""?",17,identify
+expected ')' but got '{',17,
+invalid type for argument in function call. invalid implicit conversion from int_const 4 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,17,bad usage
+"invalid type for argument in function call. invalid implicit conversion from bytes4 to bytes memory requested. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.",16,bad usage
+operator / not compatible with types bytes32 and int_const 2,16,type
+invalid type for argument in function call. invalid implicit conversion from uint256 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,16,bad usage
+operator * not compatible with types int_const 79228162514264337593543950336 and address,16,type
+invalid type for argument in function call. invalid implicit conversion from int_const 6 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,16,bad usage
+type contract mycontract is not implicitly convertible to expected type address.,16,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x2beae7bde74018968d55b463fc6f5cbf0d5cc4a9"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",15,version
+invalid type for argument in function call. invalid implicit conversion from int_const 0 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,14,bad usage
+"expected pragma, import directive or contract/interface/library/struct/enum definition.",14,external
+type contract yourcontract is not implicitly convertible to expected type address.,13,type
+operator + not compatible with types address payable and uint256. arithmetic operations on addresses are not supported. convert to integer first before using them.,13,type
+"source ""@openzeppelin/contracts/token/erc20/ierc20.sol"" not found: file outside of allowed directories.",12,external
+different number of arguments in return statement than in returns declaration.,12,bad usage
+invalid type for argument in function call. invalid implicit conversion from address to address payable requested.,12,type
+"explicit type conversion not allowed from ""bytes1"" to ""uint256"".",12,type
+operator != not compatible with types address and int_const 0,12,type
+operator % not compatible with types bytes32 and int_const 50,12,type
+"wrong argument count for function call: 4 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.",11,bad usage
+functions without implementation must be marked virtual.,11,identify
+"this looks like an address but is not exactly 40 hex digits. it is 41 hex digits. if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",11,version
+type int_const 0 is not implicitly convertible to expected type string storage ref.,10,type
+"member ""balanceof"" not found or not visible after argument-dependent lookup in address.",10,
+"function, variable, struct or modifier declaration expected.",10,identify
+invalid type for argument in function call. invalid implicit conversion from address to bytes32 requested.,10,type
+operator == not compatible with types uint256 and address payable,10,type
+operator < not compatible with types uint256 and address payable,10,type
+mappings cannot be assigned to.,10,
+type int_const 1 is not implicitly convertible to expected type bool.,10,type
+operator <= not compatible with types uint256 and address,9,type
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/v3.1.0/contracts/math/safemath.sol"" not found: file outside of allowed directories.",9,external
+"fallback function must be defined as ""external"".",9,identify
+invalid type for argument in function call. invalid implicit conversion from int_const 1 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,8,type
+"explicit type conversion not allowed from ""bytes32"" to ""uint64"".",8,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x67dc443aecece8353fe158e5f562873808f12c11"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",8,version
+"expected ',' but got ';'",8,
+operator >= not compatible with types address and uint256,8,type
+operator -= not compatible with types uint160 and uint256,8,type
+"source ""@openzeppelin/contracts/utils/math/safemath.sol"" not found: file outside of allowed directories.",8,external
+operator && not compatible with types bool and bytes32,8,type
+"undeclared identifier. did you mean ""_token""?",8,identify
+type int_const 1 is not implicitly convertible to expected type address.,8,type
+fractional numbers cannot yet be encoded.,8,
+operator & not compatible with types bytes32 and int_const 1,8,type
+operator == not compatible with types bool and int_const 1,8,type
+operator / not compatible with types bytes32 and int_const 1,8,type
+"type tuple(bool,bytes memory) is not implicitly convertible to expected type uint256.",7,type
+operator + not compatible with types int_const 31 and bytes32,7,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x2e2e356b67d82d6f4f5d54ffcbcfff4351d2e56c"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",7,version
+invalid type for argument in function call. invalid implicit conversion from bytes4 to string memory requested.,7,type
+"type tuple(bool,bytes memory) is not implicitly convertible to expected type bool.",7,type
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/release-v3.4/contracts/math/safemath.sol"" not found: file outside of allowed directories.",7,external
+"explicit type conversion not allowed from ""bytes31"" to ""uint256"".",7,type
+"undeclared identifier. did you mean ""token"" or ""tokens""?",6,identify
+unary operator ! cannot be applied to type bytes32,6,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x3a31ac87092909af0e01b4d8fc6e03157e91f4bb"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",6,version
+type contract tokencontract is not implicitly convertible to expected type address.,6,type
+operator == not compatible with types address and int_const 0,6,type
+operator == not compatible with types uint160 and address payable,6,type
+type contract mytoken is not implicitly convertible to expected type address.,6,type
+type bytes32 is not implicitly convertible to expected type uint256.,6,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x7ec915b8d3ffee3deaae5aa90def8ad826d2e110"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",6,version
+"operator == not compatible with types string storage ref and literal_string ""0""",6,type
+operator * not compatible with types int_const 79228162514264337593543950336 and address payable,6,type
+operator + not compatible with types bytes32 and uint16,6,type
+operator >= not compatible with types mapping(address => uint256) and mapping(address => uint256),6,type
+wrong argument count for function call: 2 arguments given but expected 1. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,6,bad usage
+"explicit type conversion not allowed from ""bytes storage pointer"" to ""uint256"".",6,type
+"member ""add"" not found or not visible after argument-dependent lookup in uint256.",5,bad usage
+"explicit type conversion not allowed from ""bytes memory"" to ""uint256"".",5,type
+operator + not compatible with types mapping(address => uint256) and uint256,5,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x20c84e76c691e38e81eae5ba60f655b8c388718d"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",5,version
+"functions are not allowed to have the same name as the contract. if you intend this to be a constructor, use ""constructor(...) { ... }"" to define it.",5,identify
+type int_const 2014223715 is not implicitly convertible to expected type address.,5,type
+"undeclared identifier. did you mean ""lasthatch""?",5,identify
+expected identifier but got 'minutes',5,identify
+type int_const 0 is not implicitly convertible to expected type address payable.,5,type
+"expected ',' but got 'memory'",5,
+operator + not compatible with types bytes32 and int_const 10,5,type
+operator % not compatible with types bytes32 and int_const 10,5,type
+expected identifier but got 'fallback',5,identify
+operator += not compatible with types mapping(address => uint256) and uint256,5,type
+operator != not compatible with types bytes32 and int_const 1,5,type
+operator == not compatible with types bytes32 and int_const 1,5,type
+type int_const 2158778573 is not implicitly convertible to expected type address.,5,type
+type int_const 33540519 is not implicitly convertible to expected type address.,5,type
+type is not callable,5,type
+operator -= not compatible with types address and uint256,5,type
+type bytes32 is not implicitly convertible to expected type address.,5,type
+type int_const 1532892063 is not implicitly convertible to expected type address.,5,type
+operator + not compatible with types int_const 31 and bool,4,type
+"undeclared identifier. did you mean ""upgradeagent""?",4,identify
+operator > not compatible with types bytes32 and int_const 2,4,type
+operator - not compatible with types bool and int_const 1,4,type
+operator <= not compatible with types bytes32 and int_const 5,4,type
+operator + not compatible with types uint256 and address payable,4,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0xa5a5f62bfa22b1e42a98ce00131ea658d5e29b37"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",4,version
+"wrong argument count for function call: 0 arguments given but expected 1. this function requires a single bytes argument. use """" as argument to provide empty calldata.",4,
+operator <= not compatible with types uint256 and bytes32,4,type
+operator != not compatible with types uint256 and bool,4,type
+"member ""mul"" not found or not visible after argument-dependent lookup in uint256.",4,bad usage
+operator + not compatible with types address payable and int_const 1. arithmetic operations on addresses are not supported. convert to integer first before using them.,4,type
+expected identifier but got 'payable',4,identify
+"source ""openzeppelin-solidity/contracts/math/safemath.sol"" not found: file outside of allowed directories.",4,external
+operator -= not compatible with types uint8 and uint256,4,type
+operator != not compatible with types uint256 and address payable,4,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x5ca71ea65acb6293e71e62c41b720698b0aa611c"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",4,version
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/master/contracts/token/erc20/erc20.sol"" not found: file outside of allowed directories.",4,external
+type int_const 1228...(43 digits omitted)...7904 is not implicitly convertible to expected type bytes31.,4,type
+operator && not compatible with types address and bool. arithmetic operations on addresses are not supported. convert to integer first before using them.,4,type
+"only local variables are supported. to access storage variables, use the _slot and _offset suffixes.",4,
+operator * not compatible with types uint256 and rational_const 1 / 2,4,type
+operator -= not compatible with types mapping(address => uint256) and uint256,3,type
+operator * not compatible with types uint256 and address,3,type
+invalid type for argument in function call. invalid implicit conversion from bytes32 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,3,bad usage
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x9115a6162d6bc3663dc7f4ea46ad87db6b9cb926"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",3,version
+"undeclared identifier. did you mean ""tokenreward""?",3,identify
+"undeclared identifier. did you mean ""transfer""?",3,identify
+expression has to be an lvalue.,3,
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/v3.0.0/contracts/math/safemath.sol"" not found: file outside of allowed directories.",3,external
+"undeclared identifier. ""upgradeto"" is not (or not yet) visible at this point.",3,identify
+"member ""length"" not found or not visible after argument-dependent lookup in string storage ref.",3,
+operator <= not compatible with types bytes32 and int_const 2,3,type
+type int_const 1157...(70 digits omitted)...6960 is not implicitly convertible to expected type address.,3,type
+operator / not compatible with types address payable and int_const 16. arithmetic operations on addresses are not supported. convert to integer first before using them.,3,type
+operator + not compatible with types int_const 2 and bytes32,3,type
+type bytes1 is not implicitly convertible to expected type uint256.,3,type
+"undeclared identifier. did you mean ""validatetrade"" or ""validatetrade""?",3,identify
+operator += not compatible with types uint160 and uint256,3,type
+operator & not compatible with types int_const 1157...(70 digits omitted)...6960 and address payable,3,type
+operator >= not compatible with types mapping(address => uint256) and uint256,3,type
+type bool is not implicitly convertible to expected type uint8.,3,type
+operator += not compatible with types uint8 and uint256,3,type
+type bool is not implicitly convertible to expected type address.,3,type
+invalid type for argument in function call. invalid implicit conversion from int_const 2 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,3,bad usage
+"this looks like an address but is not exactly 40 hex digits. it is 39 hex digits. if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",3,version
+type int_const 13217810 is not implicitly convertible to expected type address.,3,type
+operator <= not compatible with types uint256 and address payable,3,type
+invalid type for argument in function call. invalid implicit conversion from string storage ref to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,3,type
+operator + not compatible with types bytes32 and int_const 2,3,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x5777c72fb022ddf1185d3e2c7bb858862c134080"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",3,type
+type int_const 2808...(42 digits omitted)...8976 is not implicitly convertible to expected type address.,3,type
+"undeclared identifier. ""contribute"" is not (or not yet) visible at this point.",3,identify
+"function declared as pure, but this expression (potentially) reads from the environment or state and thus requires ""view"".",3,
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/master/contracts/token/erc20/ierc20.sol"" not found: file outside of allowed directories.",3,external
+operator / not compatible with types uint256 and address payable,3,type
+type int_const 1672...(85 digits omitted)...7989 is not implicitly convertible to expected type address.,2,type
+"undeclared identifier. did you mean ""totalsupply1"", ""totalsupply2"", ""totalsupply3"", ""totalsupply4"" or ""totalsupply5""?",2,identify
+operator && not compatible with types int_const 255 and bytes32,2,type
+type int_const 6 is not implicitly convertible to expected type address.,2,type
+type address is not implicitly convertible to expected type bytes32.,2,type
+"member ""sub"" not found or not visible after argument-dependent lookup in uint256.",2,bad usage
+operator > not compatible with types string storage ref and int_const 0,2,type
+operator < not compatible with types uint256 and address,2,type
+type int_const 1797...(85 digits omitted)...8259 is not implicitly convertible to expected type address.,2,type
+"undeclared identifier. did you mean ""invested"" or ""invest""?",2,identify
+operator <= not compatible with types bytes32 and int_const 4,2,type
+identifier-start is not allowed at end of a number.,2,identify
+type bytes32 is not implicitly convertible to expected type bytes storage ref.,2,type
+"explicit type conversion not allowed from ""bytes storage ref"" to ""uint256"".",2,type
+operator * not compatible with types int_const 256 and string storage ref,2,type
+operator & not compatible with types bool and string storage ref,2,type
+wrong argument count for function call: 1 arguments given but expected 4.,2,
+operator & not compatible with types int_const 256 and string storage ref,2,type
+"type tuple(bool,bytes memory) is not implicitly convertible to expected type bytes memory.",2,type
+type uint256 is not implicitly convertible to expected type bytes32.,2,type
+"unary operator ! cannot be applied to type tuple(bool,bytes memory)",2,type
+operator % not compatible with types bytes32 and int_const 2,2,type
+"source ""@openzeppelin/contracts/security/reentrancyguard.sol"" not found: file outside of allowed directories.",2,external
+operator % not compatible with types bytes32 and int_const 3,2,type
+"contract ""token"" should be marked as abstract.",2,
+operator > not compatible with types bytes32 and int_const 3,2,type
+operator > not compatible with types bytes32 and int_const 4,2,type
+operator * not compatible with types address and uint256. arithmetic operations on addresses are not supported. convert to integer first before using them.,2,type
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/solc-0.6/contracts/math/safemath.sol"" not found: file outside of allowed directories.",2,external
+"undeclared identifier. ""recalctokenprice"" is not (or not yet) visible at this point.",2,identify
+"undeclared identifier. ""invest"" is not (or not yet) visible at this point.",2,identify
+operator && not compatible with types int_const 256 and bool,2,type
+operator <= not compatible with types bytes32 and int_const 3,2,type
+"wrong argument count for function call: 5 arguments given but expected 1. this function requires a single bytes argument. if all your arguments are value types, you can use abi.encode(...) to properly generate it.",2,bad usage
+operator > not compatible with types bytes32 and int_const 1,2,type
+"undeclared identifier. did you mean ""s_8""?",2,identify
+operator <= not compatible with types bytes32 and int_const 1,2,type
+operator += not compatible with types address payable and uint256,2,type
+"explicit type conversion not allowed from ""tuple(bool,bytes memory)"" to ""uint256"".",2,type
+"explicit type conversion not allowed from ""string storage ref"" to ""uint256"".",2,type
+"explicit type conversion not allowed from ""int_const 1"" to ""bytes32"".",2,type
+operator + not compatible with types address and uint256. arithmetic operations on addresses are not supported. convert to integer first before using them.,2,type
+"undeclared identifier. did you mean ""tokenpereth""?",2,identify
+operator -= not compatible with types address payable and uint256,2,type
+operator + not compatible with types int_const 4 and bytes memory,2,type
+expected ')' but got '=>',2,
+operator * not compatible with types int_const 256 and address payable,2,type
+operator + not compatible with types bytes32 and rational_const 143 / 16,2,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0xdcdb42c9a256690bd153a7b409751adfc8dd5851"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",2,version
+invalid type for argument in function call. invalid implicit conversion from int_const 1 to bool requested.,2,type
+"explicit type conversion not allowed from ""string storage ref"" to ""bytes32"".",2,type
+type address is not implicitly convertible to expected type uint160.,2,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0xdf0960778c6e6597f197ed9a25f12f5d971da86c"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",2,version
+operator + not compatible with types bytes memory and uint256,2,type
+type uint256 is not implicitly convertible to expected type bytes1.,2,type
+"indexed expression has to be a type, mapping or array (is address payable)",2,type
+operator * not compatible with types uint256 and int256,2,type
+operator + not compatible with types uint256 and rational_const 31 / 32,2,type
+this type cannot be encoded.,2,type
+"source ""@openzeppelin/contracts-ethereum-package/contracts/math/safemath.sol"" not found: file outside of allowed directories.",2,external
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x0077da9df6507655cdb3ab9277a347ede759f93f"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",2,version
+expected '(' but got ':=',2,
+function not found.,2,
+"undeclared identifier. ""tokensavailable"" is not (or not yet) visible at this point.",2,identify
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x1c21cf57bf4e2dd28883ee68c03a9725056d29f1"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",2,version
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/master/contracts/access/ownable.sol"" not found: file outside of allowed directories.",2,external
+operator && not compatible with types uint8 and bool,2,type
+invalid type for argument in function call. invalid implicit conversion from address payable to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,2,bad usage
+operator & not compatible with types int_const 31 and string storage ref,2,type
+type contract examplecontract is not implicitly convertible to expected type address.,2,type
+"undeclared identifier. did you mean ""caniwithdraw""?",2,identify
+"contract ""erc20"" should be marked as abstract.",2,
+"explicit type conversion not allowed from ""uint256"" to ""bytes1"".",2,type
+"undeclared identifier. ""getpersellinfo"" is not (or not yet) visible at this point.",2,identify
+invalid type for argument in function call. invalid implicit conversion from contract mycontract to address requested.,2,type
+operator != not compatible with types address payable and uint256,2,type
+"expected ',' but got 'hours'",2,
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/token/erc20/erc20.sol"" not found: file outside of allowed directories.",2,external
+type uint256 is not implicitly convertible to expected type bool.,1,type
+"member ""origin"" not found or not visible after argument-dependent lookup in msg.",1,
+source XXX/safemath.sol not found: file not found.,1,external
+"explicit type conversion not allowed from ""bytes memory"" to ""address"".",1,type
+operator == not compatible with types uint256 and address,1,type
+"member ""value"" is only available for payable functions.",1,
+type int_const 9 is not implicitly convertible to expected type address.,1,type
+"source ""@openzeppelin/contracts/ownership/ownable.sol"" not found: file outside of allowed directories.",1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"undeclared identifier. did you mean ""v2"", ""v3"" or ""v0""?",1,identify
+version not in VERSIONS,1,version
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/tokeninterface.sol not found: file not found.,1,external
+source XXX/erc20.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"undeclared identifier. did you mean ""balanceof""?",1,identify
+type int_const 1555164000 is not implicitly convertible to expected type address.,1,type
+"explicit type conversion not allowed from ""bool"" to ""uint160"".",1,type
+operator != not compatible with types bytes32 and address payable,1,type
+type int_const 5000000000000000000000 is not implicitly convertible to expected type bytes32.,1,type
+operator + not compatible with types int_const 4 and bytes calldata,1,type
+type int_const 2500000000000000000000 is not implicitly convertible to expected type bytes32.,1,type
+type int_const 1000000000000000000000 is not implicitly convertible to expected type bytes32.,1,type
+"member ""mul"" not found or not visible after argument-dependent lookup in int_const 86400.",1,bad usage
+operator <= not compatible with types address payable and uint256,1,type
+"expected expression to evaluate to one value, but got 0 values instead.",1,
+operator >= not compatible with types uint256 and mapping(address => uint256),1,type
+type uint256 is not implicitly convertible to expected type mapping(address => uint256).,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+operator > not compatible with types address and uint256,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+operator <= not compatible with types bytes32 and uint256,1,type
+expected identifier but got ')',1,identify
+source XXX/erc721.sol not found: file not found.,1,external
+operator += not compatible with types address and uint256,1,type
+"member ""push"" not found or not visible after argument-dependent lookup in address[] storage ref.",1,
+source XXX/safemath.sol not found: file not found.,1,external
+"member ""length"" is read-only and cannot be used to resize arrays.",1,
+source XXX/safemath.sol not found: file not found.,1,external
+"expected ',' but got 'payable'",1,
+source XXX/safemath.sol not found: file not found.,1,external
+"member ""activities"" not found or not visible after argument-dependent lookup in address.",1,
+operator - not compatible with types address and int_const 1. arithmetic operations on addresses are not supported. convert to integer first before using them.,1,type
+operator + not compatible with types bytes32 and uint64,1,type
+"member ""resolver"" not found or not visible after argument-dependent lookup in address.",1,
+"explicit type conversion not allowed from ""bool"" to ""uint8"".",1,type
+source XXX/safemath.sol not found: file not found.,1,external
+"member ""add"" not found or not visible after argument-dependent lookup in int_const 7257600.",1,bad usage
+"source ""@openzeppelin/contracts/token/erc20/safeerc20.sol"" not found: file outside of allowed directories.",1,external
+"name has to refer to a struct, enum or contract.",1,
+"expected ',' but got 'is'",1,
+"expected ']' but got ','",1,
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0xffffffffffffffffffffffffffffffffffffffff"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",1,version
+operator * not compatible with types int_const 256 and bool,1,type
+"member ""balance"" not found or not visible after argument-dependent lookup in uint160.",1,
+"member ""transferfrom"" not found or not visible after argument-dependent lookup in address.",1,
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/safemath.sol"" not found: file outside of allowed directories.",1,external
+"expected ',' but got '{'",1,
+expected identifier but got reserved keyword 'try',1,identify
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x516e0debb3db8c2c087786ccf7653fa0991784b3"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",1,version
+"member ""getlendingpool"" not found or not visible after argument-dependent lookup in address.",1,
+"member ""call"" not found or not visible after argument-dependent lookup in uint256.",1,
+"explicit type conversion not allowed from ""int_const 2"" to ""bytes4"".",1,type
+"undeclared identifier. ""buytoken"" is not (or not yet) visible at this point.",1,identify
+"undeclared identifier. did you mean ""_betamount"" or ""betamount""?",1,identify
+"undeclared identifier. did you mean ""ethtotal""?",1,identify
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+operator + not compatible with types address and int_const 1157...(70 digits omitted)...9935. arithmetic operations on addresses are not supported. convert to integer first before using them.,1,type
+operator == not compatible with types address and uint256,1,type
+type address payable is not implicitly convertible to expected type uint8.,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+type address is not implicitly convertible to expected type uint8.,1,type
+type uint256 is not implicitly convertible to expected type uint8.,1,type
+type bool is not implicitly convertible to expected type bytes32.,1,type
+invalid type for argument in function call. invalid implicit conversion from int_const 79228162514264337593543950336 to bytes memory requested. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,1,bad usage
+"explicit type conversion not allowed from ""bool"" to ""address"".",1,type
+"undeclared identifier. did you mean ""s_2_31_32""?",1,identify
+"type tuple(bool,bytes memory) is not implicitly convertible to expected type tuple(,uint256).",1,type
+type address payable is not implicitly convertible to expected type uint160.,1,type
+type int_const 1157...(70 digits omitted)...9935 is not implicitly convertible to expected type address.,1,type
+source XXX/safemath.sol not found: file outside of allowed directories.,1,external
+source XXX/ierc20.sol not found: file not found.,1,external
+unary operator ! cannot be applied to type uint8,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/v3.0.1/contracts/math/safemath.sol"" not found: file outside of allowed directories.",1,external
+source XXX/safemath.sol not found: file not found.,1,external
+type int_const 1123...(85 digits omitted)...5225 is not implicitly convertible to expected type address.,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"member ""div"" not found or not visible after argument-dependent lookup in string storage ref.",1,bad usage
+source XXX/safemath.sol not found: file not found.,1,external
+expected '(' but got end of source,1,
+source XXX/safemath.sol not found: file not found.,1,external
+operator + not compatible with types bytes32 and int_const 5,1,type
+operator + not compatible with types bytes32 and int_const 4,1,type
+operator + not compatible with types bytes32 and int_const 3,1,type
+operator + not compatible with types bytes32 and int_const 1,1,type
+operator + not compatible with types bytes32 and bytes32,1,type
+operator + not compatible with types int_const 5 and bytes32,1,type
+"member ""iscutiecore"" not found or not visible after argument-dependent lookup in address.",1,
+source XXX/safemath.sol not found: file not found.,1,external
+"undeclared identifier. ""setbet"" is not (or not yet) visible at this point.",1,identify
+source XXX/safemath.sol not found: file not found.,1,external
+operator + not compatible with types bytes32 and rational_const 317 / 64,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+"source ""@openzeppelin/contracts/token/erc20/extensions/erc20burnable.sol"" not found: file outside of allowed directories.",1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/ierc20.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"expected ',' but got ']'",1,
+source XXX/safemath.sol not found: file not found.,1,external
+"contract ""swapcontract"" should be marked as abstract.",1,
+"contract ""cartaxitoken"" should be marked as abstract.",1,
+source XXX/safemath.sol not found: file not found.,1,external
+"undeclared identifier. did you mean ""eggssincelasthatch""?",1,identify
+"undeclared identifier. did you mean ""hatcheryshrimp""?",1,identify
+"undeclared identifier. ""calculateeggbuysimple"" is not (or not yet) visible at this point.",1,identify
+"undeclared identifier. ""calculateeggsell"" is not (or not yet) visible at this point.",1,identify
+source XXX/safemath.sol not found: file not found.,1,external
+"source ""github.com/openzeppelin/openzeppelin-contracts/blob/release-v3.4/contracts/math/safemath.sol"" not found: file outside of allowed directories.",1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"member ""transferfrom"" not found or not visible after argument-dependent lookup in contract ierc20.",1,
+type int_const 7810...(84 digits omitted)...2758 is not implicitly convertible to expected type address.,1,type
+type int_const 2085...(85 digits omitted)...9352 is not implicitly convertible to expected type address.,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+operator * not compatible with types uint16 and string storage ref,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+type uint24[6] memory is not implicitly convertible to expected type uint256[] memory.,1,type
+operator - not compatible with types uint8 and address payable,1,type
+source XXX/erc20interface.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+type int_const 8788...(83 digits omitted)...6598 is not implicitly convertible to expected type address.,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+type int_const 5592...(85 digits omitted)...1266 is not implicitly convertible to expected type address.,1,type
+expected '{' but got '>=',1,
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"member ""add"" not found or not visible after argument-dependent lookup in int_const 100.",1,bad usage
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"member ""div"" not found or not visible after argument-dependent lookup in int_const 2000000000000000000.",1,bad usage
+"source ""github.com/openzeppelin/openzeppelin-contracts/blob/master/contracts/math/safemath.sol"" not found: file outside of allowed directories.",1,external
+source XXX/safemath.sol not found: file not found.,1,external
+type int_const 1639...(85 digits omitted)...4884 is not implicitly convertible to expected type address.,1,type
+type int_const 1737...(85 digits omitted)...5111 is not implicitly convertible to expected type address.,1,type
+type int_const 2959...(85 digits omitted)...0337 is not implicitly convertible to expected type address.,1,type
+"member ""totimestamp"" not found or not visible after argument-dependent lookup in address.",1,
+source XXX/safemath.sol not found: file not found.,1,external
+"member ""mytokens"" not found or not visible after argument-dependent lookup in address.",1,
+"""sha3"" has been deprecated in favour of ""keccak256"".",177,version
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"type literal_string ""0x5410c9762d3c5e12299e0d1175471d1d8c8b2c0500"" is not implicitly convertible to expected type bytes31.",1,type
+source XXX/safemath.sol not found: file not found.,1,external
+"contract ""tokencontract"" should be marked as abstract.",1,
+"member ""mul"" not found or not visible after argument-dependent lookup in int_const 2.",1,bad usage
+type int_const 48879 is not implicitly convertible to expected type address.,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+operator && not compatible with types bool and uint256,1,type
+operator && not compatible with types uint256 and bool,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+type bytes12 is not implicitly convertible to expected type address.,1,type
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0xf43414abb5a05c3037910506571e4333e16a4bf4"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",1,version
+"member ""iscontributorinlists"" not found or not visible after argument-dependent lookup in contract crowdsale.",1,
+"explicit type conversion not allowed from ""tuple(bool,bytes memory)"" to ""bool"".",1,type
+operator | not compatible with types int_const 1157...(70 digits omitted)...6960 and address payable,1,type
+"undeclared identifier. ""tokenbalance"" is not (or not yet) visible at this point.",1,identify
+hexadecimal digit missing or invalid.,1,
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"explicit type conversion not allowed from ""bytes32"" to ""address payable"".",1,type
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+expected identifier but got '(',1,identify
+"this looks like an address but has an invalid checksum. correct checksummed address: ""0x239c09c910ea910994b320ebdc6bb159e71d0b30"". if this is not used as an address, please prepend '00'. for more information please see https://solidity.readthedocs.io/en/develop/types.html#address-literals",1,version
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/release-v3.4/contracts/token/erc20/ierc20.sol"" not found: file outside of allowed directories.",1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"data location must be ""memory"" or ""calldata"" for parameter in external function, but none was given.",1,
+source XXX/safemath.sol not found: file not found.,1,external
+operator + not compatible with types int_const 4 and bytes1,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/iwhitelist.sol not found: file not found.,1,external
+source XXX/ierc20.sol not found: file not found.,1,external
+"member ""div"" not found or not visible after argument-dependent lookup in uint256.",1,bad usage
+operator += not compatible with types uint256 and int256,1,type
+invalid type for argument in function call. invalid implicit conversion from int256 to uint256 requested.,1,type
+expected ';' but got identifier,1,identify
+source XXX/safemath.sol not found: file outside of allowed directories.,1,external
+wrong argument count for function call: 3 arguments given but expected 1. this function requires a single bytes argument. use abi.encodepacked(...) to obtain the pre-0.5.0 behaviour or abi.encode(...) to use abi encoding.,1,bad usage
+"undeclared identifier. did you mean ""s_11_1_32""?",1,identify
+"member ""transferownership"" not found or not visible after argument-dependent lookup in address.",1,
+expected ';' but got '{',1,
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/v3.1.0/contracts/token/erc20/ierc20.sol"" not found: file outside of allowed directories.",1,external
+operator << not compatible with types contract yourcontract and int_const 160,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+"undeclared identifier. ""purchase"" is not (or not yet) visible at this point.",1,identify
+expected ';' but got 'public',1,
+expected ';' but got 'private',1,
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"source ""https://github.com/openzeppelin/openzeppelin-contracts/blob/v3.4.0/contracts/access/ownable.sol"" not found: file outside of allowed directories.",1,external
+operator == not compatible with types bytes32 and address,1,type
+source XXX/ownable.sol not found: file not found.,1,external
+source XXX/erc20.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"indexed expression has to be a type, mapping or array (is tuple(bool,bytes memory))",1,type
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+operator >= not compatible with types uint256 and address,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+"undeclared identifier. did you mean ""totalheartsbydappid""?",1,identify
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"member ""call"" not found or not visible after argument-dependent lookup in contract ierc20. use ""address(token).call"" to access this address member.",1,
+source XXX/safemath.sol not found: file not found.,1,external
+use of unary + is disallowed.,1,
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"undeclared identifier. ""buywithreferral"" is not (or not yet) visible at this point.",1,identify
+source XXX/safemath.sol not found: file not found.,1,external
+"undeclared identifier. did you mean ""_decimals"" or ""decimals""?",1,identify
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"member ""div"" not found or not visible after argument-dependent lookup in int_const 5940000000000000000.",1,bad usage
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+"expected ')' but got ','",1,
+source XXX/safemath.sol not found: file outside of allowed directories.,1,external
+invalid type for argument in function call. invalid implicit conversion from uint256 to uint64 requested.,1,type
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+source XXX/safemath.sol not found: file not found.,1,external
+operator <= not compatible with types bool and bool,1,type
