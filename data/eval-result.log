@@ -1,0 +1,122 @@
+evaluate Eddy
+unzip files
+Archive:  ./data/training-result/training_result.csv.zip
+  inflating: ./data/training-result/training_result.csv  
+Decompressed ./data/training-result/training_result.csv.zip
+Archive:  ./data/training-result/ablation/cluster-unaware/training_result.csv.zip
+  inflating: ./data/training-result/ablation/cluster-unaware/training_result.csv  
+Decompressed ./data/training-result/ablation/cluster-unaware/training_result.csv.zip
+Archive:  ./data/training-result/ablation/cross-entropy/training_result.csv.zip
+  inflating: ./data/training-result/ablation/cross-entropy/training_result.csv  
+Decompressed ./data/training-result/ablation/cross-entropy/training_result.csv.zip
+Archive:  ./data/training-result/ablation/uncluster-unaware/training_result.csv.zip
+  inflating: ./data/training-result/ablation/uncluster-unaware/training_result.csv  
+Decompressed ./data/training-result/ablation/uncluster-unaware/training_result.csv.zip
+Archive:  ./data/lifting-result/lifting_result.csv.zip
+  inflating: ./data/lifting-result/lifting_result.csv  
+Decompressed ./data/lifting-result/lifting_result.csv.zip
+Archive:  ./data/lifting-result/lifting_result_wo_memory_analysis.csv.zip
+  inflating: ./data/lifting-result/lifting_result_wo_memory_analysis.csv  
+Decompressed ./data/lifting-result/lifting_result_wo_memory_analysis.csv.zip
+******************************Run the evaluation of the reversed code.******************************
+==============================Summarize the manual verification result==============================
+[Fig.6] The result on SC_manual is:
+     dataset       input_type compilable equivalent
+0   solidity         Bytecode      66.30       0.00
+1   solidity          Elipmoc      79.56       9.39
+2   solidity  SpecDescription      80.11      31.49
+3      vyper         Bytecode      55.56       0.00
+4      vyper          Elipmoc      72.22       0.00
+5      vyper  SpecDescription      66.67      33.33
+6        new         Bytecode      48.57       0.00
+7        new          Elipmoc      71.43      17.14
+8        new  SpecDescription      91.43      51.43
+9      total         Bytecode      62.82       0.00
+10     total          Elipmoc      77.78       9.83
+11     total  SpecDescription      80.77      34.62
+
+For Bytecode, the semantically equal contracts is 0
+For Elipmoc, the semantically equal contracts is 23
+For Description, the semantically equal contracts is 81
+==============================Summarize the result on large dataset==============================
+[Fig.7 Left] Here is the summary of average result on syntax evaluation for different input:
+   address_type       summary_type #p_compilable #e_p_compilable #sai_coverage #e_sai_coverage
+0        total           bytecode         19.35            2.53         13.28            1.02
+1        total            elipmoc         37.96            2.23         39.12            1.50
+2        total  description_v1111         47.45            1.50         76.08            0.85
+[Fig.7 Right] Here is the summary of best result on syntax evaluation for different input:
+         summary_type address_type #compilable #sai_coverage
+0           bytecode        total       64.00         16.50
+1            elipmoc        total       78.67         47.49
+2  description_v1111        total       81.58         78.33
+==============================Summarize the compiler errors==============================
+[Tabel 5] Here is the result of summarized top 5 compiler errors:
+bad usage:6.60%
+external:13.31%
+identify:29.10%
+type:43.72%
+version:4.42%
+==============================Summarize the ablation study of different settings==============================
+[Table 6] Here is the result of ablation study for different descriptions:
+         summary_type address_type #compilable #sai_coverage
+0  description_v1111        total       81.58         78.33
+1  description_v1101        total       78.04         73.79
+2  description_v1100        total       78.15         73.18
+3  description_v0100        total       77.32         72.92
+4  description_v0000        total       66.49         71.16
+******************************Run the evaluation on semantic units lifting.******************************
+==============================Summarize the coverage rate==============================
+[Table 7] Here is the result of semantic unit extraction:
+                 type #path_coverage #semantic_unit_coverage
+0          Ethersolve          92.44                   83.88
+1                Eddy          95.51                   89.61
+2  wo Memory Analysis          94.62                   88.78
+3      wo Transaction          93.94                   85.20
+==============================Summarize the result of variable recognition==============================
+[Table 7] Here is the result of state variables recognition:
+                 type #precision #recall #wo_type_precision #wo_type_recall
+0             elipmoc      42.00   42.01              97.89           98.28
+1                Eddy      69.34   70.30              96.70           98.49
+2  wo Memory Analysis      69.05   70.18              95.85           97.88
+3     wo Transactions      68.94   70.14              95.73           97.76
+******************************Run the evaluation of unknown name inference.******************************
+==============================Summarize the result of name inference==============================
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 52754/52754 [00:11<00:00, 4489.38it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:08<00:00,  8.77s/it]
+[Fig.9 Right] Here is the Acc@1,Acc@3 and Acc@5 of name inference:
+   total_names  classes  number_names  Acc@1  Acc@3  Acc@5
+0        53160     1453         52754  33.44  40.58  46.84
+==============================Summarize the effect of extend numbers==============================
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 52754/52754 [00:11<00:00, 4640.32it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 12/12 [01:40<00:00,  8.36s/it]
+[Fig.9] Here is the result for different extend number:
+    total_names  classes  extend_number  Acc@1  Acc@3  Acc@5
+0         53160     1453              1  20.06  29.43  31.70
+1         53160     1453              0   0.00   0.00   0.00
+2         53160     1453              5  24.85  34.85  37.79
+3         53160     1453             10  31.03  36.42  40.60
+4         53160     1453             15  31.97  37.12  42.08
+5         53160     1453             20  32.13  37.94  43.16
+6         53160     1453             25  32.39  38.30  43.64
+7         53160     1453             30  32.75  38.84  44.36
+8         53160     1453             35  33.29  39.82  45.92
+9         53160     1453             40  33.44  40.58  46.84
+10        53160     1453             45  33.57  40.96  47.26
+11        53160     1453             50  33.66  41.16  47.53
+==============================Summarize the ablation study on name inference==============================
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 49686/49686 [00:10<00:00, 4693.41it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 44632/44632 [00:09<00:00, 4710.86it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 52754/52754 [00:11<00:00, 4615.73it/s]
+[Fig.9] Here is the ablation study result:
+            ablation  total_names  classes  Acc@1  Acc@3  Acc@5
+0    cluster-unaware        49686     1210  23.16  33.53  43.76
+1  uncluster-unaware        44640     6322  27.64  34.11  38.91
+2      cross-entropy        53160     1453  32.86  41.16  46.59
+******************************Run the evaluation of scalability.******************************
+==============================Summarize the time cost of analysis==============================
+Average for static analysis is 15.34s
+Average for dynamic analysis is 6.34s
+==============================Summarize the token count of prompt==============================
+Average input token is 3189.59
+Average output token is 699.59
+Average cost 3189.587649/1k*0.06+699.591071/1k*0.12=$0.28
