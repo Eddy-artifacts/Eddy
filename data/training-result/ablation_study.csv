@@ -1,0 +1,4 @@
+ablation,total_names,classes,Acc@1,Acc@3,Acc@5
+cluster-unaware,49686,1210,23.16,33.53,43.76
+uncluster-unaware,44640,6322,27.64,34.11,38.91
+cross-entropy,53160,1453,32.86,41.16,46.59
