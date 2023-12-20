@@ -97,8 +97,8 @@ This script evaluates the reversed code manually and automatically. Specifically
 | 0 | 0 | 0 | 0 | description_v0000|
 | 1 | 0 | 0 | 0 | description_v0100|
 | 1 | 1 | 0 | 0 | description_v1100|
-| 1 | 1 | 0 | 1 | description_v1101|
-| 1 | 1 | 1 | 1 | description_v1111|
+| 1 | 1 | 0 | 1 | description_v1101 (a.k.a LayedDescription)|
+| 1 | 1 | 1 | 1 | description_v1111 (a.k.a TemplateDescription)|
 
 ### `eval_semantic_units_lifting.py`
 
